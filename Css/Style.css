@@ -104,15 +104,16 @@ Section {
 }
 
 #ImagemCentral {
-    width: 900px;
+    width: 700px;
     height: auto;
     opacity: 60%;
-    transition: all 1200ms ease-in-out;
+    transition: all 1800ms ease-in-out;
+    transition-delay: .30s;
 }
 
 
 #ImagemCentral:hover {
-    transform: translatex(30px) translatey(-10px) rotate(5deg);
+    transform: translatex(20px) translatey(-10px) rotate(2.5deg);
 }
 
 #SetaBaixo {
