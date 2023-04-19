@@ -53,10 +53,11 @@ Section {
 
 #IconeMenu {
     color: aqua;
-    font-size: 40px;
-    display: none;
+    width: 50px;
+    height: auto;
     z-index: 10001;
     cursor: pointer;
+    display: none;
 }
 
 .Central {
@@ -118,8 +119,8 @@ Section {
 
 #SetaBaixo {
     position: absolute;
-    bottom: 5%;
-    right: 2.5%;
+    bottom: 6%;
+    right: 9%;
 }
 #SetaBaixo a {
     display: block;
@@ -137,4 +138,89 @@ Section {
 #SetaBaixo img {
     width: 25px;
     height: auto;
+}
+
+@media (max-width: 1535px){
+    header {
+        padding: 15px 3%;
+    }
+    #SetaBaixo {
+        right: 9%;
+    }
+}
+
+@media (max-width: 1460px){
+    section {
+        padding: 0 12%;
+    }
+}
+
+@media (max-width: 1340px) {
+    #ImagemCentral {
+        width: 100%;
+        height: auto;
+    }
+    #Texto h1 {
+        font-size: 75px;
+        margin: 0 0 30px
+    }
+}
+
+@media (max-width: 1195px) {
+    section {
+        padding: 0 3%;
+    }
+    #Texto {
+        padding-top: 115px;
+    }
+    #ImagemCentral {
+        text-align: center;
+        width: 560px;
+        height: auto;
+    }
+    .Central {
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    #SetaBaixo {
+        display: none;
+    }
+}
+
+@media (max-width: 990px) {
+    #IconeMenu {
+        display: block;
+    }
+    .ListaVertical {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh;
+        display: flex;
+        padding: 50px 20px;
+        flex-direction: column;
+        align-items: center;
+        background: rgb(58, 58, 58);
+        transition: all .55s ease;
+    }
+    .ListaVertical a {
+        margin-left: 0;
+        display: block;
+        margin: 5px 0;
+    }
+    .ListaVertical.open{
+        right: 0;
+        height: 250px;
+        width: 200px;
+        border-radius: 30px;
+        border: solid 2px aqua;
+    }
+}
+
+@media (max-width: 990px) {
+    #ImagemCentral {
+        width: 100%;
+        height: auto;
+    }
 }
