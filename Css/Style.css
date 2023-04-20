@@ -108,7 +108,7 @@ Section {
     width: 700px;
     height: auto;
     opacity: 60%;
-    transition: all 1800ms ease-in-out;
+    transition: transform 1800ms ease-in-out;
     transition-delay: .30s;
 }
 
@@ -175,7 +175,7 @@ Section {
     }
     #ImagemCentral {
         text-align: center;
-        width: 560px;
+        width: 450px;
         height: auto;
     }
     .Central {
@@ -218,39 +218,36 @@ Section {
     }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 880px) {
     #ImagemCentral {
-        width: 100%;
+        width: 420px;
         height: auto;
+    }
+    #Texto h1 {
+        font-size: 50px;
     }
 }
 
-@media (max-width: 880px) {
-    #ImagemCentral {
-        width: 550px;
-        height: auto;
-    }
-
 @media (max-width: 750px) {
     #ImagemCentral {
-        width: 500px;
+        width: 400px;
         height: auto;
     }
     #Texto h1{
-        font-size: 60px;
+        font-size: 45px;
     }
 }
 
 @media (max-width: 600px) {
     #ImagemCentral {
-        width: 450px;
+        width: 410px;
         height: auto;
     }
 }
 
 @media (max-width: 500px) {
     #ImagemCentral {
-        width: 400px;
+        width: 380px;
         height: auto;
     }
     #Texto h1{
@@ -258,19 +255,42 @@ Section {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
+    html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
     #ImagemCentral {
         width: 350px;
         height: auto;
     }
     #Texto h1{
-        font-size: 50px;
+        font-size: 40px;
+    }
+    #Texto {
+        margin: 0;
+        padding-top: 40px;
+        margin-right: 0;
+    }
+    .Central {
+        gap: 0rem;
+        grid-template-columns: 0fr;
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
     #ImagemCentral {
         width: 300px;
         height: auto;
+    }
+    #Texto h1 {
+        font-size: 30px;
+    }
+    #Texto p {
+        font-size: 12px;
     }
 }
