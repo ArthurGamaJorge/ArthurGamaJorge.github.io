@@ -267,7 +267,7 @@ Section {
         font-size: 12px;
     }
 }
-@media (max-width: 920px) and (max-height: 600px){
+@media (max-width: 920px) and (max-height: 500px){
     html,body
     {
         width: 100%;
@@ -296,7 +296,7 @@ Section {
     }
 }
 
-@media (max-width: 700px) and (max-height: 600px){
+@media (max-width: 700px) and (max-height: 500px){
     #ImagemCentral {
         width: 230px;
         height: auto;
