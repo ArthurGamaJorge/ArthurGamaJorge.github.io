@@ -7,10 +7,10 @@
     text-decoration: none;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
+    cursor: url("../Images/Cursor.png"), auto;
 }
-
 header {
     background-color: rgb(33, 30, 30, 0.5);
     position: fixed;
@@ -22,10 +22,15 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
+    border: solid 1px white;
 }
 
 Section {
     padding: 0 18%;
+}
+
+a:hover {
+    cursor: url("../Images/CursorPointer.png"), pointer;
 }
 
 .ListaVertical {
@@ -34,21 +39,21 @@ Section {
 
 .ListaVertical a{
     font-size: 25px;
-    color: aqua;
+    color: white;
     margin-left: 60px;
     font-weight: 700;
     transition: all .55s ease; 
 }
 
 .ListaVertical a:hover{
-    border-bottom: 2px solid aqua;
+    border-bottom: 2px solid white;
     background-color: rgba(66, 62, 62, 0.8);
 }
 
 .Principal {
     font-size: 30px;
     font-weight: 1000;
-    color: aqua;
+    color: white;
 }
 
 #IconeMenu {
@@ -69,7 +74,7 @@ Section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
 }
 
 #Texto h1 {
@@ -80,11 +85,31 @@ Section {
 }
 
 #Texto p {
-    font-size: 14px;
+    font-size: 18px;
     color: aqua;
-    font-style: italic;
-    width: 450px;
 }
+  
+  #EfeitoEscrevendo {
+    width: 20.4ch;
+    animation: Escrever 2s steps(37), effect .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid aqua;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes Escrever {
+    from {
+      width: 0;
+    }
+  }
+      
+  @keyframes effect {
+    50% {
+      border-color: transparent;
+    }
+  }
 
 #Texto a {
     display: inline-block;
@@ -109,7 +134,8 @@ Section {
     height: auto;
     opacity: 60%;
     transition: transform 1800ms ease-in-out;
-    transition-delay: .30s;
+    transition-delay: .1s;
+    filter: drop-shadow(10px 10px 15px aqua);
 }
 
 
@@ -214,7 +240,9 @@ Section {
         height: 250px;
         width: 200px;
         border-radius: 30px;
-        border: solid 2px aqua;
+        border: solid 2px white;
+        filter: drop-shadow(5px 5px 10px white);
+
     }
 }
 
@@ -265,6 +293,9 @@ Section {
     }
     #Texto p {
         font-size: 12px;
+    }
+    #EfeitoEscrevendo {
+        width: 13.6ch;
     }
 }
 @media (max-width: 920px) and (max-height: 400px){
