@@ -175,7 +175,7 @@ Section {
     }
     #ImagemCentral {
         text-align: center;
-        width: 450px;
+        width: 380px;
         height: auto;
     }
     .Central {
@@ -228,33 +228,6 @@ Section {
     }
 }
 
-@media (max-width: 750px) {
-    #ImagemCentral {
-        width: 400px;
-        height: auto;
-    }
-    #Texto h1{
-        font-size: 45px;
-    }
-}
-
-@media (max-width: 600px) {
-    #ImagemCentral {
-        width: 410px;
-        height: auto;
-    }
-}
-
-@media (max-width: 500px) {
-    #ImagemCentral {
-        width: 380px;
-        height: auto;
-    }
-    #Texto h1{
-        font-size: 55px;
-    }
-}
-
 @media (max-width: 480px) {
     html,body
 {
@@ -265,7 +238,7 @@ Section {
     overflow-x: hidden; 
 }
     #ImagemCentral {
-        width: 350px;
+        width: 380px;
         height: auto;
     }
     #Texto h1{
@@ -284,7 +257,7 @@ Section {
 
 @media (max-width: 400px) {
     #ImagemCentral {
-        width: 300px;
+        width: 320px;
         height: auto;
     }
     #Texto h1 {
@@ -292,5 +265,49 @@ Section {
     }
     #Texto p {
         font-size: 12px;
+    }
+}
+@media (max-width: 920px) and (max-height: 600px){
+    html,body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden; 
+    }
+    #ImagemCentral {
+        width: 320px;
+        height: auto;
+    }
+    #Texto h1 {
+        font-size: 40px;
+    }
+    #Texto {
+        padding-top: 0px;
+        width: 300px;
+    }
+    .Central {
+        padding: 0 12%;
+        align-items: center;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) and (max-height: 600px){
+    #ImagemCentral {
+        width: 230px;
+        height: auto;
+    }
+    #Texto h1 {
+        font-size: 35px;
+    }
+    #Texto {
+        width: 300px;
+    }
+    .Central {
+        gap: 0;
     }
 }
