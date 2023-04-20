@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -11,6 +12,7 @@ html, body {
     scroll-behavior: smooth;
     cursor: url("../Images/Cursor.png"), auto;
 }
+
 header {
     background-color: rgb(33, 30, 30, 0.5);
     position: fixed;
@@ -42,7 +44,8 @@ a:hover {
     color: white;
     margin-left: 60px;
     font-weight: 700;
-    transition: all .55s ease; 
+    transition: all .55s ease-in-out; 
+    border-bottom: transparent;
 }
 
 .ListaVertical a:hover{
@@ -75,6 +78,14 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 5rem;
+}
+
+#Texto {
+    visibility: hidden;
+}
+
+#DivImagem {
+    visibility: hidden;
 }
 
 #Texto h1 {
@@ -147,6 +158,7 @@ a:hover {
     position: absolute;
     bottom: 6%;
     right: 9%;
+    visibility: hidden;
 }
 #SetaBaixo a {
     display: block;

@@ -6,13 +6,14 @@ menu.onclick = () => {
     ListaVertical.classList.toggle('open')
 };
 
-const sr =ScrollReveal ({
+
+window.sr =ScrollReveal ({
     distance: '65px',
     duration: 2600,
     delay: 450,
-    reset: true
+    reset: true,
 });
 
-sr.reveal('#Texto',{delay:200, origin:'top'});
+sr.reveal('#Texto',{delay:200, origin:'top',}); 
 sr.reveal('#DivImagem',{delay:450, origin:'top'});
 sr.reveal('#SetaBaixo',{delay:800, origin:'right'});
