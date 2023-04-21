@@ -127,18 +127,19 @@ a:hover {
     }
   }
 
-#Texto a, .Projeto a {
+#Texto a, #Texto2 a, .Projeto a {
     display: inline-block;
     color: white;
     background: rgb(58, 58, 58);
-    padding: 12px 30px;
+    padding: 20px 30px;
     line-height: 1.4;
     font-weight: 400;
     border-radius: 40px;
     transition: all .55s ease;
+    margin-top: 20px;
 }
 
-#Texto a:hover, .Projeto a:hover {
+#Texto a:hover, .Projeto a:hover,  #Texto2 a:hover{
     background: transparent;
     border: 1px solid white;
     transform: translateX(7px);
@@ -246,14 +247,6 @@ a:hover {
     font-size: 2em;
   }
 
-  #EfeitoEscrevendo3 {
-    width: 14.8ch;
-    animation: Escrever 2s steps(128), effect .5s step-end infinite alternate;
-    overflow: hidden;
-    border-right: 3px solid white;
-    font-size: 2em;
-  }
-
   #DivImagem {
     padding: 0 12%;
     align-items: center;
@@ -296,6 +289,10 @@ a:hover {
     
     .container:hover .overlay {
       opacity: 1;
+    }
+
+ #Texto2 a img {
+        width: 30px;
     }
     
 
@@ -438,7 +435,7 @@ a:hover {
         padding-top: 40px;
         margin-right: 0;
     }
-    #Texto a img {
+    #Texto a img,  #Texto2 a img {
         width: 30px;
     }
     #DivImagem {
@@ -491,8 +488,6 @@ a:hover {
     #EfeitoEscrevendo2 {
         width: 14.5ch;
     }
-    #EfeitoEscrevendo3 {
-        width: 10.5ch;
     }
     .Projeto {
         width: 250px;
@@ -516,7 +511,6 @@ a:hover {
     #DivImagem {
         width: 200px;
     }
-}
 
 @media (min-width: 1200px) and (min-height: 800px){
     #ImagemCentral {
@@ -567,11 +561,8 @@ a:hover {
     #Texto img{
         width: 30px;
     }
-    #Texto a{
-        padding: 6px 10px;
-    }
-    .Central {
-        padding: 0 12%;
+    #Texto a, #Texto2 a{
+        width: 300px;
         align-items: center;
         position: relative;
         display: grid;
