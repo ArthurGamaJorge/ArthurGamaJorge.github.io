@@ -186,7 +186,7 @@ a:hover {
 /* Próximas seções */
 
 .SobreMim{
-    background: linear-gradient(105deg, rgb(83, 37, 6) 0%, rgb(61, 26, 3) 40%, rgb(61, 26, 3) 30%);
+    background: linear-gradient(105deg, rgb(48, 20, 3) 0%, rgb(36, 15, 2) 40%, rgb(36, 15, 2) 30%);
 }
 
 .Habilidades{
@@ -198,7 +198,7 @@ a:hover {
 }
 
 .Contato {
-    background:  linear-gradient(105deg, rgb(107, 15, 15) 0%, rgb(56, 5, 5) 40%, rgb(56, 5, 5) 30%);
+    background:  linear-gradient(105deg, rgb(46, 5, 5) 0%, rgb(32, 3, 3) 40%, rgb(32, 3, 3) 30%);
 }
 
 .ContainerPortofolio {
@@ -364,7 +364,7 @@ a:hover {
     .ListaVertical {
         position: absolute;
         top: 100%;
-        right: -100%;
+        right: -120%;
         width: 300px;
         height: 40vh;
         display: flex;
@@ -488,6 +488,9 @@ a:hover {
     #EfeitoEscrevendo {
         width: 14.5ch;
     }
+    #EfeitoEscrevendo2 {
+        width: 14.5ch;
+    }
     #EfeitoEscrevendo3 {
         width: 10.5ch;
     }
@@ -509,6 +512,9 @@ a:hover {
     }
     img {
         width: 35px;
+    }
+    #DivImagem {
+        width: 200px;
     }
 }
 
