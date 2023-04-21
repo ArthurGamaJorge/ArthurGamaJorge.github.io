@@ -96,7 +96,6 @@ a:hover {
     font-size: 60px;
     color: aqua;
     margin-bottom: 18px;
-    font-family: cursive;
 }
 
 #Texto p, #Texto2 p {
@@ -193,7 +192,7 @@ a:hover {
     background: linear-gradient(105deg, rgb(37, 1, 45) 0%, rgb(22, 5, 27) 40%, rgb(21, 1, 27) 30%);
 }
 
-.Portofolio{
+.Portifolio{
     background: linear-gradient(105deg, rgb(5, 4, 49) 0%, rgb(2, 1, 27) 40%, rgb(2, 1, 27) 30%);
 }
 
