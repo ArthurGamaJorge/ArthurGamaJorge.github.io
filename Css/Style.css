@@ -82,6 +82,7 @@ a:hover {
 
 #Texto {
     visibility: hidden;
+    width: 390px;
 }
 
 #DivImagem {
@@ -89,7 +90,7 @@ a:hover {
 }
 
 #Texto h1 {
-    font-size: 75px;
+    font-size: 65px;
     color: aqua;
     margin-bottom: 18px;
     font-family: cursive;
@@ -97,11 +98,12 @@ a:hover {
 
 #Texto p {
     font-size: 18px;
+    font-weight: 600;
     color: aqua;
 }
   
   #EfeitoEscrevendo {
-    width: 20.4ch;
+    width: 21.8ch;
     animation: Escrever 2s steps(37), effect .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -178,6 +180,62 @@ a:hover {
     height: auto;
 }
 
+/* Próximas seções */
+
+.SobreMim{
+    background: linear-gradient(105deg, rgb(83, 37, 6) 0%, rgb(61, 26, 3) 40%, rgb(61, 26, 3) 30%);
+}
+
+.Habilidades{
+    background: linear-gradient(105deg, rgb(37, 1, 45) 0%, rgb(22, 5, 27) 40%, rgb(21, 1, 27) 30%);
+}
+
+#EfeitoEscrevendo2 {
+    width: 46ch;
+    animation: Escrever 2s steps(128), effect .5s step-end infinite alternate;
+    overflow: hidden;
+    border-right: 3px solid #3b4dc3;
+    font-family: monospace;
+    font-size: 2em;
+  }
+
+  #Texto h2 {
+    font-size: 35px;
+    color: #e53f71;
+    margin-bottom: 18px;
+}
+
+.container {
+    display: inline-block;
+      position: relative;
+      max-width: 300px;
+      margin: auto;
+      color: white
+      
+    }
+    
+    .image {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      height: 300px;
+    
+    }
+    
+    .overlay {
+      position: absolute; 
+      bottom: 0;
+      background: rgb(229, 63, 113, 0.8); 
+      transition: .5s ease;
+      opacity:0;
+      font-size: 20px;
+    }
+    
+    .container:hover .overlay {
+      opacity: 1;
+    }
+    
+
 @media (max-width: 1535px){
     header {
         padding: 15px 3%;
@@ -199,7 +257,7 @@ a:hover {
         height: auto;
     }
     #Texto h1 {
-        font-size: 75px;
+        font-size: 65px;
         margin: 0 0 30px
     }
 }
@@ -211,6 +269,18 @@ a:hover {
     #Texto {
         padding-top: 115px;
     }
+    #Texto p {
+        width: 300px;
+    }
+    #EfeitoEscrevendo2 {
+        width: 36ch;
+        animation: Escrever 2s steps(60), effect .5s step-end infinite alternate;
+        overflow: hidden;
+        border-right: 0px solid #3b4dc3;
+        font-family: monospace;
+        font-size: 2em;
+      }
+
     #ImagemCentral {
         text-align: center;
         width: 380px;
@@ -266,16 +336,21 @@ a:hover {
     #Texto h1 {
         font-size: 50px;
     }
+    img {
+        width: 55px;
+    }
+    .overlay {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 480px) {
-    html,body
-{
+    html,body {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: visible; 
 }
     #ImagemCentral {
         width: 380px;
@@ -289,9 +364,21 @@ a:hover {
         padding-top: 40px;
         margin-right: 0;
     }
+    #Texto a img {
+        width: 30px;
+    }
+    #DivImagem {
+        width: 300px;
+    }
     .Central {
         gap: 0rem;
         grid-template-columns: 0fr;
+    }
+    #EfeitoEscrevendo {
+        width: 22ch;
+    }
+    #EfeitoEscrevendo2 {
+        width: 19ch;
     }
 }
 
@@ -300,6 +387,9 @@ a:hover {
         width: 320px;
         height: auto;
     }
+    #Texto {
+        width: 300px;
+    }
     #Texto h1 {
         font-size: 38px;
     }
@@ -307,17 +397,36 @@ a:hover {
         font-size: 12px;
     }
     #EfeitoEscrevendo {
-        width: 13.6ch;
+        width: 14.5ch;
     }
 }
-@media (max-width: 920px) and (max-height: 400px){
+@media (max-width: 1100px) and (max-height: 550px){
+    #ImagemCentral {
+        width: 300px;
+        height: auto;
+    }
+    #Texto h1 {
+        font-size: 35px;
+    }
+    #Texto {
+        width: 300px;
+        padding-top: 0;
+    }
+    .Central {
+        padding: 0 12%;
+        align-items: center;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 920px) and (max-height: 420px){
     html,body
     {
         width: 100%;
         height: 100%;
         margin: 0px;
         padding: 0px;
-        overflow-x: hidden; 
     }
     #ImagemCentral {
         width: 320px;
@@ -339,7 +448,7 @@ a:hover {
     }
 }
 
-@media (max-width: 700px) and (max-height: 400px){
+@media (max-width: 700px) and (max-height: 420px){
     #ImagemCentral {
         width: 230px;
         height: auto;

@@ -14,6 +14,7 @@ window.sr =ScrollReveal ({
     reset: true,
 });
 
-sr.reveal('#Texto',{delay:200, origin:'top',}); 
-sr.reveal('#DivImagem',{delay:450, origin:'top'});
-sr.reveal('#SetaBaixo',{delay:800, origin:'right'});
+sr.reveal('#Texto',{delay:100, origin:'left',}); 
+sr.reveal('#DivImagem',{delay:350, origin:'top'});
+sr.reveal('#SetaBaixo',{delay:400, origin:'right'});
+sr.reveal('.Container',{delay:100, origin:'left',}); 
