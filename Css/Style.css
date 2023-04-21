@@ -538,14 +538,6 @@ a:hover {
         width: 300px;
         padding-top: 0;
     }
-    .Central {
-        padding: 0 12%;
-        align-items: center;
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
 }
 @media (max-width: 920px) and (max-height: 420px){
     html,body
