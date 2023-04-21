@@ -292,6 +292,9 @@ a:hover {
  #Texto2 a img {
         width: 30px;
     }
+    #Texto2 a{
+    background: rgb(171, 22, 22);
+    }
 
     .Projeto {
         width: 250px;
