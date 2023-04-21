@@ -93,7 +93,7 @@ a:hover {
 }
 
 #Texto h1, #Texto2 h1 {
-    font-size: 65px;
+    font-size: 60px;
     color: aqua;
     margin-bottom: 18px;
     font-family: cursive;
@@ -492,7 +492,7 @@ a:hover {
         width: 250px;
     }
     #Texto, #Texto2 {
-        width: 250px;
+        width: 350px;
     }
     .Projeto a {
         padding: 4px 11px;
