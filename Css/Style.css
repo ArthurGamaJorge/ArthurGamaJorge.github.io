@@ -146,7 +146,7 @@ a:hover {
 }
 
 #ImagemCentral {
-    width: 650px;
+    width: 600px;
     height: auto;
     opacity: 60%;
     transition: transform 1800ms ease-in-out;
