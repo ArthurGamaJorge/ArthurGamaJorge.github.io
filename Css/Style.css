@@ -97,18 +97,17 @@ a:hover {
 }
 
 #Texto p {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     color: aqua;
 }
   
   #EfeitoEscrevendo {
-    width: 21.8ch;
+    width: 18.3ch;
     animation: Escrever 2s steps(37), effect .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid aqua;
-    font-family: monospace;
     font-size: 2em;
   }
   
@@ -124,7 +123,7 @@ a:hover {
     }
   }
 
-#Texto a {
+#Texto a, .Projeto a {
     display: inline-block;
     color: white;
     background: rgb(58, 58, 58);
@@ -135,7 +134,7 @@ a:hover {
     transition: all .55s ease;
 }
 
-#Texto a:hover {
+#Texto a:hover, .Projeto a:hover {
     background: transparent;
     border: 1px solid white;
     transform: translateX(7px);
@@ -190,14 +189,74 @@ a:hover {
     background: linear-gradient(105deg, rgb(37, 1, 45) 0%, rgb(22, 5, 27) 40%, rgb(21, 1, 27) 30%);
 }
 
+.Portofolio{
+    background: linear-gradient(105deg, rgb(5, 4, 49) 0%, rgb(2, 1, 27) 40%, rgb(2, 1, 27) 30%);
+}
+
+.Contato {
+    background:  linear-gradient(105deg, rgb(107, 15, 15) 0%, rgb(56, 5, 5) 40%, rgb(56, 5, 5) 30%);
+}
+
+.ContainerPortofolio {
+    display: flex;
+    justify-content: center;
+}
+
+.Projeto {
+    background:rgb(3, 1, 67);
+    color: white;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    border: white 2px solid;
+    border-radius: 20px;
+    box-shadow: 10px 10px 75px rgb(39, 60, 200);
+}
+
+.Projeto a {
+    background: rgb(39, 60, 200);
+    margin-left: 5px;
+    text-align: center;
+}
+
+.Projeto img {
+    width: 40px;
+}
+
+.ImagemProjeto {
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+    height: 250px;
+}
+
+#Imagem1 {
+    background-image: url(../Images/HollowKnight.png);
+}
+
 #EfeitoEscrevendo2 {
-    width: 46ch;
+    width: 36.8ch;
     animation: Escrever 2s steps(128), effect .5s step-end infinite alternate;
     overflow: hidden;
     border-right: 3px solid #3b4dc3;
-    font-family: monospace;
     font-size: 2em;
   }
+
+  #EfeitoEscrevendo3 {
+    width: 14.8ch;
+    animation: Escrever 2s steps(128), effect .5s step-end infinite alternate;
+    overflow: hidden;
+    border-right: 3px solid #000000;
+    font-size: 2em;
+  }
+
+  #DivImagem {
+    padding: 0 12%;
+    align-items: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 
   #Texto h2 {
     font-size: 35px;
@@ -277,7 +336,6 @@ a:hover {
         animation: Escrever 2s steps(60), effect .5s step-end infinite alternate;
         overflow: hidden;
         border-right: 0px solid #3b4dc3;
-        font-family: monospace;
         font-size: 2em;
       }
 
@@ -339,8 +397,20 @@ a:hover {
     img {
         width: 55px;
     }
+    #EfeitoEscrevendo2 {
+        width: 400px;
+    }
     .overlay {
         font-size: 15px;
+    }
+    .Projeto a {
+        padding: 6px 15px;
+    }
+    .Projeto img {
+        width: 30px;
+    }
+    .Projeto {
+        width: 350px;
     }
 }
 
@@ -375,10 +445,16 @@ a:hover {
         grid-template-columns: 0fr;
     }
     #EfeitoEscrevendo {
-        width: 22ch;
+        width: 17.5ch;
     }
     #EfeitoEscrevendo2 {
-        width: 19ch;
+        width: 23ch;
+    }
+    .Projeto a {
+        padding: 6px 15px;
+    }
+    .Projeto img {
+        width: 30px;
     }
 }
 
@@ -398,6 +474,19 @@ a:hover {
     }
     #EfeitoEscrevendo {
         width: 14.5ch;
+    }
+    .Projeto {
+        width: 250px;
+    }
+    #Texto {
+        width: 250px;
+    }
+    .Projeto a {
+        padding: 4px 11px;
+        margin-top: 5px;
+    }
+    .Projeto img {
+        width: 20px;
     }
 }
 @media (max-width: 1100px) and (max-height: 550px){
