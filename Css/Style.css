@@ -77,7 +77,6 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 5rem;
 }
 
 #Texto {
@@ -147,7 +146,7 @@ a:hover {
 }
 
 #ImagemCentral {
-    width: 600px;
+    width: 550px;
     height: auto;
     opacity: 60%;
     transition: transform 1800ms ease-in-out;
@@ -313,7 +312,7 @@ a:hover {
 
 @media (max-width: 1340px) {
     #ImagemCentral {
-        width: 100%;
+        width: 550px;
         height: auto;
     }
     #Texto h1,  #Texto2 h1   {
@@ -562,9 +561,14 @@ a:hover {
         width: 30px;
     }
     #Texto a, #Texto2 a{
-        width: 300px;
+        padding: 0 12%;
         align-items: center;
         position: relative;
+    }
+    #Texto2 a{
+        width: 300px;
+    }
+    .Central {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
