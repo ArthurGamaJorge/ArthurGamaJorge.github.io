@@ -464,7 +464,7 @@ a:hover {
 
 @media (max-width: 400px) {
     #ImagemCentral {
-        width: 230px;
+        width: 210px;
         height: auto;
         left: 0;
         position: absolute;
@@ -528,7 +528,7 @@ a:hover {
 
 @media (max-width: 1100px) and (max-height: 550px){
     #ImagemCentral {
-        width: 300px;
+        width: 270px;
         height: auto;
     }
     #Texto h1, #Texto2 h1 {
@@ -545,6 +545,7 @@ a:hover {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 @media (max-width: 920px) and (max-height: 420px){
     html,body
