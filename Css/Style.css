@@ -186,14 +186,17 @@ a:hover {
 
 .SobreMim{
     background: linear-gradient(105deg, rgb(48, 20, 3) 0%, rgb(36, 15, 2) 40%, rgb(36, 15, 2) 30%);
+    height: 100vh;
 }
 
 .Habilidades{
     background: linear-gradient(105deg, rgb(37, 1, 45) 0%, rgb(22, 5, 27) 40%, rgb(21, 1, 27) 30%);
+    height: 100vh;
 }
 
 .Portifolio{
     background: linear-gradient(105deg, rgb(5, 4, 49) 0%, rgb(2, 1, 27) 40%, rgb(2, 1, 27) 30%);
+    height: 100vh;
 }
 
 .Contato {
