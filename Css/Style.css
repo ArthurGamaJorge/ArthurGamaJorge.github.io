@@ -142,7 +142,7 @@ a:hover {
 }
 
 #ImagemCentral {
-    width: 700px;
+    width: 650px;
     height: auto;
     opacity: 60%;
     transition: transform 1800ms ease-in-out;
@@ -246,7 +246,7 @@ a:hover {
     width: 14.8ch;
     animation: Escrever 2s steps(128), effect .5s step-end infinite alternate;
     overflow: hidden;
-    border-right: 3px solid #000000;
+    border-right: 3px solid white;
     font-size: 2em;
   }
 
@@ -388,7 +388,7 @@ a:hover {
 
 @media (max-width: 880px) {
     #ImagemCentral {
-        width: 420px;
+        width: 390px;
         height: auto;
     }
     #Texto h1 {
@@ -423,7 +423,7 @@ a:hover {
     overflow-x: visible; 
 }
     #ImagemCentral {
-        width: 380px;
+        width: 300px;
         height: auto;
     }
     #Texto h1{
@@ -460,20 +460,32 @@ a:hover {
 
 @media (max-width: 400px) {
     #ImagemCentral {
-        width: 320px;
+        width: 230px;
         height: auto;
+        left: 0;
+        position: absolute;
+        
     }
     #Texto {
-        width: 400px;
+        width: 200px;
+    }
+    #Texto p {
+        width: 200px;
     }
     #Texto h1 {
-        font-size: 38px;
+        font-size: 28px;
+    }
+    #Texto h2 {
+        font-size: 20px;
     }
     #Texto p {
         font-size: 12px;
     }
     #EfeitoEscrevendo {
         width: 14.5ch;
+    }
+    #EfeitoEscrevendo3 {
+        width: 10.5ch;
     }
     .Projeto {
         width: 250px;
@@ -485,10 +497,31 @@ a:hover {
         padding: 4px 11px;
         margin-top: 5px;
     }
+    .ContainerPortofolio {
+        justify-content: left;
+    }
     .Projeto img {
         width: 20px;
     }
+    img {
+        width: 35px;
+    }
 }
+
+@media (max-width: 1500px) and (min-height: 800px){
+    #ImagemCentral {
+        width: 500px;
+        height: auto;
+    }
+    #Texto h1 {
+        font-size: 42px;
+    }
+    #Texto {
+        width: 400px;
+        padding-top: 0;
+    }
+}
+
 @media (max-width: 1100px) and (max-height: 550px){
     #ImagemCentral {
         width: 300px;
@@ -518,7 +551,7 @@ a:hover {
         padding: 0px;
     }
     #ImagemCentral {
-        width: 320px;
+        width: 280px;
         height: auto;
     }
     #Texto h1 {
@@ -526,7 +559,13 @@ a:hover {
     }
     #Texto {
         padding-top: 0px;
-        width: 300px;
+        width: 250px;
+    }
+    #Texto img{
+        width: 30px;
+    }
+    #Texto a{
+        padding: 6px 10px;
     }
     .Central {
         padding: 0 12%;
@@ -539,14 +578,26 @@ a:hover {
 
 @media (max-width: 700px) and (max-height: 420px){
     #ImagemCentral {
-        width: 230px;
+        width: 200px;
         height: auto;
     }
     #Texto h1 {
         font-size: 35px;
     }
+    #Texto h2 {
+        font-size: 25px;
+    }
+    img {
+        width: 25px;
+    }
     #Texto {
-        width: 300px;
+        width: 220px;
+    }
+    #Texto p {
+        font-size: 13px;
+    }
+    #EfeitoEscrevendo {
+        width: 14.3ch;
     }
     .Central {
         gap: 0;
