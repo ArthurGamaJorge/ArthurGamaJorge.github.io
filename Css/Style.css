@@ -312,7 +312,7 @@ a:hover {
 
 @media (max-width: 1340px) {
     #ImagemCentral {
-        width: 550px;
+        width: 510px;
         height: auto;
     }
     #Texto h1,  #Texto2 h1   {
@@ -345,8 +345,8 @@ a:hover {
         height: auto;
     }
     .Central {
-        gap: 1rem;
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
     #SetaBaixo {
         display: none;
