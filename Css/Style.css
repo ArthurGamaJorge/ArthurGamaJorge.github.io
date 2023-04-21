@@ -512,7 +512,7 @@ a:hover {
     }
 }
 
-@media (max-width: 1500px) and (min-height: 800px){
+@media (min-width: 1200px) and (min-height: 800px){
     #ImagemCentral {
         width: 500px;
         height: auto;
