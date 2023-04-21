@@ -85,19 +85,23 @@ a:hover {
     width: 390px;
 }
 
+#Texto2 {
+    width: 390px;
+}
+
 #DivImagem {
     visibility: hidden;
 }
 
-#Texto h1 {
+#Texto h1, #Texto2 h1 {
     font-size: 65px;
     color: aqua;
     margin-bottom: 18px;
     font-family: cursive;
 }
 
-#Texto p {
-    font-size: 17px;
+#Texto p, #Texto2 p {
+    font-size: 16px;
     font-weight: 600;
     color: aqua;
 }
@@ -315,7 +319,7 @@ a:hover {
         width: 100%;
         height: auto;
     }
-    #Texto h1 {
+    #Texto h1,  #Texto2 h1   {
         font-size: 65px;
         margin: 0 0 30px
     }
@@ -325,10 +329,10 @@ a:hover {
     section {
         padding: 0 3%;
     }
-    #Texto {
+    #Texto, #Texto2 {
         padding-top: 115px;
     }
-    #Texto p {
+    #Texto p, #Texto2 p {
         width: 300px;
     }
     #EfeitoEscrevendo2 {
@@ -391,7 +395,7 @@ a:hover {
         width: 390px;
         height: auto;
     }
-    #Texto h1 {
+    #Texto h1, #Texto2 h1 {
         font-size: 50px;
     }
     img {
@@ -426,10 +430,10 @@ a:hover {
         width: 300px;
         height: auto;
     }
-    #Texto h1{
+    #Texto h1, #Texto2 h1{
         font-size: 40px;
     }
-    #Texto {
+    #Texto, #Texto2 {
         margin: 0;
         padding-top: 40px;
         margin-right: 0;
@@ -466,19 +470,19 @@ a:hover {
         position: absolute;
         
     }
-    #Texto {
+    #Texto, #Texto2 {
         width: 200px;
     }
-    #Texto p {
+    #Texto p, #Texto2 p {
         width: 200px;
     }
-    #Texto h1 {
+    #Texto h1, #Texto2 h1 {
         font-size: 28px;
     }
     #Texto h2 {
         font-size: 20px;
     }
-    #Texto p {
+    #Texto p, #Texto2 p {
         font-size: 12px;
     }
     #EfeitoEscrevendo {
@@ -490,7 +494,7 @@ a:hover {
     .Projeto {
         width: 250px;
     }
-    #Texto {
+    #Texto, #Texto2 {
         width: 250px;
     }
     .Projeto a {
@@ -513,10 +517,10 @@ a:hover {
         width: 500px;
         height: auto;
     }
-    #Texto h1 {
+    #Texto h1, #Texto2 h1 {
         font-size: 42px;
     }
-    #Texto {
+    #Texto, #Texto2 {
         width: 400px;
         padding-top: 0;
     }
@@ -527,10 +531,10 @@ a:hover {
         width: 300px;
         height: auto;
     }
-    #Texto h1 {
+    #Texto h1, #Texto2 h1 {
         font-size: 35px;
     }
-    #Texto {
+    #Texto, #Texto2 {
         width: 300px;
         padding-top: 0;
     }
@@ -554,10 +558,10 @@ a:hover {
         width: 280px;
         height: auto;
     }
-    #Texto h1 {
+    #Texto h1, #Texto2 h1 {
         font-size: 40px;
     }
-    #Texto {
+    #Texto, #Texto2 {
         padding-top: 0px;
         width: 250px;
     }
@@ -581,7 +585,7 @@ a:hover {
         width: 200px;
         height: auto;
     }
-    #Texto h1 {
+    #Texto h1, #Texto2 h1 {
         font-size: 35px;
     }
     #Texto h2 {
@@ -590,10 +594,10 @@ a:hover {
     img {
         width: 25px;
     }
-    #Texto {
+    #Texto, #Texto2 {
         width: 220px;
     }
-    #Texto p {
+    #Texto p, #Texto2 p {
         font-size: 13px;
     }
     #EfeitoEscrevendo {
