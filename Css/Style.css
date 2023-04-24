@@ -185,7 +185,7 @@ a:hover {
 /* Próximas seções */
 
 .SobreMim{
-    background: linear-gradient(105deg, rgb(48, 20, 3) 0%, rgb(36, 15, 2) 40%, rgb(36, 15, 2) 30%);
+    background: linear-gradient(105deg, rgb(5, 4, 49) 0%, rgb(2, 1, 27) 40%, rgb(2, 1, 27) 30%);
     height: 100vh;
 }
 
@@ -195,15 +195,15 @@ a:hover {
 }
 
 .Portifolio{
-    background: linear-gradient(105deg, rgb(5, 4, 49) 0%, rgb(2, 1, 27) 40%, rgb(2, 1, 27) 30%);
+    background: linear-gradient(105deg, rgb(48, 20, 3) 0%, rgb(36, 15, 2) 40%, rgb(36, 15, 2) 30%);
     height: 100vh;
 }
 
 .Contato {
-    background:  linear-gradient(105deg, rgb(46, 5, 5) 0%, rgb(32, 3, 3) 40%, rgb(32, 3, 3) 30%);
+    background:  linear-gradient(105deg, rgb(67, 8, 8) 0%, rgb(52, 5, 5) 40%, rgb(52, 5, 5) 30%);
 }
 
-.ContainerPortofolio {
+.ContainerPortifolio {
     display: flex;
     justify-content: center;
 }
@@ -211,12 +211,16 @@ a:hover {
 .Projeto {
     background:rgb(3, 1, 67);
     color: white;
-    width: 500px;
-    height: 400px;
+    width: 290px;
+    height: 430px;
     text-align: center;
     border: white 2px solid;
     border-radius: 20px;
-    box-shadow: 10px 10px 75px rgb(39, 60, 200);
+    box-shadow: 10px 10px 35px rgb(39, 60, 200);
+    margin: 0 30px;
+}
+.Projeto h1 {
+    font-size: 22px;
 }
 
 .Projeto a {
@@ -240,13 +244,9 @@ a:hover {
     background-image: url(../Images/HollowKnight.png);
 }
 
-#EfeitoEscrevendo2 {
-    width: 36.8ch;
-    animation: Escrever 2s steps(128), effect .5s step-end infinite alternate;
-    overflow: hidden;
-    border-right: 3px solid #3b4dc3;
-    font-size: 2em;
-  }
+#Imagem2 {
+    background-image: url(../Images/Cadastro\ Alunos.png);
+}
 
   #DivImagem {
     padding: 0 12%;
@@ -291,6 +291,10 @@ a:hover {
     .container:hover .overlay {
       opacity: 1;
     }
+        
+    .ImagemProjeto:hover .overlay {
+        opacity: 1;
+      }
 
  #Texto2 a img {
         width: 30px;
@@ -299,18 +303,12 @@ a:hover {
     background: rgb(171, 22, 22);
     }
 
-    .Projeto {
-        width: 250px;
-    }
     #Texto, #Texto2 {
         width: 350px;
     }
     .Projeto a {
         padding: 4px 11px;
         margin-top: 5px;
-    }
-    .ContainerPortofolio {
-        justify-content: left;
     }
     .Projeto img {
         width: 20px;
@@ -356,13 +354,6 @@ a:hover {
     #Texto p, #Texto2 p {
         width: 300px;
     }
-    #EfeitoEscrevendo2 {
-        width: 36ch;
-        animation: Escrever 2s steps(60), effect .5s step-end infinite alternate;
-        overflow: hidden;
-        border-right: 0px solid #3b4dc3;
-        font-size: 2em;
-      }
 
     #ImagemCentral {
         text-align: center;
@@ -422,9 +413,6 @@ a:hover {
     img {
         width: 55px;
     }
-    #EfeitoEscrevendo2 {
-        width: 400px;
-    }
     .overlay {
         font-size: 15px;
     }
@@ -436,6 +424,24 @@ a:hover {
     }
     .Projeto {
         width: 350px;
+    }
+    .Portifolio #Texto {
+        height: 80px;
+    }
+    .ContainerPortifolio {
+        display: block;
+        justify-content: center;
+    }
+    .Projeto {
+        width: 270px;
+        height: 350px;
+        margin-top: 15px;
+    }
+    .ImagemProjeto {
+        height: 190px;
+    }
+    .Projeto p {
+        font-size: 12px;
     }
 }
 
@@ -463,7 +469,7 @@ a:hover {
         width: 30px;
     }
     #DivImagem {
-        width: 300px;
+        width: 100px;
     }
     .Central {
         gap: 0rem;
@@ -472,14 +478,14 @@ a:hover {
     #EfeitoEscrevendo {
         width: 17.5ch;
     }
-    #EfeitoEscrevendo2 {
-        width: 23ch;
-    }
     .Projeto a {
-        padding: 6px 15px;
+        padding: 4px 10px;
     }
     .Projeto img {
-        width: 30px;
+        width: 20px;
+    }
+    .ImagemProjeto {
+        height: 150px;
     }
 }
 
@@ -509,11 +515,36 @@ a:hover {
     #EfeitoEscrevendo {
         width: 14.5ch;
     }
-    #EfeitoEscrevendo2 {
-        width: 14.5ch;
-    }
     img {
         width: 35px;
+    }
+    .Projeto {
+        width: 50px;
+    }
+    .Projeto a {
+        padding: 4px 10px;
+        font-size: 10px;
+        padding-top: 2px;
+    }
+    .Projeto img {
+        width: 15px;
+    }
+    .Projeto h1{
+        font-size: 15px;
+    }
+    .Projeto {
+        width: 190px;
+        height: 260px;
+        margin-top: 15px;
+    }
+    .ImagemProjeto {
+        height: 140px;
+    }
+    #Texto2 a {
+        width: 250px;
+    }
+    .overlay {
+        width: 1px;
     }
     }
 
