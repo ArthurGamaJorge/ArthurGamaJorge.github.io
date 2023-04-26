@@ -261,7 +261,6 @@ a:hover {
       position: relative;
       max-width: 300px;
       margin: auto;
-      color: white
       
     }
     
@@ -280,6 +279,7 @@ a:hover {
       transition: .5s ease;
       opacity:0;
       font-size: 20px;
+      color: white
     }
     
     .container:hover .overlay {
