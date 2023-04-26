@@ -79,9 +79,13 @@ a:hover {
     align-items: center;
 }
 
-#Texto, #Texto2 {
+#Texto {
     width: 450px;
     visibility: hidden;
+}
+
+#Texto2 {
+    width: 450px;
 }
 
 .ContainerPortifolio, #DivImagem, #Corvo, #ContainerGeral{
@@ -498,7 +502,7 @@ a:hover {
         width: 14.5ch;
     }
     img {
-        width: 34px;
+        width: 40px;
     }
     .Projeto {
         width: 50px;
@@ -523,11 +527,20 @@ a:hover {
         height: 120px;
     }
     #Texto2 a {
-        width: 250px;
+        width: 300px;
     }
     .overlay {
         font-size: 10px;
     }
+    }
+
+    @media (max-width: 300px) {
+        #Texto2 a {
+            width: 260px;
+        }
+        img {
+            width: 34px;
+        }
     }
 
 

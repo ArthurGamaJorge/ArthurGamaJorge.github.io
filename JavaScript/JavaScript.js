@@ -15,8 +15,13 @@ window.sr =ScrollReveal ({
 });
 
 sr.reveal('#Texto',{delay:50, origin:'left',}); 
-sr.reveal('#Texto2',{delay:50, origin:'left',}); 
 sr.reveal('#Corvo',{delay:50, origin:'right'});
+
+var tamanho = window.matchMedia("(max-width: 500px)")
+if (tamanho.matches) {
+    sr.reveal('#Corvo',{delay:50, origin:'left'});
+}
+
 sr.reveal('#DivImagem',{delay:50, origin:'left'});
 sr.reveal('#SetaBaixo',{delay:50, origin:'right'});
 sr.reveal('.Container',{delay:50, origin:'left',}); 
