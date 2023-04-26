@@ -6,6 +6,7 @@
     font-family: 'Times New Roman', Times, serif;
     list-style: none;
     text-decoration: none;
+    color: aqua
 }
 
 html, body {
@@ -60,7 +61,6 @@ a:hover {
 }
 
 #IconeMenu {
-    color: aqua;
     width: 50px;
     height: auto;
     z-index: 10001;
@@ -79,29 +79,23 @@ a:hover {
     align-items: center;
 }
 
-#Texto {
+#Texto, #Texto2 {
+    width: 450px;
     visibility: hidden;
-    width: 390px;
 }
 
-#Texto2 {
-    width: 390px;
-}
-
-#DivImagem {
+.ContainerPortifolio, #DivImagem, #Corvo, #ContainerGeral{
     visibility: hidden;
 }
 
 #Texto h1, #Texto2 h1 {
     font-size: 60px;
-    color: aqua;
     margin-bottom: 18px;
 }
 
 #Texto p, #Texto2 p {
     font-size: 16px;
     font-weight: 600;
-    color: aqua;
 }
   
   #EfeitoEscrevendo {
@@ -186,17 +180,14 @@ a:hover {
 
 .SobreMim{
     background: linear-gradient(105deg, rgb(5, 4, 49) 0%, rgb(2, 1, 27) 40%, rgb(2, 1, 27) 30%);
-    height: 100vh;
 }
 
 .Habilidades{
     background: linear-gradient(105deg, rgb(37, 1, 45) 0%, rgb(22, 5, 27) 40%, rgb(21, 1, 27) 30%);
-    height: 100vh;
 }
 
 .Portifolio{
-    background: linear-gradient(105deg, rgb(48, 20, 3) 0%, rgb(36, 15, 2) 40%, rgb(36, 15, 2) 30%);
-    height: 100vh;
+    background: linear-gradient(105deg, rgb(68, 29, 4) 0%, rgb(51, 21, 3) 40%, rgb(51, 21, 3) 30%);
 }
 
 .Contato {
@@ -248,8 +239,7 @@ a:hover {
     background-image: url(../Images/Cadastro\ Alunos.png);
 }
 
-  #DivImagem {
-    padding: 0 12%;
+  #DivImagem, #Corvo {
     align-items: center;
     position: relative;
     display: grid;
@@ -303,9 +293,6 @@ a:hover {
     background: rgb(171, 22, 22);
     }
 
-    #Texto, #Texto2 {
-        width: 350px;
-    }
     .Projeto a {
         padding: 4px 11px;
         margin-top: 5px;
@@ -313,7 +300,7 @@ a:hover {
     .Projeto img {
         width: 20px;
     }
-    #DivImagem {
+    #DivImagem, #Corvo {
         width: 200px;
     }
     
@@ -411,7 +398,7 @@ a:hover {
         font-size: 50px;
     }
     img {
-        width: 55px;
+        width: 50px;
     }
     .overlay {
         font-size: 15px;
@@ -446,13 +433,7 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-    html,body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: visible; 
-}
+
     #ImagemCentral {
         width: 300px;
         height: auto;
@@ -464,11 +445,12 @@ a:hover {
         margin: 0;
         padding-top: 40px;
         margin-right: 0;
+        width: 380px;
     }
     #Texto a img,  #Texto2 a img {
         width: 30px;
     }
-    #DivImagem {
+    #DivImagem, #Corvo {
         width: 100px;
     }
     .Central {
@@ -516,7 +498,7 @@ a:hover {
         width: 14.5ch;
     }
     img {
-        width: 35px;
+        width: 34px;
     }
     .Projeto {
         width: 50px;
@@ -544,12 +526,12 @@ a:hover {
         width: 250px;
     }
     .overlay {
-        width: 1px;
+        font-size: 10px;
     }
     }
 
 
-@media (min-width: 1200px) and (min-height: 800px){
+@media (min-width: 1200px) and (max-height: 800px){
     #ImagemCentral {
         width: 500px;
         height: auto;
@@ -577,13 +559,6 @@ a:hover {
     }
 }
 @media (max-width: 920px) and (max-height: 420px){
-    html,body
-    {
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-        padding: 0px;
-    }
     #ImagemCentral {
         width: 280px;
         height: auto;
@@ -599,7 +574,7 @@ a:hover {
         width: 30px;
     }
     #Texto a, #Texto2 a{
-        padding: 0 12%;
+        padding: 3% 12%;
         align-items: center;
         position: relative;
     }
