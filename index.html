@@ -10,10 +10,11 @@
     <header>
       <a href="#" class="Principal">Home</a>
       <ul class="ListaVertical">
-        <li><a href="Sobre mim">Sobre mim</a></li>
-        <li><a href="Habilidades">Habilidades</a></li>
-        <li><a href="Portofólio">Portofólio</a></li>
-        <li><a href="Contato">Contato</a></li>
+        <li><a href="#SobreMim">Sobre mim</a></li>
+        <li><a href="#Habilidades">Habilidades</a></li>
+        <li><a href="#Portifolio">Portifólio</a></li>
+        <li><a href="#Contato">Contato</a></li>
+        <li><button onclick = "MudarTema()" id = "button"> Mudar tema</button></li>
       </ul>
 
       <div class="Bx bx-menu" id="IconeMenu">
@@ -26,7 +27,7 @@
         <h1>Arthur Gama Jorge</h1>
         <div id="Escrever">
         <div id="EfeitoEscrevendo">
-        <p>Meu portofólio pessoal de programador</p>
+        <p>Meu portifólio pessoal de programador</p>
         </div>
         </div>
         <br />
@@ -35,7 +36,7 @@
         >
       </div>
 
-      <div id="DivImagem">
+      <div id="Corvo">
         <img src="./Images/Icone.png" usemap="#image-map" id="ImagemCentral">
 
         <map name="image-map">
@@ -49,14 +50,140 @@
     </section>
 
     <div id="SetaBaixo">
-      <a href="#" id="Seta"> <img src="./Images/Seta.png" /> </a>
+      <a href="#SobreMim" id="Seta"> <img src="./Images/Seta.png" /> </a>
     </div>
 
+    
+    <section class="SobreMim" id="SobreMim">
+      <br>
+      <div id="Texto" >
+        <h1>Sobre mim</h1>
+        <br><br>
+        <div id="Escrever">
+        <p>Programador full-stack com experiência básica de 1 ano </p>
+        <p> Estudante no 1o semestre de informática do Colégio Técnico de Campinas - Unicamp  </p> 
+      </div> <br>
+        </div>
+        </div>
+        </div>
+        <br /> <br><br><br>
 
+      <div id="DivImagem">
+        <img src="./Images/Programador.png" id="ImagemCentral" style="filter: drop-shadow(10px 10px 15px #3b4dc3)">
+      </div>
 
+      <br><br><br><br><br><br>
+
+    </section>
+    
+    <section class="Habilidades" id="Habilidades">
+      <br>
+      <div id="Texto" >
+        <h1>Habilidades</h1>
+        <div id="Escrever">
+        <div>
+      </div> <br>
+        <h2>Experiência em:</h2>
+      </div>
+        </div>
+        </div>
+    <div id="ContainerGeral">
+
+      <div class="container">
+        <img width="84" alt="js-icon"  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+          <div class="overlay">JavaScript</div>
+      </div>
+
+      <div class="container">
+        <img width="84" alt="html-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+          <div class="overlay">HTML</div>
+      </div>
+
+      <div class="container">
+        <img width="84" alt="css-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+          <div class="overlay">CSS</div>
+      </div>
+
+      <div class="container">
+        <img width="84" alt="python-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+          <div class="overlay">Python</div>
+      </div>
+
+      <div class="container">
+        <img width="84" alt="microsoftsqlserver-icon" src="https://img.icons8.com/color/512/microsoft-sql-server.png">
+          <div class="overlay">MSSQL</div>
+      </div>
+  </div>
+
+        </div>
+        <br /><br><br><br>
+
+      <div id="DivImagem">
+        <img src="./Images/coding.gif" id="ImagemCentral" style="filter: drop-shadow(10px 10px 15px #e53f71)">
+      </div>
+
+      <br><br><br><br><br><br>
+
+    </section>
+
+    <section class="Portifolio" id="Portifolio">
+      <br>
+      <div id="Texto" >
+        <h1>Portifólio</h1>
+        <br><br>
+      </div>
+
+<div class="ContainerPortifolio">
+
+        <div class="Projeto">
+            <div class="ImagemProjeto" id="Imagem1"></div>
+            <h1>Hollow Knight Guia</h1>
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> <br>
+            <a href="https://arthurgamajorge.github.io/Hollow-Knight-Guia/" target="_blank">
+              <img src="./Images/IconeHollow.png" /> VER SITE
+            <a href="https://github.com/ArthurGamaJorge/Hollow-Knight-Guia" target="_blank">
+              <img src="./Images/Github logo.png" /> VER NO GITHUB</a>
+            <p>27/03/2023</p>
+            </div>
+
+  
+        <div class="Projeto">
+          <div class="ImagemProjeto" id="Imagem2"></div>
+          <h1>Cadastro e Estatísticas Alunos</h1>
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"> <br>
+          <a href="https://github.com/ArthurGamaJorge/Cadastro-e-Estatisticas-Alunos" target="_blank">
+            <img src="./Images/Github logo.png" /> VER NO GITHUB</a
+          >
+          <p>24/04/2023</p>
+        </div>
+
+</div>
+
+      <br><br><br><br><br><br>
+    </section>
+
+    <section class="Contato" id="Contato">
+      <br>
+      <div id="Texto2" >
+        <h1>Contato</h1>
+
+        <a href="mailto: arthurgamajorgetec@gmail.com" target="_blank">
+          <img src="./Images/Gmail.png" /> arthurgamajorgetec@gmail.com</a>
+          
+          <a href="https://discordapp.com/users/659238913227096085" target="_blank">
+            <img src="./Images/Discord.png" /> Ronin_Kanmuri#5566</a>
+            
+  </div> <br>
+        </div>
+        </div>
+
+      
+    </section>
+    
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="./JavaScript/JavaScript.js"></script>
-
   </body>
 </html>
