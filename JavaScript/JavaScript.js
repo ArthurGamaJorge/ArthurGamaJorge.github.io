@@ -42,6 +42,6 @@ function MudarTema() {
     } else {
        button.innerHTML = "Tema Claro"
        Corvo.src = "./Images/IconeLight.png"
-       Corvo.style="filter: drop-shadow(10px 10px 15px rgb(109, 109, 219)"
+       Corvo.style="filter: drop-shadow(10px 10px 15px black"
     }
  }
