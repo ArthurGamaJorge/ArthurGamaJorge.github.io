@@ -24,7 +24,6 @@ if (tamanho.matches) {
 sr.reveal("#DivImagem", { delay: 50, origin: "left" });
 sr.reveal("#SetaBaixo", { delay: 50, origin: "right" });
 sr.reveal(".Container", { delay: 50, origin: "left" });
-sr.reveal(".Projeto", { delay: 50, origin: "left" });
 sr.reveal(".ContainerPortifolio", { delay: 50, origin: "bottom" });
 
 function MudarTema() {
