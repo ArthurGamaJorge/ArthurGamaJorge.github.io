@@ -1,0 +1,95 @@
+ .Light-theme {
+    background: linear-gradient(0.25turn, rgb(170, 170, 170), rgb(220, 220, 220));
+    color: black;
+    cursor: url("../Images/CursorClaro.png"), auto;
+  }
+
+  .Light-theme #ImagemCentral {
+    filter: drop-shadow(10px 10px 10px crimson)
+  }
+  
+  .Light-theme a:hover, .Light-theme button {
+    cursor: url("../Images/CursorClaroPointer.png"), pointer;
+  }
+  
+  .Light-theme .ListaVertical a,
+  .Light-theme button,
+  .Light-theme .Principal,
+  .Light-theme a {
+    color: white;
+  }
+  
+  .Light-theme #EfeitoEscrevendo {
+    color: black;
+  }
+  
+  .Light-theme section {
+    border: 0.1px solid crimson;
+  }
+  
+  .Light-theme #Texto a,
+  .Light-theme #Seta {
+    background-color: crimson;
+  }
+  
+  .Light-theme .Portifolio,
+  .Light-theme .SobreMim {
+    background-color: rgb(255, 255, 255, 0.59);
+    color: black;
+  }
+  
+  .Light-theme .Habilidades {
+    background: linear-gradient(0.25turn, rgb(170, 170, 170), rgb(220, 220, 220));
+    color: black;
+  }
+  
+  .Light-theme header {
+    background-color: rgb(220, 20, 60, 0.2);
+    border: solid 1.5px crimson;
+  }
+  
+  .Light-theme .ListaVertical a:hover,
+  .Light-theme button:hover {
+    border-bottom: 2px solid crimson;
+    background-color: rgb(220, 20, 60, 0.3);
+  }
+  
+  .Light-theme #EfeitoEscrevendo {
+    border-right: 3px solid black;
+  }
+  
+  .Light-theme #ImagemCentral {
+    opacity: 1;
+  } 
+  
+  .Light-theme::-webkit-scrollbar-thumb, .Light-theme ::-webkit-scrollbar-thumb {
+    background-color: rgb(164, 8, 40);
+    border: 1px solid white;
+  }
+  
+  .Light-theme .ListaVertical.open {
+    background: rgb(164, 8, 40);
+    filter: drop-shadow(5px 5px 10px white);
+    border: 2px solid white
+  }
+
+  .Light-theme .Projeto {
+    background: rgb(152, 11, 39);
+    filter:  drop-shadow(10px 10px 8px crimson);
+  }
+  
+  .Light-theme .Projeto:hover {
+    filter:  drop-shadow(15px 15px 12px crimson);
+  }
+  
+  .Light-theme .Projeto:active{
+    filter:  drop-shadow(5px 5px 4px crimson);
+  }
+  
+  .Light-theme .Projeto a {
+    background: rgb(229, 33, 72);
+  }
+
+  .Light-theme .Projeto a:hover {
+    background: rgb(178, 13, 46);
+  }

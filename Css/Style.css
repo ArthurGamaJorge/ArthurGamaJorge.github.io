@@ -167,11 +167,12 @@ button:hover {
   opacity: 60%;
   transition: transform 1800ms ease-in-out;
   transition-delay: 0.1s;
-  filter: drop-shadow(10px 10px 15px aqua);
+  filter: drop-shadow(10px 10px 10px aqua);
 }
 
 #ImagemCentral:hover {
   transform: translatex(20px) translatey(-10px) rotate(2.5deg);
+  filter: drop-shadow(11px 11px 11px)
 }
 
 #SetaBaixo {
@@ -216,71 +217,6 @@ button:hover {
   color: white;
 }
 
-.Light-theme {
-  background: linear-gradient(0.25turn, rgb(170, 170, 170), rgb(220, 220, 220));
-  color: black;
-  cursor: url("../Images/CursorClaro.png"), auto;
-}
-
-.Light-theme a:hover, .Light-theme button {
-  cursor: url("../Images/CursorClaroPointer.png"), pointer;
-}
-
-.Light-theme .ListaVertical a,
-.Light-theme button,
-.Light-theme .Principal {
-  color: rgb(51, 51, 183);
-}
-
-.Light-theme #EfeitoEscrevendo {
-  color: black;
-}
-
-.Light-theme section {
-  border: 0.1px solid rgb(51, 51, 183);
-}
-
-.Light-theme #Texto a,
-.Light-theme #Seta {
-  color: black;
-  background-color: #6262a4;
-}
-
-.Light-theme .Portifolio,
-.Light-theme .SobreMim {
-  background-color: rgb(255, 255, 255, 0.59);
-  color: black;
-}
-
-.Light-theme .Habilidades {
-  background: linear-gradient(0.25turn, rgb(170, 170, 170), rgb(220, 220, 220));
-  color: black;
-}
-
-.Light-theme header {
-  background-color: rgba(61, 61, 190, 0.2);
-  border: solid 1.5px rgb(125, 125, 214);
-}
-
-.Light-theme .ListaVertical a:hover,
-.Light-theme button:hover {
-  border-bottom: 2px solid rgb(51, 51, 183);
-  background-color: rgb(255, 255, 255, 0.3);
-}
-
-.Light-theme #EfeitoEscrevendo {
-  border-right: 3px solid black;
-}
-
-.Light-theme #ImagemCentral {
-  opacity: 1;
-}
-
-.Light-theme .ListaVertical.open {
-  border: solid 2px rgb(109, 109, 219);
-  filter: drop-shadow(5px 5px 10px rgb(51, 51, 183));
-}
-
 ::-webkit-scrollbar {
   width: 20px;
 }
@@ -296,16 +232,12 @@ button:hover {
   border-radius: 10px;
 }
 
-.Light-theme::-webkit-scrollbar-thumb, .Light-theme ::-webkit-scrollbar-thumb {
-  background-color: #6262a4;
-}
-
 .ContainerPortifolio {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  margin-top: 60px;
+  padding-top: 10px;
 }
 
 .Projeto {
@@ -316,11 +248,22 @@ button:hover {
   text-align: center;
   border: white 2px solid;
   border-radius: 20px;
-  box-shadow: 10px 10px 35px rgb(39, 60, 200);
+  filter:  drop-shadow(10px 10px 8px rgb(39, 60, 200));
   margin: 0 30px;
   flex-direction: column;
   flex-shrink: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.Projeto:hover {
+  scale: 1.03;
+  filter:  drop-shadow(15px 15px 12px rgb(39, 60, 200));
+}
+
+.Projeto:active{
+  scale: 0.98;
+  filter:  drop-shadow(5px 5px 4px rgb(39, 60, 200));
 }
 
 .Projeto h1 {
@@ -488,7 +431,7 @@ button:hover {
     padding: 50px 20px;
     flex-direction: column;
     align-items: center;
-    background: rgb(58, 58, 58);
+    background: rgb(73, 73, 73);
     transition: all 0.55s ease;
   }
   .ListaVertical a,

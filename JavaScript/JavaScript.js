@@ -36,11 +36,9 @@ function MudarTema() {
     if (button.innerHTML == "Tema Claro") {
        button.innerHTML = "Tema Escuro";
        Corvo.src = "./Images/Icone.png"
-       Corvo.style="filter: drop-shadow(10px 10px 15px aqua)"
        
     } else {
        button.innerHTML = "Tema Claro"
        Corvo.src = "./Images/IconeLight.png"
-       Corvo.style="filter: drop-shadow(10px 10px 15px black"
     }
  }
