@@ -34,7 +34,7 @@ Section {
   border: 0.1px solid rgb(255, 255, 255, 0.1);
 }
 
-a:hover, button {
+a:hover, button, .Projeto {
   cursor: url("../Images/CursorPointer.png"), pointer;
 }
 

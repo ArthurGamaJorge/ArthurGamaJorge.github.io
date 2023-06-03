@@ -5,10 +5,10 @@
   }
 
   .Light-theme #ImagemCentral {
-    filter: drop-shadow(10px 10px 10px crimson)
+    filter: drop-shadow(10px 10px 10px white)
   }
   
-  .Light-theme a:hover, .Light-theme button {
+  .Light-theme a:hover, .Light-theme button, .Light-theme .Projeto {
     cursor: url("../Images/CursorClaroPointer.png"), pointer;
   }
   
