@@ -24,7 +24,31 @@ if (tamanho.matches) {
 sr.reveal("#DivImagem", { delay: 50, origin: "left" });
 sr.reveal("#SetaBaixo", { delay: 50, origin: "right" });
 sr.reveal(".Container", { delay: 50, origin: "left" });
-sr.reveal(".ContainerPortifolio", { delay: 50, origin: "bottom" });
+sr.reveal("#Botoes", { delay: 50, origin: "left" });
+sr.reveal(".Web", { delay: 50, origin: "bottom" });
+
+Python = document.querySelector('.ContainerPortifolio.Python')
+Web = document.querySelector('.ContainerPortifolio.Web')
+BtnPy = document.querySelector('#BtnPy')
+BtnWeb = document.querySelector('#BtnWeb')
+
+function RevelarPython(){
+  Python.style="display:flex"
+  BtnPy.style="border: 2px solid white; scale:1.2"
+
+  BtnWeb.style = "scale:0.94; border:none"
+  Web.style="display:none"
+  PythonAtivado = true
+}
+
+function RevelarWeb(){
+  Web.style="display:flex"
+  BtnWeb.style="border: 2px solid white; scale:1.2"
+
+  BtnPy.style="border: none; scale:0.94"
+  Python.style="display:none"
+  WebAtivado = true
+}
 
 function MudarTema() {
   var Corvo = document.getElementById('ImagemCentral')

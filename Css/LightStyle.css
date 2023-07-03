@@ -93,3 +93,8 @@
   .Light-theme .Projeto a:hover {
     background: rgb(178, 13, 46);
   }
+
+  .Light-theme .BotaoPortifolio, .Light-theme #BtnWeb {
+    background-color: crimson;
+  }
+  

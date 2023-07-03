@@ -61,7 +61,7 @@ button {
 }
 
 .ListaVertical a:hover,
-button:hover {
+.ListaVertical button:hover {
   border-bottom: 2px solid white;
   background-color: rgba(66, 62, 62, 0.8);
 }
@@ -99,7 +99,6 @@ button:hover {
   width: 450px;
 }
 
-.ContainerPortifolio,
 #DivImagem,
 #Corvo,
 #ContainerGeral {
@@ -280,23 +279,53 @@ button:hover {
   width: 40px;
 }
 
+.ContainerPortifolio.Python {
+  display: none;
+}
+
+#Imagem1 {
+  background-image: url("../Images/HollowKnight.png");
+}
+
+#Imagem2 {
+  background-image: url("../Images/Cadastro\ Alunos.png");
+}
+
+#Imagem3 {
+  background-image: url("../Images/Formulario.png");
+}
+
+#Imagem4 {
+  background-image: url("../Images/AgendamentoMonitoria.png");
+}
+
+.BotaoPortifolio {
+  height: 40px;
+  width: 90px;
+  border-radius: 20px;
+  background-color: rgb(39, 60, 200);
+  margin-left: 10px;
+  border:none
+}
+
+.BotaoPortifolio:hover{
+  scale:1.08;
+}
+
+.BotaoPortifolio:active{
+  scale:0.92;
+}
+
+#BtnWeb  {
+  border: 2px solid white; 
+  scale:1.2
+}
+
 .ImagemProjeto {
   background-size: cover;
   background-position: center center;
   border-radius: 20px;
   height: 250px;
-}
-
-#Imagem1 {
-  background-image: url(../Images/HollowKnight.png);
-}
-
-#Imagem2 {
-  background-image: url(../Images/Cadastro\ Alunos.png);
-}
-
-#Imagem3 {
-  background-image: url(../Images/Formulario.png);
 }
 
 #DivImagem,
@@ -435,7 +464,7 @@ button:hover {
     transition: all 0.55s ease;
   }
   .ListaVertical a,
-  button {
+  .ListaVertical button {
     margin-left: 0;
     display: block;
     margin: 5px 0;
@@ -490,6 +519,12 @@ button:hover {
   }
   .Projeto p {
     font-size: 12px;
+  }
+  .BotaoPortifolio {
+    margin-top: 30px;
+    font-size: 22px;
+    height: 50px;
+    width: 100px;
   }
 }
 
