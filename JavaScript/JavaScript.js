@@ -1,5 +1,6 @@
 let menu = document.querySelector("#IconeMenu");
 let ListaVertical = document.querySelector(".ListaVertical");
+let ImagemOriginal = document.getElementById('button').getAttribute('src');
 
 menu.onclick = () => {
   menu.classList.toggle("bx-x");
@@ -51,18 +52,18 @@ function RevelarWeb(){
 }
 
 function MudarTema() {
-  var Corvo = document.getElementById('ImagemCentral')
+    var Corvo = document.getElementById('ImagemCentral')
     var body = document.body;
          
     body.classList.toggle("Light-theme");
     let button = document.getElementById('button');
-    
-    if (button.innerHTML == "Tema Claro") {
-       button.innerHTML = "Tema Escuro";
-       Corvo.src = "./Images/Icone.png"
+
+    if (button.getAttribute('src') == ImagemOriginal) {
+       button.src = "./Images/darkIcon.png";
+       Corvo.src = "./Images/IconeLight.png"
        
     } else {
-       button.innerHTML = "Tema Claro"
-       Corvo.src = "./Images/IconeLight.png"
+       button.src = ImagemOriginal
+       Corvo.src = "./Images/Icone.png"
     }
  }
