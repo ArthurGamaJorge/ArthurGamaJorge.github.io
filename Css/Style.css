@@ -16,6 +16,8 @@ body {
 }
 
 header {
+  padding: 15px 3%;
+  backdrop-filter: blur(4px);
   background-color: rgb(33, 30, 30, 0.5);
   position: fixed;
   right: 0;
@@ -34,7 +36,9 @@ Section {
   border: 0.1px solid rgb(255, 255, 255, 0.1);
 }
 
-a:hover, button, .Projeto {
+a:hover,
+button,
+.Projeto {
   cursor: url("../Images/CursorPointer.png"), pointer;
 }
 
@@ -74,7 +78,6 @@ button {
 
 #IconeMenu {
   width: 50px;
-  height: auto;
   z-index: 10001;
   cursor: pointer;
   display: none;
@@ -90,25 +93,18 @@ button {
   align-items: center;
 }
 
-#Texto {
-  width: 450px;
-  visibility: hidden;
-}
-
-#Texto2 {
-  width: 450px;
-}
-
 #DivImagem,
 #Corvo,
-#ContainerGeral {
+#ContainerGeral,
+#Texto {
   visibility: hidden;
 }
 
 #Texto h1,
 #Texto2 h1 {
   font-size: 60px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
+  margin-top: 40px;
 }
 
 #Texto p,
@@ -145,8 +141,6 @@ button {
   color: white;
   background: rgb(58, 58, 58);
   padding: 20px 30px;
-  line-height: 1.4;
-  font-weight: 400;
   border-radius: 40px;
   transition: all 0.55s ease;
   margin-top: 20px;
@@ -162,7 +156,6 @@ button {
 
 #ImagemCentral {
   width: 550px;
-  height: auto;
   opacity: 60%;
   transition: transform 1800ms ease-in-out;
   transition-delay: 0.1s;
@@ -171,7 +164,7 @@ button {
 
 #ImagemCentral:hover {
   transform: translatex(20px) translatey(-10px) rotate(2.5deg);
-  filter: drop-shadow(11px 11px 11px)
+  filter: drop-shadow(11px 11px 11px);
 }
 
 #SetaBaixo {
@@ -195,7 +188,6 @@ button {
 
 #SetaBaixo img {
   width: 25px;
-  height: auto;
 }
 .Habilidades {
   color: #e53f71;
@@ -242,12 +234,11 @@ button {
 .Projeto {
   background: rgb(3, 1, 67);
   color: white;
-  width: 350px;
-  height: 430px;
+  width: 40%;
   text-align: center;
   border: white 2px solid;
   border-radius: 20px;
-  filter:  drop-shadow(10px 10px 8px rgb(39, 60, 200));
+  filter: drop-shadow(10px 10px 8px rgb(39, 60, 200));
   margin: 0 30px;
   flex-direction: column;
   flex-shrink: 0;
@@ -257,12 +248,12 @@ button {
 
 .Projeto:hover {
   scale: 1.03;
-  filter:  drop-shadow(15px 15px 12px rgb(39, 60, 200));
+  filter: drop-shadow(15px 15px 12px rgb(39, 60, 200));
 }
 
-.Projeto:active{
+.Projeto:active {
   scale: 0.98;
-  filter:  drop-shadow(5px 5px 4px rgb(39, 60, 200));
+  filter: drop-shadow(5px 5px 4px rgb(39, 60, 200));
 }
 
 .Projeto h1 {
@@ -273,10 +264,6 @@ button {
   background: rgb(39, 60, 200);
   margin-left: 5px;
   text-align: center;
-}
-
-.Projeto img {
-  width: 40px;
 }
 
 .ContainerPortifolio.Python {
@@ -305,20 +292,20 @@ button {
   border-radius: 20px;
   background-color: rgb(39, 60, 200);
   margin-left: 10px;
-  border:none
+  border: none;
 }
 
-.BotaoPortifolio:hover{
-  scale:1.08;
+.BotaoPortifolio:hover {
+  scale: 1.08;
 }
 
-.BotaoPortifolio:active{
-  scale:0.92;
+.BotaoPortifolio:active {
+  scale: 0.92;
 }
 
-#BtnWeb  {
-  border: 2px solid white; 
-  scale:1.2
+#BtnWeb {
+  border: 2px solid white;
+  scale: 1.2;
 }
 
 .ImagemProjeto {
@@ -350,8 +337,6 @@ button {
 
 .image {
   display: inline-block;
-  width: auto;
-  height: auto;
   height: 300px;
 }
 
@@ -365,12 +350,9 @@ button {
   color: white;
 }
 
-.container:hover .overlay {
-  opacity: 1;
-}
-
+.container:hover .overlay,
 .ImagemProjeto:hover .overlay {
-  opacity: 100%;
+  opacity: 1;
 }
 
 #Texto2 a img {
@@ -387,55 +369,15 @@ button {
 .Projeto img {
   width: 20px;
 }
-#DivImagem,
-#Corvo {
-  width: 200px;
-}
-
-@media (max-width: 1535px) {
-  header {
-    padding: 15px 3%;
-  }
-  #SetaBaixo {
-    right: 9%;
-  }
-}
-
-@media (max-width: 1460px) {
-  section {
-    padding: 0 12%;
-  }
-}
-
-@media (max-width: 1340px) {
-  #ImagemCentral {
-    width: 510px;
-    height: auto;
-  }
-  #Texto h1,
-  #Texto2 h1 {
-    font-size: 65px;
-    margin: 0 0 30px;
-  }
-}
 
 @media (max-width: 1195px) {
   section {
     padding: 0 3%;
   }
-  #Texto,
-  #Texto2 {
-    padding-top: 115px;
-  }
-  #Texto p,
-  #Texto2 p {
-    width: 300px;
-  }
 
   #ImagemCentral {
     text-align: center;
     width: 380px;
-    height: auto;
   }
   .Central {
     display: grid;
@@ -446,7 +388,7 @@ button {
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1040px) {
   #IconeMenu {
     display: block;
   }
@@ -481,8 +423,7 @@ button {
 
 @media (max-width: 880px) {
   #ImagemCentral {
-    width: 210px;
-    height: auto;
+    width: 250px;
   }
   #Texto h1,
   #Texto2 h1 {
@@ -497,42 +438,16 @@ button {
   .overlay {
     font-size: 15px;
   }
-  .Projeto a {
-    padding: 6px 15px;
-  }
-  .Projeto img {
-    width: 30px;
-  }
-  .Projeto {
-    width: 300px;
-  }
-  .Portifolio #Texto {
-    height: 80px;
-  }
-  .Projeto {
-    width: 200px;
-    height: 430px;
-    margin-top: 15px;
-  }
-  .ImagemProjeto {
-    height: 190px;
-  }
-  .Projeto p {
-    font-size: 12px;
-  }
-  .BotaoPortifolio {
-    margin-top: 30px;
-    font-size: 22px;
-    height: 50px;
-    width: 100px;
+}
+
+@media (max-width: 730px) {
+  .Central {
+    gap: 0rem;
+    grid-template-columns: 0fr;
   }
 }
 
 @media (max-width: 480px) {
-  #ImagemCentral {
-    width: 300px;
-    height: auto;
-  }
   #Texto h1,
   #Texto2 h1 {
     font-size: 40px;
@@ -542,7 +457,6 @@ button {
     margin: 0;
     padding-top: 40px;
     margin-right: 0;
-    width: 380px;
   }
   #Texto a img,
   #Texto2 a img {
@@ -552,87 +466,48 @@ button {
   #Corvo {
     width: 100px;
   }
-  .Central {
-    gap: 0rem;
-    grid-template-columns: 0fr;
-  }
   #EfeitoEscrevendo {
     width: 17.5ch;
   }
-  .Projeto a {
-    padding: 4px 10px;
-  }
-  .Projeto img {
-    width: 20px;
-  }
   .ImagemProjeto {
     height: 150px;
-  }
-  .Projeto {
-    width: 250px;
-    margin-top: 15px;
   }
 }
 
 @media (max-width: 400px) {
   #ImagemCentral {
-    width: 250px;
-    height: auto;
-    left: 0;
-    position: absolute;
-  }
-  #Corvo #ImagemCentral {
-    bottom: -30px;
+    width: 260px;
   }
   #Texto,
   #Texto2 {
     width: 200px;
-    padding-top: 0px;
-  }
-  #Texto p,
-  #Texto2 p {
-    width: 200px;
   }
   #Texto h1,
   #Texto2 h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
   #Texto h2 {
-    font-size: 20px;
+    font-size: 24px;
   }
   #Texto p,
   #Texto2 p {
-    font-size: 12px;
+    font-size: 16px;
   }
   #EfeitoEscrevendo {
-    width: 14.5ch;
+    width: 17.5ch;
   }
   img {
     width: 40px;
   }
   .Projeto a {
-    padding: 4px 10px;
     font-size: 10px;
-    padding-top: 2px;
-  }
-  .Projeto img {
-    width: 15px;
   }
   .Projeto h1 {
     font-size: 15px;
   }
-  .Projeto {
-    width: 200px;
-    height: 300px;
-    margin-top: 15px;
-  }
-  .ImagemProjeto {
-    height: 120px;
-  }
   #Texto2 a {
     width: 310px;
     height: 50px;
-    text-align: center;
     padding-top: 10px;
   }
   .overlay {
@@ -647,43 +522,28 @@ button {
   img {
     width: 34px;
   }
+  #Texto p,
+  #Texto2 p {
+    font-size: 12px;
+  }
+  #EfeitoEscrevendo {
+    width: 13ch;
+  }
 }
 
 @media (min-width: 1200px) and (max-height: 800px) {
   #ImagemCentral {
     width: 500px;
-    height: auto;
   }
   #Texto h1,
   #Texto2 h1 {
     font-size: 42px;
   }
-  #Texto,
-  #Texto2 {
-    width: 400px;
-    padding-top: 0;
-  }
 }
 
-@media (max-width: 1100px) and (max-height: 550px) {
-  #ImagemCentral {
-    width: 270px;
-    height: auto;
-  }
-  #Texto h1,
-  #Texto2 h1 {
-    font-size: 35px;
-  }
-  #Texto,
-  #Texto2 {
-    width: 300px;
-    padding-top: 0;
-  }
-}
 @media (max-width: 920px) and (max-height: 420px) {
   #ImagemCentral {
     width: 280px;
-    height: auto;
   }
   #Texto h1,
   #Texto2 h1 {
@@ -691,7 +551,6 @@ button {
   }
   #Texto,
   #Texto2 {
-    padding-top: 0px;
     width: 250px;
   }
   #Texto img {
@@ -714,8 +573,7 @@ button {
 
 @media (max-width: 700px) and (max-height: 420px) {
   #ImagemCentral {
-    width: 200px;
-    height: auto;
+    width: 230px;
   }
   #Texto h1,
   #Texto2 h1 {
@@ -727,18 +585,11 @@ button {
   img {
     width: 25px;
   }
-  #Texto,
-  #Texto2 {
-    width: 220px;
-  }
   #Texto p,
   #Texto2 p {
     font-size: 13px;
   }
   #EfeitoEscrevendo {
     width: 14.3ch;
-  }
-  .Central {
-    gap: 0;
   }
 }
