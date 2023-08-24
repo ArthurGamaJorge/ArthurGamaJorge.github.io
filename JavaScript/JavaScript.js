@@ -11,7 +11,7 @@ window.sr = ScrollReveal({
   distance: "80px",
   duration: 2600,
   delay: 450,
-  reset: true,
+  reset: false,
 });
 
 sr.reveal("#Texto", { delay: 50, origin: "left" });

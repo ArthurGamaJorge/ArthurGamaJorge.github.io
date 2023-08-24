@@ -15,14 +15,17 @@ body {
   color: aqua;
 }
 
+img {
+  width: 30px;
+}
+
 header {
-  padding: 15px 3%;
   backdrop-filter: blur(4px);
   background-color: rgb(33, 30, 30, 0.5);
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -33,12 +36,11 @@ header {
 
 Section {
   padding: 0 18%;
-  border: 0.1px solid rgb(255, 255, 255, 0.1);
+  border: 0.3px solid rgb(255, 255, 255, 0.1);
 }
 
 a:hover,
-button,
-.Projeto {
+.Projeto, button {
   cursor: url("../Images/CursorPointer.png"), pointer;
 }
 
@@ -46,8 +48,7 @@ button,
   display: flex;
 }
 
-.ListaVertical a,
-button {
+.ListaVertical a {
   font-size: 25px;
   color: white;
   margin-left: 50px;
@@ -58,14 +59,11 @@ button {
 }
 
 button {
-  font-size: 20px;
-  width: 70px;
   border: 0px solid;
   background-color: transparent;
 }
 
-.ListaVertical a:hover,
-.ListaVertical button:hover {
+#ahover:hover {
   border-bottom: 2px solid white;
   background-color: rgba(66, 62, 62, 0.8);
 }
@@ -78,7 +76,7 @@ button {
 
 #IconeMenu {
   width: 50px;
-  z-index: 10001;
+  z-index: 11;
   cursor: pointer;
   display: none;
 }
@@ -186,9 +184,6 @@ button {
   transform: translatey(5px);
 }
 
-#SetaBaixo img {
-  width: 25px;
-}
 .Habilidades {
   color: #e53f71;
 }
@@ -292,7 +287,7 @@ button {
   border-radius: 20px;
   background-color: rgb(39, 60, 200);
   margin-left: 10px;
-  border: none;
+  color: white;
 }
 
 .BotaoPortifolio:hover {
@@ -355,9 +350,6 @@ button {
   opacity: 1;
 }
 
-#Texto2 a img {
-  width: 30px;
-}
 #Texto2 a {
   background: rgb(171, 22, 22);
 }
@@ -366,9 +358,7 @@ button {
   padding: 4px 11px;
   margin-top: 5px;
 }
-.Projeto img {
-  width: 20px;
-}
+
 
 @media (max-width: 1195px) {
   section {
@@ -383,14 +373,14 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  #SetaBaixo {
-    display: none;
-  }
 }
 
 @media (max-width: 1040px) {
   #IconeMenu {
     display: block;
+  }
+  #SetaBaixo {
+    display: none;
   }
   .ListaVertical {
     position: absolute;
@@ -432,9 +422,6 @@ button {
   #Texto a {
     padding: 10px 15px;
   }
-  img {
-    width: 50px;
-  }
   .overlay {
     font-size: 15px;
   }
@@ -457,10 +444,6 @@ button {
     margin: 0;
     padding-top: 40px;
     margin-right: 0;
-  }
-  #Texto a img,
-  #Texto2 a img {
-    width: 30px;
   }
   #DivImagem,
   #Corvo {
@@ -496,14 +479,14 @@ button {
   #EfeitoEscrevendo {
     width: 17.5ch;
   }
-  img {
-    width: 40px;
-  }
   .Projeto a {
     font-size: 10px;
   }
   .Projeto h1 {
     font-size: 15px;
+  }
+  .Projeto img {
+    width: 20px;
   }
   #Texto2 a {
     width: 310px;
@@ -518,9 +501,6 @@ button {
 @media (max-width: 300px) {
   #Texto2 a {
     width: 260px;
-  }
-  img {
-    width: 34px;
   }
   #Texto p,
   #Texto2 p {
@@ -553,9 +533,6 @@ button {
   #Texto2 {
     width: 250px;
   }
-  #Texto img {
-    width: 30px;
-  }
   #Texto a,
   #Texto2 a {
     padding: 3% 12%;
@@ -564,10 +541,6 @@ button {
   }
   #Texto2 a {
     width: 300px;
-  }
-  .Central {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -581,9 +554,6 @@ button {
   }
   #Texto h2 {
     font-size: 25px;
-  }
-  img {
-    width: 25px;
   }
   #Texto p,
   #Texto2 p {
