@@ -49,7 +49,7 @@ a:hover,
 }
 
 .ListaVertical a {
-  font-size: 25px;
+  font-size: calc(80% + 10px);
   color: white;
   margin-left: 50px;
   font-weight: 700;
@@ -100,19 +100,19 @@ button {
 
 #Texto h1,
 #Texto2 h1 {
-  font-size: 60px;
+  font-size: calc(3.5vmax + 10px);
   margin-bottom: 10px;
   margin-top: 40px;
 }
 
 #Texto p,
 #Texto2 p {
-  font-size: 16px;
+  font-size: calc(0.5vmax + 10px);
   font-weight: 600;
 }
 
 #EfeitoEscrevendo {
-  width: 17ch;
+  width: calc(22ch + 17vmin - 170px);
   animation: Escrever 2s steps(37), effect 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
@@ -139,9 +139,19 @@ button {
   color: white;
   background: rgb(58, 58, 58);
   padding: 20px 30px;
+  text-align: center;
   border-radius: 40px;
   transition: all 0.55s ease;
+  margin: auto;
   margin-top: 20px;
+}
+
+#Texto2 a {
+  background: rgb(171, 22, 22);
+  width: calc(8vmax + 160px);
+  height: calc(2vmax + 50px);
+  padding: calc(1.4vmax + 7px) 0px 0px 0px;
+  font-size: calc(0.5vmax + 10px);
 }
 
 #Texto a:hover,
@@ -229,7 +239,7 @@ button {
 .Projeto {
   background: rgb(3, 1, 67);
   color: white;
-  width: 40%;
+  width: calc(30% + 60px);
   text-align: center;
   border: white 2px solid;
   border-radius: 20px;
@@ -320,20 +330,22 @@ button {
 }
 
 #Texto h2 {
-  font-size: 35px;
   margin-bottom: 18px;
 }
 
 .container {
   display: inline-block;
   position: relative;
-  max-width: 300px;
+  width: max-content;
   margin: auto;
+}
+
+.Habilidades img {
+  width: 70px;
 }
 
 .image {
   display: inline-block;
-  height: 300px;
 }
 
 .overlay {
@@ -342,17 +354,13 @@ button {
   background: rgb(229, 63, 113, 0.8);
   transition: 0.5s ease;
   opacity: 0;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
 }
 
 .container:hover .overlay,
 .ImagemProjeto:hover .overlay {
   opacity: 1;
-}
-
-#Texto2 a {
-  background: rgb(171, 22, 22);
 }
 
 .Projeto a {
@@ -362,12 +370,7 @@ button {
 
 
 @media (max-width: 1195px) {
-  section {
-    padding: 0 3%;
-  }
-
   #ImagemCentral {
-    text-align: center;
     width: 380px;
   }
   .Central {
@@ -416,10 +419,6 @@ button {
   #ImagemCentral {
     width: 250px;
   }
-  #Texto h1,
-  #Texto2 h1 {
-    font-size: 50px;
-  }
   #Texto a {
     padding: 10px 15px;
   }
@@ -433,13 +432,12 @@ button {
     gap: 0rem;
     grid-template-columns: 0fr;
   }
+  .Habilidades img {
+    width: 50px;
+  }
 }
 
 @media (max-width: 480px) {
-  #Texto h1,
-  #Texto2 h1 {
-    font-size: 40px;
-  }
   #Texto,
   #Texto2 {
     margin: 0;
@@ -450,35 +448,24 @@ button {
   #Corvo {
     width: 100px;
   }
-  #EfeitoEscrevendo {
-    width: 17.5ch;
-  }
   .ImagemProjeto {
     height: 150px;
+  }
+  .Habilidades img {
+    width: 35px;
   }
 }
 
 @media (max-width: 400px) {
   #ImagemCentral {
-    width: 260px;
+    width: 230px;
   }
   #Texto,
   #Texto2 {
     width: 200px;
   }
-  #Texto h1,
-  #Texto2 h1 {
-    font-size: 30px;
-  }
   #Texto h2 {
     font-size: 24px;
-  }
-  #Texto p,
-  #Texto2 p {
-    font-size: 16px;
-  }
-  #EfeitoEscrevendo {
-    width: 17.5ch;
   }
   .Projeto a {
     font-size: 10px;
@@ -489,26 +476,8 @@ button {
   .Projeto img {
     width: 20px;
   }
-  #Texto2 a {
-    width: 310px;
-    height: 50px;
-    padding-top: 10px;
-  }
   .overlay {
     font-size: 10px;
-  }
-}
-
-@media (max-width: 300px) {
-  #Texto2 a {
-    width: 260px;
-  }
-  #Texto p,
-  #Texto2 p {
-    font-size: 12px;
-  }
-  #EfeitoEscrevendo {
-    width: 13ch;
   }
 }
 
@@ -516,19 +485,11 @@ button {
   #ImagemCentral {
     width: 500px;
   }
-  #Texto h1,
-  #Texto2 h1 {
-    font-size: 42px;
-  }
 }
 
 @media (max-width: 920px) and (max-height: 420px) {
   #ImagemCentral {
     width: 280px;
-  }
-  #Texto h1,
-  #Texto2 h1 {
-    font-size: 40px;
   }
   #Texto,
   #Texto2 {
@@ -540,27 +501,13 @@ button {
     align-items: center;
     position: relative;
   }
-  #Texto2 a {
-    width: 300px;
-  }
 }
 
 @media (max-width: 700px) and (max-height: 420px) {
   #ImagemCentral {
     width: 230px;
   }
-  #Texto h1,
-  #Texto2 h1 {
-    font-size: 35px;
-  }
   #Texto h2 {
     font-size: 25px;
-  }
-  #Texto p,
-  #Texto2 p {
-    font-size: 13px;
-  }
-  #EfeitoEscrevendo {
-    width: 14.3ch;
   }
 }
