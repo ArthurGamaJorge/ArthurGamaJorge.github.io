@@ -40,7 +40,8 @@ Section {
 }
 
 a:hover,
-.Projeto, button {
+.Projeto,
+button {
   cursor: url("../Images/CursorPointer.png"), pointer;
 }
 
@@ -69,7 +70,7 @@ button {
 }
 
 .Principal {
-  font-size: 30px;
+  font-size: calc(1.5vmax + 10px);
   font-weight: 1000;
   color: white;
 }
@@ -112,7 +113,7 @@ button {
 }
 
 #EfeitoEscrevendo {
-  width: calc(22ch + 17vmin - 170px);
+  width: calc(21ch + 9vmax - 170px);
   animation: Escrever 2s steps(37), effect 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
@@ -140,7 +141,7 @@ button {
   background: rgb(58, 58, 58);
   padding: 20px 30px;
   text-align: center;
-  border-radius: 40px;
+  border-radius: calc(1.5vmax + 30px);
   transition: all 0.55s ease;
   margin: auto;
   margin-top: 20px;
@@ -163,7 +164,7 @@ button {
 }
 
 #ImagemCentral {
-  width: 550px;
+  width: calc(25vw + 140px);
   opacity: 60%;
   transition: transform 1800ms ease-in-out;
   transition-delay: 0.1s;
@@ -186,7 +187,7 @@ button {
   padding: 10px;
   color: white;
   background-color: rgb(58, 58, 58);
-  border-radius: 40px;
+  border-radius: calc(2vmax + 30px);
   transition: all 0.55s ease;
 }
 
@@ -239,16 +240,23 @@ button {
 .Projeto {
   background: rgb(3, 1, 67);
   color: white;
-  width: calc(30% + 60px);
+  width: calc(15vmax + 100px);
   text-align: center;
   border: white 2px solid;
-  border-radius: 20px;
+  border-radius: calc(1vmax + 20px);
   filter: drop-shadow(10px 10px 8px rgb(39, 60, 200));
   margin: 0 30px;
   flex-direction: column;
   flex-shrink: 0;
   margin-bottom: 20px;
   transition: all 0.5s ease-in-out;
+}
+
+.ImagemProjeto {
+  background-size: cover;
+  background-position: center center;
+  border-radius: calc(1vmax + 20px) calc(1vmax + 20px) 0px 0px;
+  height: calc(10vmax + 80px);
 }
 
 .Projeto:hover {
@@ -262,13 +270,16 @@ button {
 }
 
 .Projeto h1 {
-  font-size: 22px;
+  font-size: calc(1vmax + 10px);
 }
 
 .Projeto a {
   background: rgb(39, 60, 200);
   margin-left: 5px;
   text-align: center;
+  font-size: calc(0.5vmax + 10px);
+  padding: 4px 11px;
+  margin-top: 5px;
 }
 
 .ContainerPortifolio.Python {
@@ -294,7 +305,7 @@ button {
 .BotaoPortifolio {
   height: 40px;
   width: 90px;
-  border-radius: 20px;
+  border-radius: calc(1vmax + 20px);
   background-color: rgb(39, 60, 200);
   margin-left: 10px;
   color: white;
@@ -314,13 +325,6 @@ button {
   scale: 1.2;
 }
 
-.ImagemProjeto {
-  background-size: cover;
-  background-position: center center;
-  border-radius: 20px;
-  height: 250px;
-}
-
 #DivImagem,
 #Corvo {
   align-items: center;
@@ -331,6 +335,7 @@ button {
 
 #Texto h2 {
   margin-bottom: 18px;
+  font-size: calc(1.5vmax + 10px);
 }
 
 .container {
@@ -341,7 +346,7 @@ button {
 }
 
 .Habilidades img {
-  width: 70px;
+  width: calc(2.5vmax + 30px);
 }
 
 .image {
@@ -354,7 +359,7 @@ button {
   background: rgb(229, 63, 113, 0.8);
   transition: 0.5s ease;
   opacity: 0;
-  font-size: 18px;
+  font-size: calc(0.5vmax + 10px);
   color: white;
 }
 
@@ -363,16 +368,7 @@ button {
   opacity: 1;
 }
 
-.Projeto a {
-  padding: 4px 11px;
-  margin-top: 5px;
-}
-
-
 @media (max-width: 1195px) {
-  #ImagemCentral {
-    width: 380px;
-  }
   .Central {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -416,14 +412,8 @@ button {
 }
 
 @media (max-width: 880px) {
-  #ImagemCentral {
-    width: 250px;
-  }
   #Texto a {
     padding: 10px 15px;
-  }
-  .overlay {
-    font-size: 15px;
   }
 }
 
@@ -431,9 +421,6 @@ button {
   .Central {
     gap: 0rem;
     grid-template-columns: 0fr;
-  }
-  .Habilidades img {
-    width: 50px;
   }
 }
 
@@ -448,49 +435,19 @@ button {
   #Corvo {
     width: 100px;
   }
-  .ImagemProjeto {
-    height: 150px;
-  }
-  .Habilidades img {
-    width: 35px;
-  }
 }
 
 @media (max-width: 400px) {
-  #ImagemCentral {
-    width: 230px;
-  }
   #Texto,
   #Texto2 {
     width: 200px;
   }
-  #Texto h2 {
-    font-size: 24px;
-  }
-  .Projeto a {
-    font-size: 10px;
-  }
-  .Projeto h1 {
-    font-size: 15px;
-  }
   .Projeto img {
     width: 20px;
-  }
-  .overlay {
-    font-size: 10px;
-  }
-}
-
-@media (min-width: 1200px) and (max-height: 800px) {
-  #ImagemCentral {
-    width: 500px;
   }
 }
 
 @media (max-width: 920px) and (max-height: 420px) {
-  #ImagemCentral {
-    width: 280px;
-  }
   #Texto,
   #Texto2 {
     width: 250px;
@@ -500,14 +457,5 @@ button {
     padding: 3% 12%;
     align-items: center;
     position: relative;
-  }
-}
-
-@media (max-width: 700px) and (max-height: 420px) {
-  #ImagemCentral {
-    width: 230px;
-  }
-  #Texto h2 {
-    font-size: 25px;
   }
 }
