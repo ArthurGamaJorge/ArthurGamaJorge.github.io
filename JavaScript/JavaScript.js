@@ -60,10 +60,10 @@ function MudarTema() {
 
     if (button.getAttribute('src') == ImagemOriginal) {
        button.src = "./Images/darkIcon.png";
-       Corvo.src = "./Images/IconeLight.png"
+       Corvo.style = "filter: invert(100%)"
        
     } else {
        button.src = ImagemOriginal
-       Corvo.src = "./Images/Icone.png"
+       Corvo.style = "filter: invert(-100%)"
     }
  }
