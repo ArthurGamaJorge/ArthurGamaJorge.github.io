@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="https://arthurgamajorge.github.io/sitemap.xml/">
+<urlset xmlns="https://arthurgamajorge.github.io/sitemap/">
 
    <url>
-      <loc>https://arthurgamajorge.github.io/Formulario-Login-localStorage/</loc>
+      <loc>http://arthurgamajorge.github.io/Formulario-Login-localStorage/</loc>
       <lastmod>2023-09-01</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
