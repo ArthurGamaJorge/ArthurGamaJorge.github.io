@@ -4,8 +4,12 @@
     cursor: url("../Images/CursorClaro.png"), auto;
   }
 
-  .Light-theme #ImagemCentral {
-    filter: drop-shadow(10px 10px 10px crimson)
+  .Light-theme #corvo {
+    filter: drop-shadow(10px 10px 10px crimson);
+  }
+
+  .Light-theme .SecondaryImage{
+    filter: invert(10%) drop-shadow(10px 10px 10px crimson) !important;
   }
   
   .Light-theme a:hover, .Light-theme button, .Light-theme .Projeto {
@@ -30,7 +34,7 @@
   
   .Light-theme .Portifolio,
   .Light-theme .SobreMim {
-    background-color: rgba(250, 250, 250, 0.790);
+    background-color: rgba(250, 250, 250, 0.88);
     color: black;
   }
 
@@ -74,7 +78,7 @@
   }
 
   .Light-theme .Projeto {
-    background: rgb(152, 11, 39);
+    background: rgb(115, 6, 28);
     filter:  drop-shadow(10px 10px 8px crimson);
   }
   
@@ -87,7 +91,11 @@
   }
   
   .Light-theme .Projeto a {
-    background: rgb(229, 33, 72);
+    border-color: rgb(229, 33, 72);
+  }
+
+  .Light-theme #github{
+    content: url("../Images/githubLight.png")
   }
 
   .Light-theme .Projeto a:hover {

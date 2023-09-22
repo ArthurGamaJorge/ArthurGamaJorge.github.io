@@ -113,6 +113,11 @@ button {
   visibility: hidden;
 }
 
+#Texto a img, #Texto2 a img, .Projeto a img{
+  align-self: center;
+  vertical-align: middle;
+}
+
 #Texto h1,
 #Texto2 h1 {
   font-size: calc(3.5vmax + 10px);
@@ -123,7 +128,6 @@ button {
 #Texto p,
 #Texto2 p {
   font-size: calc(0.5vmax + 10px);
-  font-weight: 600;
 }
 
 #EfeitoEscrevendo {
@@ -162,11 +166,13 @@ button {
 }
 
 #Texto2 a {
-  background: rgb(171, 22, 22);
-  width: calc(8vmax + 160px);
+  background: transparent;
+  border: 2px solid rgb(171, 22, 22);
+  width: calc(8vmax + 180px);
   height: calc(2vmax + 50px);
   padding: calc(1.4vmax + 7px) 0px 0px 0px;
   font-size: calc(0.5vmax + 10px);
+  margin-right: 20px;
 }
 
 #Texto a:hover,
@@ -209,16 +215,11 @@ button {
   transform: translatey(5px);
 }
 
-.Habilidades {
-  color: #e53f71;
+.Habilidades{
+  color: #3b4dc3;
 }
 
-.SobreMim {
-  background: rgb(255, 255, 255, 0.02);
-  color: white;
-}
-
-.Portifolio {
+.SobreMim, .Portifolio {
   background: rgb(255, 255, 255, 0.02);
   color: #3b4dc3;
 }
@@ -288,12 +289,22 @@ button {
 }
 
 .Projeto a {
-  background: rgb(39, 60, 200);
+  border: 2px dashed rgb(39, 60, 200);
+  background: transparent;
   margin-left: 5px;
   text-align: center;
   font-size: calc(0.5vmax + 10px);
   padding: 4px 11px;
   margin-top: 5px;
+}
+
+.Projeto img{
+  height: calc(1vmax + 15px);
+  width: auto;
+}
+
+.BasicInfo{
+  height: calc(2vmax + 30px);
 }
 
 .ContainerPortifolio.Python {
@@ -319,7 +330,6 @@ button {
 .BotaoPortifolio {
   height: 40px;
   width: 90px;
-  border-radius: calc(1vmax + 20px);
   background-color: rgb(39, 60, 200);
   margin-left: 10px;
   color: white;
@@ -347,9 +357,9 @@ button {
   grid-template-columns: repeat(2, 1fr);
 }
 
-#Texto h2 {
+#h2 {
   margin-bottom: 18px;
-  font-size: calc(1.5vmax + 10px);
+  font-size: calc(1vmax + 10px) !important;
 }
 
 .container {
@@ -370,7 +380,7 @@ button {
 .overlay {
   position: absolute;
   bottom: 0;
-  background: rgb(229, 63, 113, 0.8);
+  background: #3b4dc3;
   transition: 0.5s ease;
   opacity: 0;
   font-size: calc(0.5vmax + 10px);
