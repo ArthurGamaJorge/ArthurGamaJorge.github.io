@@ -1,10 +1,10 @@
 let menu = document.querySelector("#IconeMenu");
-let ListaVertical = document.querySelector(".ListaVertical");
+let Navbar = document.querySelector(".Navbar");
 let ImagemOriginal = document.getElementById('button').getAttribute('src');
 
 menu.onclick = () => {
   menu.classList.toggle("bx-x");
-  ListaVertical.classList.toggle("open");
+  Navbar.classList.toggle("open");
 };
 
 window.sr = ScrollReveal({
