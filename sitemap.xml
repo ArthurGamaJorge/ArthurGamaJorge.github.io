@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="https://arthurgamajorge.github.io/">
+<urlset xmlns="https://arthurgamajorge.github.io/sitemap.xml/">
 
    <url>
       <loc>https://arthurgamajorge.github.io/Formulario-Login-localStorage/</loc>
@@ -11,14 +11,14 @@
 
    <url>
       <loc>https://arthurgamajorge.github.io/Formulario-Login-localStorage/cadastro.html/</loc>
-      <lastmod>2023-09-7</lastmod>
+      <lastmod>2023-09-07</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.4</priority>
    </url>
 
     <url>
       <loc>https://arthurgamajorge.github.io/Formulario-Login-localStorage/login.html/</loc>
-      <lastmod>2023-09-7</lastmod>
+      <lastmod>2023-09-07</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.4</priority>
    </url>
