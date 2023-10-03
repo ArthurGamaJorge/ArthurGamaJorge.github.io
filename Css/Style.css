@@ -251,6 +251,10 @@ header {
 
 /* SEÇÃO HABILIDADES */
 
+.SecondaryImage{
+  filter: drop-shadow(10px 10px 15px #3b4dc3);
+}
+
 .Habilidades{
   color: #3b4dc3;
 }
@@ -330,7 +334,7 @@ header {
   filter: drop-shadow(5px 5px 4px rgb(39, 60, 200));
 }
 
-.Projeto h1 {
+.Projeto h2 {
   font-size: calc(1vmax + 10px);
 }
 
