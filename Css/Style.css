@@ -312,7 +312,7 @@ header {
 .Projeto {
   background: rgb(3, 1, 67);
   color: white;
-  width: calc(15vmax + 100px);
+  width: calc(20vmax + 160px);
   text-align: center;
   border: white 2px solid;
   border-radius: calc(1vmax + 20px);
@@ -349,7 +349,12 @@ header {
 }
 
 .BasicInfo{
-  height: calc(2vmax + 30px);
+  height: calc(1vmax + 110px);
+  padding: 0% 4%
+}
+
+.BasicInfo p{
+  font-size: calc(0.4vmax + 12px);
 }
 
 .Projeto img{
@@ -361,24 +366,18 @@ header {
   background-size: cover;
   background-position: center center;
   border-radius: calc(1vmax + 20px) calc(1vmax + 20px) 0px 0px;
-  height: calc(10vmax + 80px);
+  height: calc(11vmax + 80px);
 }
 
-#Imagem1 {
-  background-image: url("../Images/HollowKnight.png");
-}
+#Imagem1 {background-image: url("../Images/HollowKnight.png");}
 
-#Imagem2 {
-  background-image: url("../Images/Cadastro\ Alunos.png");
-}
+#Imagem2 {background-image: url("../Images/Cadastro\ Alunos.png");}
 
-#Imagem3 {
-  background-image: url("../Images/Formulario.png");
-}
+#Imagem3 {background-image: url("../Images/Formulario.png");}
 
-#Imagem4 {
-  background-image: url("../Images/AgendamentoMonitoria.png");
-}
+#Imagem4 {background-image: url("../Images/AgendamentoMonitoria.png");}
+
+#Imagem5 {background-image: url("../Images/ChatTheoritas.png");}
 
 .ContainerPortifolio.Python {
   display: none;
@@ -447,6 +446,10 @@ header {
     border-radius: 30px;
     border: solid 2px white;
     filter: drop-shadow(5px 5px 10px white);
+  }
+  .Portifolio{
+    padding: 4%;
+    margin: 0;
   }
 }
 
