@@ -68,10 +68,13 @@ button {
   opacity: 60%;
   transition: transform 1800ms ease-in-out;
   transition-delay: 0.1s;
-  filter: drop-shadow(10px 10px 10px aqua);
 }
 
-#ImagemCentral:hover {
+#Corvo #ImagemCentral{
+  filter: drop-shadow(8px 10px 10px aqua);
+}
+
+#ImagemCentral:hover,  #Corvo #ImagemCentral:hover{
   transform: translatex(20px) translatey(-10px) rotate(2.5deg);
   filter: drop-shadow(11px 11px 11px);
 }

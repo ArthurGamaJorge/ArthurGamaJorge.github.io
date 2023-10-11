@@ -60,7 +60,7 @@ function MudarTema() {
 
     if (button.getAttribute('src') == ImagemOriginal) {
        button.src = "./Images/darkIcon.png";
-       Corvo.style = "filter: invert(100%)"
+       Corvo.style = "filter: invert(100%) drop-shadow(10px 10px 10px crimson) !important;"
        
     } else {
        button.src = ImagemOriginal

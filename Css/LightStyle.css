@@ -27,10 +27,6 @@
 
   /* ESTILIZAÇÃO IMAGENS */
 
-  .Light-theme #corvo {
-    filter: drop-shadow(10px 10px 10px crimson);
-  }
-
   .Light-theme .SecondaryImage{
     filter: invert(10%) drop-shadow(10px 10px 10px crimson) !important;
   }
