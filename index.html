@@ -17,6 +17,21 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./Images/favicon-16x16.png">
     <link rel="manifest" href="./Images/site.webmanifest">
 
+    <!-- Se o usuário desativar javascript, remove scroll reveal-->
+    <noscript>
+      <style>
+      #DivImagem,
+      #Corvo,
+      #ContainerGeral,
+      #Texto,
+      #SetaBaixo,
+      .ContainerPortifolio
+       {
+        visibility: visible;
+      }
+      </style>
+    </noscript>
+
   </head>
   <body>
     <header>
@@ -106,6 +121,16 @@
       </div>
 
       <div class="container">
+        <img alt="microsoftsqlserver-icon" src="https://img.icons8.com/color/512/microsoft-sql-server.png">
+          <div class="overlay">MSSQL</div>
+      </div>
+
+      <div class="container">
+        <img alt="nodeJS-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+          <div class="overlay">Node JS</div>
+      </div>
+
+      <div class="container">
         <img alt="js-icon"  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
           <div class="overlay">JavaScript</div>
       </div>
@@ -123,11 +148,6 @@
       <div class="container">
         <img alt="python-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
           <div class="overlay">Python</div>
-      </div>
-
-      <div class="container">
-        <img alt="microsoftsqlserver-icon" src="https://img.icons8.com/color/512/microsoft-sql-server.png">
-          <div class="overlay">MSSQL</div>
       </div>
   </div>
 
@@ -151,28 +171,48 @@
       <button onclick='RevelarWeb()' class="BotaoPortifolio" id="BtnWeb">Web</button>
       <button onclick='RevelarPython()' class="BotaoPortifolio" id="BtnPy">Python</button> <br><br><br>
     </div>
+    <noscript><p><b>Ative javascript para ver outros projetos!</b></p></noscript>
 
-<div class="ContainerPortifolio Web"> 
+<div class="ContainerPortifolio"> 
 
-  <div class="Projeto">
-    <div class="ImagemProjeto" id="Imagem5"></div>
+  <div class="Projeto Web">
+    <div class="ImagemProjeto" id="Imagem6"></div>
     <div class="BasicInfo">
-      <h2>Chat Theoritas</h2> 
+      <h2>CodeDrafts - em andamento</h2> 
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="bootstrap-icon"/>
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
-      <p>Projeto de um website com uma grande equipe liderada por mim, feito para uma comunidade multilinguagem </p>
-      <p>O site é responsivo e possui localStorage para detecção do tema e idioma do usuário</p>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodeJS-icon">
+      <img src="https://img.icons8.com/color/512/microsoft-sql-server.png" alt="MSSQL-icon">
+      <img src="./Images/Java.png" alt="java-icon">
+      <p>Projeto de uma rede social totalmente funcional com banco de dados que permite interação entre usuários com posts, denúncias, comentários e muito mais </p>
     </div> <br><br>
-    <a href="https://arthutjorge.github.io/Chat-theoritas/" target="_blank" rel="noreferrer noopener">
-      <img src="./Images/theoritas.png" alt="icone site Chat Theoritas"/> VER SITE
-    <a href="https://github.com/ArthutJorge/Chat-theoritas" target="_blank" rel="noreferrer noopener">
+    <a href="https://cc23135.github.io/codedrafts/" target="_blank" rel="noreferrer noopener">
+      <img src="./Images/CodeDraftsIcon.png" alt="icone site CodeDrafts" id="CodeDraftsIcon"/> VER SITE
+    <a href="https://github.com/cc23135/codedrafts" target="_blank" rel="noreferrer noopener">
       <img src="./Images/github.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
-    <p>10/08/2023</p>
+    <p>04/09/2023</p>
     </div>
 
-      <div class="Projeto">
+    <div class="Projeto Web">
+      <div class="ImagemProjeto" id="Imagem5"></div>
+      <div class="BasicInfo">
+        <h2>Chat Theoritas</h2> 
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="bootstrap-icon"/>
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
+        <p>Projeto de um website com uma grande equipe liderada por mim, feito para uma comunidade multilinguagem </p>
+        <p>O site é responsivo assim como todos os outros e possui localStorage para detecção do tema e idioma do usuário</p>
+      </div> <br><br>
+      <a href="https://arthutjorge.github.io/Chat-theoritas/" target="_blank" rel="noreferrer noopener">
+        <img src="./Images/theoritas.png" alt="icone site Chat Theoritas"/> VER SITE
+      <a href="https://github.com/ArthutJorge/Chat-theoritas" target="_blank" rel="noreferrer noopener">
+        <img src="./Images/github.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
+      <p>10/08/2023</p>
+      </div>
+
+      <div class="Projeto Web">
         <div class="ImagemProjeto" id="Imagem3"></div>
         <div class="BasicInfo">
           <h2>Formulario Login localStorage</h2> 
@@ -189,7 +229,7 @@
         <p>13/05/2023</p>
         </div>
 
-        <div class="Projeto">
+        <div class="Projeto Web">
             <div class="ImagemProjeto" id="Imagem1"></div>
             <div class="BasicInfo">
               <h2>Hollow Knight Guia</h2> 
@@ -204,12 +244,9 @@
             <a href="https://github.com/ArthurGamaJorge/Hollow-Knight-Guia" target="_blank" rel="noreferrer noopener">
               <img src="./Images/github.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br> <br>
             <p>27/03/2023</p>
-            </div>
           </div>
-       
-<div class="ContainerPortifolio Python">
 
-        <div class="Projeto">
+        <div class="Projeto Python">
           <div class="ImagemProjeto" id="Imagem4"></div>
           <div class="BasicInfo">
           <h2>Agendamento de monitoria</h2>
@@ -223,7 +260,7 @@
           <p>02/07/2023</p>
         </div>
 
-        <div class="Projeto">
+        <div class="Projeto Python">
           <div class="ImagemProjeto" id="Imagem2"></div>
           <div class="BasicInfo">
           <h2>Cadastro e Estatísticas Alunos</h2>

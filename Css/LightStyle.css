@@ -34,6 +34,10 @@
   .Light-theme #ImagemCentral {
     opacity: 1;
   } 
+
+  .Light-theme #CodeDraftsIcon{
+    filter: brightness(200%);
+  }
   
   /* HEADER */
 

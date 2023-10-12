@@ -305,6 +305,7 @@ header {
 /* SEÇÃO PROJETOS */
 
 .ContainerPortifolio {
+  visibility: hidden;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -373,16 +374,31 @@ header {
 }
 
 #Imagem1 {background-image: url("../Images/HollowKnight.png");}
-
 #Imagem2 {background-image: url("../Images/Cadastro\ Alunos.png");}
-
 #Imagem3 {background-image: url("../Images/Formulario.png");}
-
 #Imagem4 {background-image: url("../Images/AgendamentoMonitoria.png");}
-
 #Imagem5 {background-image: url("../Images/ChatTheoritas.png");}
+#Imagem6 {background-image: url("../Images/CodeDrafts.png");}
 
-.ContainerPortifolio.Python {
+.Python {
+  display: none;
+}
+
+.PythonLigado .Python{
+  display: block;
+}
+
+.PythonLigado #BtnPy{
+  border: 2px solid white; 
+  scale:1.2;
+}
+
+.PythonLigado #BtnWeb{
+  scale: 0.94; 
+  border: none;
+}
+
+.PythonLigado .Web{
   display: none;
 }
 

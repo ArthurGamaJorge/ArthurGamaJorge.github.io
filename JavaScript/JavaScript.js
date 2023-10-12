@@ -24,31 +24,47 @@ if (tamanho.matches) {
 
 sr.reveal("#DivImagem", { delay: 50, origin: "left" });
 sr.reveal("#SetaBaixo", { delay: 50, origin: "right" });
+sr.reveal("#ContainerGeral", { delay: 50, origin: "left" });
 sr.reveal(".Container", { delay: 50, origin: "left" });
 sr.reveal("#Botoes", { delay: 50, origin: "left" });
-sr.reveal(".Web", { delay: 50, origin: "bottom" });
+sr.reveal(".ContainerPortifolio", { delay: 50, origin: "bottom" });
 
-Python = document.querySelector('.ContainerPortifolio.Python')
-Web = document.querySelector('.ContainerPortifolio.Web')
-BtnPy = document.querySelector('#BtnPy')
-BtnWeb = document.querySelector('#BtnWeb')
+
+// SLIDER PORTIFÓLIO
+container = document.querySelector('.ContainerPortifolio')
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+container.addEventListener('mousedown', (e) => {
+  isDown = true;
+  startX = e.pageX - container.offsetLeft;
+  scrollLeft = container.scrollLeft;
+});
+
+container.addEventListener('mouseleave', () => {
+  isDown = false;
+});
+
+container.addEventListener('mouseup', () => {
+  isDown = false;
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - container.offsetLeft;
+  const walkX = (x - startX) * 0.75; 
+  container.scrollLeft = scrollLeft - walkX;
+});
 
 function RevelarPython(){
-  Python.style="display:flex"
-  BtnPy.style="border: 2px solid white; scale:1.2"
-
-  BtnWeb.style = "scale:0.94; border:none"
-  Web.style="display:none"
-  PythonAtivado = true
+  document.body.classList.toggle("PythonLigado")
 }
 
 function RevelarWeb(){
-  Web.style="display:flex"
-  BtnWeb.style="border: 2px solid white; scale:1.2"
-
-  BtnPy.style="border: none; scale:0.94"
-  Python.style="display:none"
-  WebAtivado = true
+  document.body.classList.toggle("PythonLigado")
 }
 
 function MudarTema() {
