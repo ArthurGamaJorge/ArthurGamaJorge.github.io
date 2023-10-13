@@ -11,7 +11,7 @@
 }
 
 .Light-theme::-webkit-scrollbar-thumb, .Light-theme ::-webkit-scrollbar-thumb {
-  background-color: rgb(164, 8, 40);
+  background-color: #8e142b;
   border: 1px solid white;
 }
 
@@ -24,6 +24,10 @@
   .Light-theme a:hover, .Light-theme button, .Light-theme .Projeto {
     cursor: url("../Images/CursorClaroPointer.png"), pointer;
   }
+
+  .Light-theme #Imagem3 {background-image: url("../Images/FormularioLight.png");}
+  .Light-theme #Imagem5 {background-image: url("../Images/ChatTheoritasLight.png");}
+  .Light-theme #Imagem6 {background-image: url("../Images/CodeDraftsLight.png");}
 
   /* ESTILIZAÇÃO IMAGENS */
 
@@ -95,7 +99,8 @@
 
   .Light-theme .Projeto {
     background: rgb(115, 6, 28);
-    filter:  drop-shadow(10px 10px 8px crimson);
+    filter:  drop-shadow(10px 10px 8px #8e142b);
+    border-color: black;
   }
   
   .Light-theme .Projeto:hover {

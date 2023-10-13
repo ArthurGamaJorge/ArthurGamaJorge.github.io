@@ -375,10 +375,10 @@ header {
 
 #Imagem1 {background-image: url("../Images/HollowKnight.png");}
 #Imagem2 {background-image: url("../Images/Cadastro\ Alunos.png");}
-#Imagem3 {background-image: url("../Images/Formulario.png");}
+#Imagem3 {background-image: url("../Images/FormularioDark.png");}
 #Imagem4 {background-image: url("../Images/AgendamentoMonitoria.png");}
-#Imagem5 {background-image: url("../Images/ChatTheoritas.png");}
-#Imagem6 {background-image: url("../Images/CodeDrafts.png");}
+#Imagem5 {background-image: url("../Images/ChatTheoritasDark.png");}
+#Imagem6 {background-image: url("../Images/CodeDraftsDark.png");}
 
 .Python {
   display: none;
