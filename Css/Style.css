@@ -260,37 +260,94 @@ header {
 
 .Habilidades{
   color: #3b4dc3;
+  padding: 0;
 }
 
-.container {
-  display: inline-block;
-  position: relative;
-  width: max-content;
-  margin: auto;
+.Habilidades #Texto{
+  width: unset !important;
 }
 
 .Habilidades img {
   width: calc(2.5vmax + 30px);
 }
 
-.image {
-  display: inline-block;
+.Habilidades, .SobreMim, .Portifolio, .Contato{
+  text-align: center;
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: #3b4dc3;
-  transition: 0.5s ease;
-  opacity: 0;
-  font-size: calc(0.5vmax + 10px);
+#DivImagem{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#ContainerGeral{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  padding: 0;
+  width: 98vw;
+  justify-content: center;
+}
+
+.Cartão{
+  border: 3px solid white;
+  border-radius: 1vmax;
+  width: calc(19vmax + 80px);
+  height: calc(5vmax + 50px);
+  background: linear-gradient(0.15turn, aqua, rgb(0, 0, 0));
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.Ferramenta{
+  width: calc(14vmax + 80px);
+}
+
+.Cartão p{
+  font-size: calc(1vmax + 10px) !important;
   color: white;
 }
 
-.container:hover .overlay,
-.ImagemProjeto:hover .overlay {
-  opacity: 1;
+#habilidade {
+  width: calc(4vmax + 30px);
+  margin-right: 2vmax;
+  -webkit-filter: drop-shadow(1px 1px 0 white)
+                drop-shadow(-1px 1px 0 white)
+                drop-shadow(1px -1px 0 white)
+                drop-shadow(-1px -1px 0 white);
+filter: drop-shadow(1px 1px 0 white)
+        drop-shadow(-1px 1px 0 white)
+        drop-shadow(1px -1px 0 white)
+        drop-shadow(-1px -1px 0 white);
 }
+
+.estrelas{
+  position: absolute;
+  left: calc(6vmax + 30px);
+  bottom: 10%;
+}
+
+.estrelas img{
+  width: calc(0.7vmax + 10px);
+}
+
+#Botoes{
+  margin: auto;
+}
+
+.Visivel {
+  display: flex;
+}
+
+.Selecionado{
+  border: 2px solid white; 
+  scale:1.2;
+}
+
 
 .Contato {
   background: rgb(255, 0, 0, 0.05);
@@ -300,6 +357,11 @@ header {
 .SobreMim, .Portifolio {
   background: rgb(255, 255, 255, 0.02);
   color: #3b4dc3;
+}
+
+.SobreMim #Texto{
+  margin: auto;
+  width: 60%;
 }
 
 /* SEÇÃO PROJETOS */
@@ -377,7 +439,6 @@ header {
 #Imagem2 {background-image: url("../Images/Cadastro\ Alunos.png");}
 #Imagem3 {background-image: url("../Images/FormularioDark.png");}
 #Imagem4 {background-image: url("../Images/AgendamentoMonitoria.png");}
-#Imagem5 {background-image: url("../Images/ChatTheoritasDark.png");}
 #Imagem6 {background-image: url("../Images/CodeDraftsDark.png");}
 #Imagem7 {background-image: url("../Images/YourDle.png");}
 
