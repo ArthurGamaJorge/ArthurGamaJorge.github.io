@@ -293,7 +293,7 @@ header {
 .Cartão{
   border: 3px solid white;
   border-radius: 1vmax;
-  width: calc(19vmax + 80px);
+  width: calc(14vmax + 80px);
   height: calc(5vmax + 50px);
   background: linear-gradient(0.15turn, aqua, rgb(0, 0, 0));
   display: flex;
@@ -301,10 +301,6 @@ header {
   position: relative;
   margin-bottom: 20px;
   display: none;
-}
-
-.Ferramenta{
-  width: calc(14vmax + 80px);
 }
 
 .Cartão p{
