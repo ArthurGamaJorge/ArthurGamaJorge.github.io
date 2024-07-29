@@ -230,7 +230,6 @@ header {
 }
 
 #EfeitoEscrevendo {
-  width: calc(21ch + 9vmax - 170px);
   animation: Escrever 2s steps(37), effect 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
@@ -569,6 +568,11 @@ filter: drop-shadow(1px 1px 0 white)
   }
   .SobreMim #Texto{
     width: 100%;
+  }
+  #EfeitoEscrevendo, #Escrever{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .Central {
     display: flex;
