@@ -34,6 +34,7 @@
 
   </head>
   <body>
+    <script src="./JavaScript/avoidFlickering.js"></script>
     <header>
       <a href="#" class="Principal">Home</a>
       <ul class="Navbar">
@@ -41,7 +42,7 @@
         <li><a href="#Habilidades" id="ahover">Habilidades</a></li>
         <li><a href="#Portifolio" id="ahover">Portifólio</a></li>
         <li><a href="#Contato" id="ahover">Contato</a></li>
-        <li><a><button onclick = "MudarTema()"> <img src="./Images/lightIcon.png" id = "button" alt="Botão troca de tema"></button></a></li>
+        <li><a><button onclick = "MudarTema()"> <img src="./Images/lightIcon.png" id="button" alt="Botão troca de tema" style="visibility: hidden;"></button></a></li>
       </ul>
 
       <div class="Bx bx-menu" id="IconeMenu">
@@ -86,9 +87,8 @@
         <h1>Sobre mim</h1>
         <br><br>
         <div id="Escrever">
-        <p>Programador full-stack com experiência básica de 1 ano </p>
-        <p> Estudante no 3.º semestre de informática do Colégio Técnico de Campinas - Unicamp  </p> 
-        <p>Eu amo aprender tecnologias novas e me adaptar a elas, sempre tentando criar novos projetos para reforçar meu aprendizado</p>
+        <p>Programador full-stack com experiência de 3 anos e estudante no 4.º semestre de informática do Colégio Técnico de Campinas - Unicamp</p>
+        <p>Eu amo aprender tecnologias novas e me adaptar a elas, sempre tentando criar novos projetos por conta própria para reforçar meu aprendizado</p>
       </div> <br>
         </div>
         </div>
@@ -160,6 +160,11 @@
       </div>
 
       <div class="Cartão Linguagem">
+        <img id="habilidade" alt="c++-icon" src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png"> 
+        <p>C++</p>
+      </div>
+
+      <div class="Cartão Linguagem">
         <img id="habilidade" alt="c#-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1024px-Kotlin_Icon.png"> 
         <p>Kotlin</p>
       </div>
@@ -190,18 +195,18 @@
       </div>
 
       <div class="Cartão Ferramenta">
-        <img id="habilidade" alt="render-icon" src="https://tutorials.yax.com/assets/images/articles/render-logo.png"> 
-        <p>Render</p>
+        <img id="habilidade" alt="mit-icon" src="https://i.imgur.com/wlTXreT.png"> 
+        <p>Mit App Inventor</p>
       </div>
 
       <div class="Cartão Ferramenta">
-        <img id="habilidade" alt="Vercel-icon" src="https://cdn.icon-icons.com/icons2/3375/PNG/512/vercel_brand_icon_211876.png"> 
-        <p>Vercel</p>
+        <img id="habilidade" alt="figma-icon" src="https://static-00.iconduck.com/assets.00/apps-figma-icon-2048x2048-ctjj5ab7.png"> 
+        <p>Figma</p>
       </div>
 
       <div class="Cartão Ferramenta">
-        <img id="habilidade" alt="Netlify-icon" src="https://static-00.iconduck.com/assets.00/netlify-icon-511x512-idkvcd89.png"> 
-        <p>Netlify</p>
+        <img id="habilidade" alt="arduino-icon" src="https://cdn.iconscout.com/icon/free/png-256/free-arduino-226072.png?f=webp"> 
+        <p>Arduino</p>
       </div>
 
   </div>
@@ -240,7 +245,7 @@
     <a href="https://codedrafts-5as0.onrender.com/" target="_blank" rel="noreferrer noopener">
       <img src="./Images/CodeDraftsIcon.png" alt="icone site CodeDrafts" id="CodeDraftsIcon"/> VER SITE
     <a href="https://github.com/cc23135/codedrafts" target="_blank" rel="noreferrer noopener">
-      <img src="./Images/github.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
+      <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
     <p>04/09/2023</p>
     </div>
 
@@ -258,7 +263,7 @@
       <a href="https://yourdle-seven.vercel.app/" target="_blank" rel="noreferrer noopener">
         <img src="./Images/YourDleIcon.png" alt="icone site CodeDrafts" id="CodeDraftsIcon"/> VER SITE
       <a href="https://github.com/ArthurGamaJorge/YourDle" target="_blank" rel="noreferrer noopener">
-        <img src="./Images/github.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
+        <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
       <p>15/11/2023</p>
       </div>
 
@@ -276,7 +281,7 @@
         <a href="https://iooonairlines.netlify.app/" target="_blank" rel="noreferrer noopener">
           <img src="./Images/IOOON logo.png" alt="icone site iooon airlines"/> VER SITE
         <a href="https://github.com/ArthurGamaJorge/Formulario-Login-localStorage" target="_blank" rel="noreferrer noopener">
-          <img src="./Images/github.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
+          <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
         <p>13/05/2023</p>
         </div>
 
@@ -293,7 +298,7 @@
               <a href="https://arthurgamajorge.github.io/Hollow-Knight-Guia/" target="_blank" rel="noreferrer noopener">
               <img src="./Images/IconeHollow.png" alt="icone site hollow knight guia"/> VER SITE
             <a href="https://github.com/ArthurGamaJorge/Hollow-Knight-Guia" target="_blank" rel="noreferrer noopener">
-              <img src="./Images/github.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br> <br>
+              <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br> <br>
             <p>27/03/2023</p>
           </div>
 
@@ -307,7 +312,7 @@
           <p>Este projeto utiliza interfáce gráfica e consegue guardar as informações inseridas e alterá-las</p>
           </div><br><br>
           <a href="https://github.com/ArthurGamaJorge/Agendamento-de-monitoria" target="_blank" rel="noreferrer noopener">
-            <img src="./Images/github.png" id="github" alt="github"/> VER NO GITHUB</a> <br><br>
+            <img src="./Images/Github logo.png" id="github" alt="github"/> VER NO GITHUB</a> <br><br>
           <p>02/07/2023</p>
         </div>
 
@@ -320,7 +325,7 @@
           <p>Este projeto utiliza interfáce em console e armazena as informações em arquivo de texto</p>
         </div> <br><br>
           <a href="https://github.com/ArthurGamaJorge/Cadastro-e-Estatisticas-Alunos" target="_blank" rel="noreferrer noopener">
-            <img src="./Images/github.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
+            <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
           <p>24/04/2023</p>
         </div>
 
@@ -331,23 +336,21 @@
     </section>
     
     <section class="Contato" id="Contato">
-      <br>
       <div id="Texto2" >
         <h1>Contato</h1>
 
-        <a href="mailto: arthurgamajorgetec@gmail.com" target="_blank" rel="noreferrer noopener">
-          <img src="./Images/Gmail.png" alt="gmail-icon"/> arthurgamajorgetec@gmail.com</a>
+        <div class="divContato">
+          <a href="mailto: arthurgamajorgetec@gmail.com" target="_blank" rel="noreferrer noopener">
+            <img src="./Images/Gmail.png" alt="gmail-icon"/> arthurgamajorgetec@gmail.com</a>
           
           <a href="https://discordapp.com/users/659238913227096085" target="_blank" rel="noreferrer noopener">
             <img src="./Images/Discord.png" alt="discord-icon"/> Ronin_Kanmuri#5566</a>
-
-            <a href="https://leetcode.com/arthurgamajorge/" target="_blank" rel="noreferrer noopener">
-              <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="leetcode-icon"/> leetcode</a>
+        </div>
             
   </div> 
         </div>
         </div>
-        <br><br><br><br>
+        <br><br>
 
       
     </section>

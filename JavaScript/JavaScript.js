@@ -83,19 +83,27 @@ function RevelarWeb(){
   document.body.classList.toggle("PythonLigado")
 }
 
-function MudarTema() {
-    var Corvo = document.getElementById('ImagemCentral')
-    var body = document.body;
-         
-    body.classList.toggle("Light-theme");
-    let button = document.getElementById('button');
 
-    if (button.getAttribute('src') == ImagemOriginal) {
-       button.src = "./Images/darkIcon.png";
-       Corvo.style = "filter: invert(100%) drop-shadow(10px 10px 10px crimson) !important;"
-       
+darkMode = localStorage.getItem("dark-mode"); 
+botaoTema = document.getElementById('button');
+
+if (darkMode === 'disabled') {
+    botaoTema.src = "./Images/darkIcon.png";
+} else {
+    botaoTema.src = ImagemOriginal;
+}
+
+botaoTema.style.visibility = "visible";
+
+function MudarTema() {
+    var body = document.body;
+    body.classList.toggle("Light-theme");
+
+    if (botaoTema.getAttribute('src') == ImagemOriginal) {
+        botaoTema.src = "./Images/darkIcon.png";
+        localStorage.setItem('dark-mode', 'disabled');
     } else {
-       button.src = ImagemOriginal
-       Corvo.style = "filter: invert(-100%)"
+        botaoTema.src = ImagemOriginal;
+        localStorage.setItem('dark-mode', 'enabled');
     }
- }
+}

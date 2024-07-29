@@ -16,6 +16,10 @@ body {
   color: aqua;
 }
 
+html{
+  scroll-padding-top: 100px;
+}
+
 ::-webkit-scrollbar {
   width: 20px;
 }
@@ -84,7 +88,6 @@ button {
 #Texto a img, #Texto2 a img, .Projeto a img{
   vertical-align: middle;
 }
-
 #Texto h1,
 #Texto2 h1 {
   font-size: calc(3.5vmax + 10px);
@@ -95,6 +98,10 @@ button {
 #Texto p,
 #Texto2 p {
   font-size: calc(0.5vmax + 10px);
+}
+
+.SobreMim #Texto p{
+  font-size: calc(0.3vmax + 15px);
 }
 
 #Texto a,
@@ -111,14 +118,25 @@ button {
   margin-top: 20px;
 }
 
+.divContato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+}
+
 #Texto2 a {
   background: transparent;
-  border: 2px solid rgb(171, 22, 22);
-  width: calc(8vmax + 180px);
-  height: calc(2vmax + 50px);
-  padding: calc(1.4vmax + 7px) 0px 0px 0px;
+  border: 2px solid #3b4dc3;
+  display: flex; 
+  margin: 10px;
+  align-items: center; 
   font-size: calc(0.5vmax + 10px);
-  margin-right: 20px;
+}
+
+#Texto2 img {
+  margin-right: 8px; 
+  vertical-align: middle; 
 }
 
 #Texto a:hover,
@@ -240,11 +258,13 @@ header {
   visibility: hidden;
 }
 #SetaBaixo a {
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 10px;
+  aspect-ratio: 1;
   color: white;
   background-color: rgb(58, 58, 58);
-  border-radius: calc(2vmax + 30px);
+  border-radius: 100%;
   transition: all 0.55s ease;
 }
 
@@ -295,7 +315,7 @@ header {
   border-radius: 1vmax;
   width: calc(14vmax + 80px);
   height: calc(5vmax + 50px);
-  background: linear-gradient(0.15turn, aqua, rgb(0, 0, 0));
+  background: linear-gradient(0.05turn, aqua, rgb(0, 0, 0));
   display: flex;
   align-items: center;
   position: relative;
@@ -303,12 +323,16 @@ header {
   display: none;
 }
 
+#github{
+  filter: brightness(0) saturate(100%) invert(25%) sepia(89%) saturate(2932%) hue-rotate(229deg) brightness(76%) contrast(108%);
+}
 .Cartão p{
   font-size: calc(1vmax + 10px) !important;
   color: white;
 }
 
 #habilidade {
+  margin-left: 5px;
   width: calc(4vmax + 30px);
   margin-right: 2vmax;
   -webkit-filter: drop-shadow(1px 1px 0 white)
@@ -346,7 +370,7 @@ filter: drop-shadow(1px 1px 0 white)
 
 
 .Contato {
-  background: rgb(255, 0, 0, 0.05);
+  background: rgb(59, 77, 195, 0.05);
   color: white;
 }
 
@@ -384,6 +408,12 @@ filter: drop-shadow(1px 1px 0 white)
   flex-shrink: 0;
   margin-bottom: 20px;
   transition: all 0.5s ease-in-out;
+  user-select: none;
+}
+
+.Projeto a, .Projeto img{
+  -webkit-user-drag: none;
+  width: auto;
 }
 
 .Projeto:hover {
@@ -531,37 +561,40 @@ filter: drop-shadow(1px 1px 0 white)
 }
 
 @media (max-width: 730px) {
+  #Texto{
+    margin-top: 10vmax;
+    width: 100%;
+  }
+  .SobreMim #Texto{
+    width: 100%;
+  }
+  #Escrever{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .Central {
-    gap: 0rem;
-    grid-template-columns: 0fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
-}
-
-@media (max-width: 480px) {
-  #Texto,
-  #Texto2 {
-    margin: 0;
-    padding-top: 40px;
-    margin-right: 0;
+  #Corvo{
+    display: flex;
+    width: 100%;
   }
-  #DivImagem,
-  #Corvo {
-    width: 100px;
+  #ImagemCentral{
+    width: 100%;
   }
 }
 
 @media (max-width: 400px) {
-  #Texto,
-  #Texto2 {
-    width: 200px;
+  .Central, .SobreMim{
+    padding: 8%;
   }
 }
 
 @media (max-width: 920px) and (max-height: 420px) {
-  #Texto,
-  #Texto2 {
-    width: 250px;
-  }
   #Texto a,
   #Texto2 a {
     padding: 3% 12%;
