@@ -1,5 +1,3 @@
-/* GERAL */
- 
 .Light-theme {
   background: linear-gradient(0.25turn, rgb(250, 250, 250), rgb(234, 234, 234));
 }
@@ -16,18 +14,8 @@
   border-color: black;
 }
 
-  /* TROCA DE IMAGENS */
-
   .Light-theme #Imagem3 {background-image: url("../Images/FormularioLight.png");}
   .Light-theme #Imagem6 {background-image: url("../Images/CodeDraftsLight.png");}
-
-  /* ESTILIZAÇÃO IMAGENS */
-
-  .Light-theme #ImagemCentral {
-    opacity: 1;
-  } 
-  
-  /* HEADER */
 
   .Light-theme #IconeMenu img{
     filter: invert(100%);
@@ -56,10 +44,6 @@
       border: 2px solid black
     }
   }
-
-
-
-  /* SEÇÃO PRINCIPAL */
   
   .Light-theme .Portifolio,
   .Light-theme .SobreMim {
@@ -70,8 +54,6 @@
     color: black !important;
   }
 
-  /* SEÇÃO HABILIDADES */
-
   .Light-theme .Cartão{
     background: linear-gradient(0.05turn, aqua, rgb(204, 255, 255));
     border-color: black;
@@ -80,8 +62,6 @@
   .Light-theme .Cartão p{
     color: black;
   }
-
-  /* SEÇÃO PROJETOS */
 
   .Light-theme .Projeto {
     border-color: black;

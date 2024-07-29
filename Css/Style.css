@@ -69,7 +69,6 @@ button {
 
 #ImagemCentral {
   width: calc(25vw + 140px);
-  opacity: 60%;
   transition: transform 1800ms ease-in-out;
   transition-delay: 0.1s;
 }
@@ -521,6 +520,9 @@ filter: drop-shadow(1px 1px 0 white)
 
 /* MENU DE MAIS OPÇÕES */
 @media (max-width: 1040px) {
+  html{
+    scroll-padding-top: 20px;
+  }
   #IconeMenu {
     display: block;
   }
