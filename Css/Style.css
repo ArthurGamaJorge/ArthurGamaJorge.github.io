@@ -570,11 +570,6 @@ filter: drop-shadow(1px 1px 0 white)
   .SobreMim #Texto{
     width: 100%;
   }
-  #Escrever{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
   .Central {
     display: flex;
     flex-wrap: wrap;
