@@ -230,16 +230,22 @@ header {
 }
 
 #EfeitoEscrevendo {
-  animation: Escrever 2s steps(37), effect 0.5s step-end infinite alternate;
+  max-width: min-content;
+  padding-right: calc(0.5vmax + 5px);
+  animation: Escrever 2s steps(37) forwards, effect 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid aqua;
   font-size: 2em;
+  display: inline-block; /* Necessário para o efeito de escrita funcionar corretamente */
 }
 
 @keyframes Escrever {
   from {
-    width: 0;
+    max-width: 0;
+  }
+  to {
+    max-width: 100%; /* Ajusta a largura máxima conforme o conteúdo */
   }
 }
 
@@ -568,11 +574,6 @@ filter: drop-shadow(1px 1px 0 white)
   }
   .SobreMim #Texto{
     width: 100%;
-  }
-  #EfeitoEscrevendo, #Escrever{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
   }
   .Central {
     display: flex;
