@@ -10,6 +10,10 @@
   color: black;
 }
 
+.Light-theme .Selecionado{
+  border-color: black;
+}
+
 .Light-theme #EfeitoEscrevendo{
   border-color: black;
 }
