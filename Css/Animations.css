@@ -1,0 +1,23 @@
+.reveal {
+    opacity: 0;
+    transform: translateX(100px); /* Padrão (da direita) */
+    transition: opacity 2s ease, transform 1s ease;
+  }
+
+  .revealFarR{
+    transform: translateX(150px) !important;
+    transition: opacity 2s ease, transform 1s ease;
+  }
+  
+  .reveal[data-reveal-origin="left"] {
+    transform: translateX(-100px); /* Entrada pela esquerda */
+  }
+  
+  .reveal[data-reveal-origin="right"] {
+    transform: translateX(100px); /* Entrada pela direita */
+  }
+  
+  .reveal.is-inview {
+    opacity: 1;
+    transform: translateX(0) !important; 
+  }

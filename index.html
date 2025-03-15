@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-    <title>Arthur Gama Jorge - Portifólio</title>
+    <title>Arthur Gama Jorge - Portfólio</title>
     <link rel="stylesheet" href="./Css/Style.css" />
+    <link rel="stylesheet" href="./Css/Animations.css" />
     <link rel="stylesheet" href="./Css/LightStyle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google-site-verification" content="HA1D1OCcfKpxRkkOsWkLDPAp8qKG4MSqnf6uO7xq_tE" />
-    <meta name="description" content="Site pessoal de portifólio de programação full-stack de Arthur Gama Jorge. Confira quem eu sou, minhas habilidades, projetos prévios e formas de me contatar!">
+    <meta name="description" content="Site pessoal de portfólio de programação full-stack de Arthur Gama Jorge. Confira quem eu sou, minhas habilidades, projetos prévios e formas de me contatar!">
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="./Images/favicon.ico"/>
@@ -24,24 +26,22 @@
       #Corvo,
       #ContainerGeral,
       #Texto,
-      #SetaBaixo,
-      .ContainerPortifolio
+      .ContainerPortfolio
        {
-        visibility: visible;
+        opacity: 1;
       }
       </style>
     </noscript>
 
   </head>
-  <body>
+  <body data-scroll-container>
     <script src="./JavaScript/avoidFlickering.js"></script>
     <header>
       <a href="#" class="Principal">Home</a>
       <ul class="Navbar">
         <li><a href="#SobreMim" id="ahover">Sobre mim</a></li>
         <li><a href="#Habilidades" id="ahover">Habilidades</a></li>
-        <li><a href="#Portifolio" id="ahover">Portifólio</a></li>
-        <li><a href="#Contato" id="ahover">Contato</a></li>
+        <li><a href="#Portfolio" id="ahover">Portfólio</a></li>
         <li><a><button onclick = "MudarTema()"> <img src="./Images/lightIcon.png" id="button" alt="Botão troca de tema" style="visibility: hidden;"></button></a></li>
       </ul>
 
@@ -49,313 +49,297 @@
         <img src="./Images/Menu.png" id="IconeMenu" alt="Menu">
       </div>
     </header>
-
-    <section class="Central">
-      <div id="Texto">
-        <h1>Arthur Gama Jorge</h1>
-        <div id="Escrever">
-        <div id="EfeitoEscrevendo">
-        <p>Meu portifólio pessoal de programador</p>
-        </div>
-        </div>
-        <br />
-        <a href="https://github.com/ArthurGamaJorge" target="_blank" rel="noreferrer noopener">
-          <img src="./Images/Github logo.png" alt="Logo Github"/> MEU GITHUB</a
-        >
-      </div>
-
-      <div id="Corvo">
-        <img src="./Images/Icone.png" usemap="#image-map" id="ImagemCentral" alt="Logo corvo site">
-
-        <map name="image-map">
-            <area coords="557,600,0,600,1,0,665,3,666,597,398,472,441,483,488,464,447,455,491,440,525,404,465,422,526,373,459,397,398,404,372,387,366,366,354,337,418,331,419,311,429,319,434,255,431,206,476,233,533,211,588,192,547,193,502,179,466,149,526,161,571,157,626,125,653,106,660,95,597,112,548,115,495,103,571,86,609,57,630,16,584,45,493,60,415,73,382,78,341,93,319,111,299,170,291,200,283,237,218,269,218,261,228,242,213,230,258,219,183,197,282,161,151,154,233,69,96,121,157,48,213,7,171,14,135,31,99,50,60,94,71,14,69,5,49,41,34,69,19,96,4,133,7,201,36,241,92,281,121,336,96,377,95,410,85,428,74,462,83,478,100,446,124,427,151,417,166,426,178,438,226,456,224,469,188,465,170,489,179,508,193,485,200,510,213,490,215,513,239,492,239,475,253,470,252,497,209,564,226,578,234,576,257,590,252,559,260,524,275,502,283,487,282,466,296,466,320,497,363,518,395,514,380,491,664,578,664,0,666,2,666,541,666,590,398,473,525,576,663,600" shape="poly">
-            <area coords="416,486,665,600,666,550,432,495,520,584,666,599" shape="poly">
-            <area coords="455,500,649,600" shape="rect">
-        </map>
-  
-      </map>
-      </div>
-    </section>
-
-    <div id="SetaBaixo">
-      <a href="#SobreMim" id="Seta"> <img src="./Images/Seta.png" alt="seta"/> </a>
-    </div>
     
-    <section class="SobreMim" id="SobreMim">
-      <br>
-      <div id="Texto" >
-        <h1>Sobre mim</h1>
-        <br><br>
-        <div id="Escrever">
-        <p>Programador full-stack com experiência de 3 anos e estudante no 4.º semestre de informática do Colégio Técnico de Campinas - Unicamp</p>
-        <p>Eu amo aprender tecnologias novas e me adaptar a elas, sempre tentando criar novos projetos por conta própria para reforçar meu aprendizado</p>
-      </div> <br>
+    <nav id="scroll">
+      <section class="Central">
+        <div id="Texto"  class="reveal reveal" data-reveal-origin="left">
+          <div class="paragrafo">
+            <h2>Olá! Eu sou</h2>
+            <h1>Arthur Gama Jorge</h1>
+            <div id="Escrever">
+              <div id="EfeitoEscrevendo">
+                <p>E esse é meu portfólio pessoal de programador</p>
+              </div>
+            </div>
+            <h3>Sou um desenvolvedor full-stack e técnico em informática pelo Cotuca apaixonado por tecnologia e aprendizado contínuo, sempre explorando novos desafios para criar soluções inovadoras.</h3>
+            <div class="redes">
+              <a href="https://github.com/ArthurGamaJorge" target="_blank" rel="noreferrer noopener"><i class="bx bxl-github"> </i></a>
+              <a href="https://www.linkedin.com/in/arthurgamajorge/" target="_blank" rel="noreferrer noopener"><i class="bx bxl-linkedin-square"> </i></a>
+              <a href="https://discordapp.com/users/659238913227096085" target="_blank" rel="noreferrer noopener"><i class="bx bxl-discord-alt"> </i></a>
+              <a href="mailto: arthurgamajorgetec@gmail.com" target="_blank" rel="noreferrer noopener"><i class="bx bx-envelope" type="solid"></i></a>
+              <a href="https://leetcode.com/u/arthurgamajorge/" target="_blank" rel="noreferrer noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 16 16" stroke-width="273">
+                  <path fill="currentColor" d="M 10.447266 0.265625 A 0.50005 0.50005 0 0 0 10.103516 0.41796875 L 5.65625 4.8671875 L 3.0957031 7.4257812 A 0.50005 0.50005 0 0 0 2.9785156 7.6035156 C 1.769869 8.9739016 1.7865696 11.063913 3.0957031 12.373047 L 5.65625 14.933594 C 7.0176322 16.294976 9.242133 16.294976 10.603516 14.933594 L 12.853516 12.683594 A 0.50063809 0.50063809 0 1 0 12.144531 11.976562 L 9.8945312 14.226562 C 8.9159134 15.20518 7.3418991 15.20518 6.3632812 14.226562 L 3.8027344 11.666016 C 2.8241166 10.687398 2.8241166 9.1114303 3.8027344 8.1328125 L 6.3632812 5.5742188 C 7.3418991 4.5956009 8.9159135 4.5956009 9.8945312 5.5742188 L 12.144531 7.8242188 A 0.50063784 0.50063784 0 1 0 12.853516 7.1171875 L 10.603516 4.8671875 C 9.9106907 4.174363 8.9943718 3.8431189 8.0820312 3.8554688 L 10.8125 1.125 A 0.50005 0.50005 0 0 0 10.447266 0.265625 z M 7.328125 9.4003906 A 0.50005 0.50005 0 1 0 7.328125 10.400391 L 14.228516 10.400391 A 0.50005 0.50005 0 1 0 14.228516 9.4003906 L 7.328125 9.4003906 z"></path>
+                </svg>
+              </a>            
+            </div>
+          </div>
+          <br />
         </div>
+        <div id="Corvo" class="reveal revealFarR" data-reveal-origin="right">
+          <img src="./Images/corvo.png" usemap="#image-map" id="ImagemCentral" alt="Logo corvo site">
         </div>
-        </div>
-        <br/> <br><br><br>
-
-      <div id="DivImagem">
-        <img src="./Images/Programador.png" id="ImagemCentral"  alt="programador na frente de um notebook" class="SecondaryImage">
-      </div>
-
-      <br><br><br><br><br><br>
-
-    </section>
-    
-    <section class="Habilidades" id="Habilidades">
-      <br>
-      <div id="Texto" >
-        <h1>Habilidades</h1>
-        <div id="Botoes">
-          <button onclick="Revelar('HabWeb')" class="BotaoPortifolio Selecionado" id="HabWeb">Web</button>
-          <button onclick="Revelar('Linguagem')" class="BotaoPortifolio" id="Linguagem">Linguagens</button>
-          <button onclick="Revelar('Ferramenta')" class="BotaoPortifolio" id="Ferramenta">Ferramentas</button>
+        
+      </section>
+      
+      <section class="SobreMim" id="SobreMim">
+        <br>
+        <div id="Texto" class="reveal" data-reveal-origin="left">
+          <h1>Sobre mim</h1>
+          <br><br>
+          <div id="Escrever">
+          <p>Programador full-stack com experiência de 3 anos e estudante no 4.º semestre de informática do Colégio Técnico de Campinas - Unicamp</p>
+          <p>Eu amo aprender tecnologias novas e me adaptar a elas, sempre tentando criar novos projetos por conta própria para reforçar meu aprendizado</p>
         </div> <br>
-    <div id="ContainerGeral">
+          </div>
+          </div>
+          </div>
+          <br/> <br><br><br>
 
-      <div class="Cartão HabWeb Visivel">
-        <img id="habilidade" alt="html-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"> 
-        <p>HTML</p>
-      </div>
-
-      <div class="Cartão HabWeb Visivel">
-        <img id="habilidade" alt="css-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"> 
-        <p>CSS</p>
-      </div>
-
-      <div class="Cartão HabWeb Visivel">
-        <img id="habilidade" alt="js-icon" src="./Images/javascript.png"> 
-        <p>Javascript</p>
-      </div>
-
-      <div class="Cartão HabWeb Visivel">
-        <img id="habilidade" alt="node-icon" src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png"> 
-        <p>NodeJS</p>
-      </div>
-
-      <div class="Cartão HabWeb Visivel">
-        <img id="habilidade" alt="react-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"> 
-        <p>React</p>
-      </div>
-
-      <div class="Cartão Linguagem">
-        <img id="habilidade" alt="mssql-icon" src="https://img.icons8.com/color/512/microsoft-sql-server.png"> 
-        <p>MSSQL</p>
-      </div>
-
-      <div class="Cartão Linguagem">
-        <img id="habilidade" alt="python-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"> 
-        <p>Python</p>
-      </div>
-
-      <div class="Cartão Linguagem">
-        <img id="habilidade" alt="java-icon" src="./Images/Java.png"> 
-        <p>Java</p>
-      </div>
-
-      <div class="Cartão Linguagem">
-        <img id="habilidade" alt="c#-icon" src="https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png"> 
-        <p>C#</p>
-      </div>
-
-      <div class="Cartão Linguagem">
-        <img id="habilidade" alt="c++-icon" src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png"> 
-        <p>C++</p>
-      </div>
-
-      <div class="Cartão Linguagem">
-        <img id="habilidade" alt="c#-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1024px-Kotlin_Icon.png"> 
-        <p>Kotlin</p>
-      </div>
-
-      <div class="Cartão Ferramenta">
-        <img id="habilidade" alt="vscode-icon" src="https://static-00.iconduck.com/assets.00/android-studio-icon-486x512-zp9um7zl.png"> 
-        <p>Android Studio</p>
-      </div>
-
-      <div class="Cartão Ferramenta">
-        <img id="habilidade" alt="QtDesigner-icon" src="./Images/QtDesigner.png"> 
-        <p>Qt Designer</p>
-      </div>
-
-      <div class="Cartão Ferramenta">
-        <img id="habilidade" alt="JFX-icon" src="https://cursojavanow.com.br/wp-content/uploads/2020/06/Scene-Builder.png"> 
-        <p>Java Scene Builder</p>
-      </div>
-
-      <div class="Cartão Ferramenta">
-        <img id="habilidade" alt="vscode-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"> 
-        <p>Visual Studio Code</p>
-      </div>
-
-      <div class="Cartão Ferramenta">
-        <img id="habilidade" alt="visualStudio-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Visual_Studio_Icon_2022.svg/1200px-Visual_Studio_Icon_2022.svg.png"> 
-        <p>Visual Studio</p>
-      </div>
-
-      <div class="Cartão Ferramenta">
-        <img id="habilidade" alt="mit-icon" src="https://i.imgur.com/wlTXreT.png"> 
-        <p>Mit App Inventor</p>
-      </div>
-
-      <div class="Cartão Ferramenta">
-        <img id="habilidade" alt="figma-icon" src="https://static-00.iconduck.com/assets.00/apps-figma-icon-2048x2048-ctjj5ab7.png"> 
-        <p>Figma</p>
-      </div>
-
-      <div class="Cartão Ferramenta">
-        <img id="habilidade" alt="arduino-icon" src="https://cdn.iconscout.com/icon/free/png-256/free-arduino-226072.png?f=webp"> 
-        <p>Arduino</p>
-      </div>
-
-  </div>
-
+        <div id="DivImagem" class="reveal" data-reveal-origin="left">
+          <img src="./Images/Programador.png" id="ImagemCentral"  alt="programador na frente de um notebook" class="SecondaryImage">
         </div>
 
-      <br><br>
+        <br><br><br><br><br><br>
 
-    </section>
+      </section>
+      
+      <section class="Habilidades" id="Habilidades">
+        <br>
+        <div id="Texto" >
+          <h1>Habilidades</h1>
+          <div id="Botoes" class="reveal" data-reveal-origin="left">
+            <button onclick="Revelar('HabWeb')" class="BotaoPortfolio Selecionado" id="HabWeb">Web</button>
+            <button onclick="Revelar('Linguagem')" class="BotaoPortfolio" id="Linguagem">Linguagens</button>
+            <button onclick="Revelar('Ferramenta')" class="BotaoPortfolio" id="Ferramenta">Ferramentas</button>
+          </div> <br>
+      <div id="ContainerGeral" class="reveal" data-reveal-origin="left">
 
-    <section class="Portifolio" id="Portifolio">
-      <div id="Texto" >
-        <h1>Portifólio</h1>
-      </div>
-      <div id="Botoes">
-      <button onclick='RevelarWeb()' class="BotaoPortifolio" id="BtnWeb">Web</button>
-      <button onclick='RevelarPython()' class="BotaoPortifolio" id="BtnPy">Python</button> <br><br><br>
-    </div> <br>
-    <noscript><p><b>Ative javascript para ver outros projetos!</b></p></noscript>
+        <div class="Cartão HabWeb Visivel">
+          <img id="habilidade" alt="html-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"> 
+          <p>HTML</p>
+        </div>
 
-<div class="ContainerPortifolio"> 
+        <div class="Cartão HabWeb Visivel">
+          <img id="habilidade" alt="css-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"> 
+          <p>CSS</p>
+        </div>
 
-  <div class="Projeto Web">
-    <div class="ImagemProjeto" id="Imagem6"></div>
-    <div class="BasicInfo">
-      <h2>CodeDrafts</h2> 
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
-      <img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" alt="nodeJS-icon">
-      <img src="https://img.icons8.com/color/512/microsoft-sql-server.png" alt="MSSQL-icon">
-      <img src="https://static-00.iconduck.com/assets.00/google-cloud-icon-2048x1646-7admxejz.png" alt="Google Cloud-icon">
-      <img src="./Images/Java.png" alt="java-icon">
-      <p>Projeto de uma rede social totalmente funcional com banco de dados que permite interação entre usuários com posts, denúncias, comentários e muito mais </p>
-    </div> <br><br>
-    <a href="https://codedrafts-5as0.onrender.com/" target="_blank" rel="noreferrer noopener">
-      <img src="./Images/CodeDraftsIcon.png" alt="icone site CodeDrafts" id="CodeDraftsIcon"/> VER SITE
-    <a href="https://github.com/cc23135/codedrafts" target="_blank" rel="noreferrer noopener">
-      <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
-    <p>04/09/2023</p>
+        <div class="Cartão HabWeb Visivel">
+          <img id="habilidade" alt="js-icon" src="./Images/javascript.png"> 
+          <p>Javascript</p>
+        </div>
+
+        <div class="Cartão HabWeb Visivel">
+          <img id="habilidade" alt="node-icon" src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png"> 
+          <p>NodeJS</p>
+        </div>
+
+        <div class="Cartão HabWeb Visivel">
+          <img id="habilidade" alt="react-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"> 
+          <p>React</p>
+        </div>
+
+        <div class="Cartão Linguagem">
+          <img id="habilidade" alt="mssql-icon" src="https://img.icons8.com/color/512/microsoft-sql-server.png"> 
+          <p>MSSQL</p>
+        </div>
+
+        <div class="Cartão Linguagem">
+          <img id="habilidade" alt="python-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"> 
+          <p>Python</p>
+        </div>
+
+        <div class="Cartão Linguagem">
+          <img id="habilidade" alt="java-icon" src="./Images/Java.png"> 
+          <p>Java</p>
+        </div>
+
+        <div class="Cartão Linguagem">
+          <img id="habilidade" alt="c#-icon" src="https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png"> 
+          <p>C#</p>
+        </div>
+
+        <div class="Cartão Linguagem">
+          <img id="habilidade" alt="c++-icon" src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png"> 
+          <p>C++</p>
+        </div>
+
+        <div class="Cartão Linguagem">
+          <img id="habilidade" alt="c#-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1024px-Kotlin_Icon.png"> 
+          <p>Kotlin</p>
+        </div>
+
+        <div class="Cartão Ferramenta">
+          <img id="habilidade" alt="vscode-icon" src="https://static-00.iconduck.com/assets.00/android-studio-icon-486x512-zp9um7zl.png"> 
+          <p>Android Studio</p>
+        </div>
+
+        <div class="Cartão Ferramenta">
+          <img id="habilidade" alt="QtDesigner-icon" src="./Images/QtDesigner.png"> 
+          <p>Qt Designer</p>
+        </div>
+
+        <div class="Cartão Ferramenta">
+          <img id="habilidade" alt="JFX-icon" src="https://cursojavanow.com.br/wp-content/uploads/2020/06/Scene-Builder.png"> 
+          <p>Java Scene Builder</p>
+        </div>
+
+        <div class="Cartão Ferramenta">
+          <img id="habilidade" alt="vscode-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"> 
+          <p>Visual Studio Code</p>
+        </div>
+
+        <div class="Cartão Ferramenta">
+          <img id="habilidade" alt="visualStudio-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Visual_Studio_Icon_2022.svg/1200px-Visual_Studio_Icon_2022.svg.png"> 
+          <p>Visual Studio</p>
+        </div>
+
+        <div class="Cartão Ferramenta">
+          <img id="habilidade" alt="mit-icon" src="https://i.imgur.com/wlTXreT.png"> 
+          <p>Mit App Inventor</p>
+        </div>
+
+        <div class="Cartão Ferramenta">
+          <img id="habilidade" alt="figma-icon" src="https://static-00.iconduck.com/assets.00/apps-figma-icon-2048x2048-ctjj5ab7.png"> 
+          <p>Figma</p>
+        </div>
+
+        <div class="Cartão Ferramenta">
+          <img id="habilidade" alt="arduino-icon" src="https://cdn.iconscout.com/icon/free/png-256/free-arduino-226072.png?f=webp"> 
+          <p>Arduino</p>
+        </div>
+
     </div>
+
+          </div>
+
+        <br><br>
+
+      </section>
+
+      <section class="Portfolio" id="Portfolio">
+        <div id="Texto" >
+          <h1>Portfólio</h1>
+        </div>
+        <div id="Botoes">
+        <button onclick='RevelarWeb()' class="BotaoPortfolio" id="BtnWeb">Web</button>
+        <button onclick='RevelarPython()' class="BotaoPortfolio" id="BtnPy">Python</button> <br><br><br>
+      </div> <br>
+      <noscript><p><b>Ative javascript para ver outros projetos!</b></p></noscript>
+
+  <div class="ContainerPortfolio" class="reveal" data-reveal-origin="left"> 
 
     <div class="Projeto Web">
-      <div class="ImagemProjeto" id="Imagem7"></div>
+      <div class="ImagemProjeto" id="Imagem6"></div>
       <div class="BasicInfo">
-        <h2>YourDle</h2> 
+        <h2>CodeDrafts</h2> 
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
         <img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" alt="nodeJS-icon">
         <img src="https://img.icons8.com/color/512/microsoft-sql-server.png" alt="MSSQL-icon">
-        <p>Site onde você pode publicar e ver jogos estilos wordle e conexo</p>
+        <img src="https://static-00.iconduck.com/assets.00/google-cloud-icon-2048x1646-7admxejz.png" alt="Google Cloud-icon">
+        <img src="./Images/Java.png" alt="java-icon">
+        <p>Projeto de uma rede social totalmente funcional com banco de dados que permite interação entre usuários com posts, denúncias, comentários e muito mais </p>
       </div> <br><br>
-      <a href="https://yourdle-seven.vercel.app/" target="_blank" rel="noreferrer noopener">
-        <img src="./Images/YourDleIcon.png" alt="icone site CodeDrafts" id="CodeDraftsIcon"/> VER SITE
-      <a href="https://github.com/ArthurGamaJorge/YourDle" target="_blank" rel="noreferrer noopener">
+      <a href="https://codedrafts-5as0.onrender.com/" target="_blank" rel="noreferrer noopener">
+        <img src="./Images/CodeDraftsIcon.png" alt="icone site CodeDrafts" id="CodeDraftsIcon"/> VER SITE
+      <a href="https://github.com/cc23135/codedrafts" target="_blank" rel="noreferrer noopener">
         <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
-      <p>15/11/2023</p>
+      <p>04/09/2023</p>
       </div>
 
       <div class="Projeto Web">
-        <div class="ImagemProjeto" id="Imagem3"></div>
+        <div class="ImagemProjeto" id="Imagem7"></div>
         <div class="BasicInfo">
-          <h2>IOOON Airlines</h2> 
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="html-icon">
+          <h2>YourDle</h2> 
           <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
           <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
           <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
-          <p>Projeto que simula uma companhia área com sistema de login para acessar informações de passagens através de uma API </p>
+          <img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" alt="nodeJS-icon">
+          <img src="https://img.icons8.com/color/512/microsoft-sql-server.png" alt="MSSQL-icon">
+          <p>Site onde você pode publicar e ver jogos estilos wordle e conexo</p>
         </div> <br><br>
-        <a href="https://iooonairlines.netlify.app/" target="_blank" rel="noreferrer noopener">
-          <img src="./Images/IOOON logo.png" alt="icone site iooon airlines"/> VER SITE
-        <a href="https://github.com/ArthurGamaJorge/Formulario-Login-localStorage" target="_blank" rel="noreferrer noopener">
+        <a href="https://yourdle-seven.vercel.app/" target="_blank" rel="noreferrer noopener">
+          <img src="./Images/YourDleIcon.png" alt="icone site CodeDrafts" id="CodeDraftsIcon"/> VER SITE
+        <a href="https://github.com/ArthurGamaJorge/YourDle" target="_blank" rel="noreferrer noopener">
           <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
-        <p>13/05/2023</p>
+        <p>15/11/2023</p>
         </div>
 
         <div class="Projeto Web">
-            <div class="ImagemProjeto" id="Imagem1"></div>
-            <div class="BasicInfo">
-              <h2>Hollow Knight Guia</h2> 
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
-              <p>Projeto com informações sobre o jogo Hollow Knight </p>
-              <p>Meu primeiro site, ele foi feito como treino de design e javascript básico</p>
-            </div>  <br><br>
-              <a href="https://arthurgamajorge.github.io/Hollow-Knight-Guia/" target="_blank" rel="noreferrer noopener">
-              <img src="./Images/IconeHollow.png" alt="icone site hollow knight guia"/> VER SITE
-            <a href="https://github.com/ArthurGamaJorge/Hollow-Knight-Guia" target="_blank" rel="noreferrer noopener">
-              <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br> <br>
-            <p>27/03/2023</p>
+          <div class="ImagemProjeto" id="Imagem3"></div>
+          <div class="BasicInfo">
+            <h2>IOOON Airlines</h2> 
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="html-icon">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
+            <p>Projeto que simula uma companhia área com sistema de login para acessar informações de passagens através de uma API </p>
+          </div> <br><br>
+          <a href="https://iooonairlines.netlify.app/" target="_blank" rel="noreferrer noopener">
+            <img src="./Images/IOOON logo.png" alt="icone site iooon airlines"/> VER SITE
+          <a href="https://github.com/ArthurGamaJorge/Formulario-Login-localStorage" target="_blank" rel="noreferrer noopener">
+            <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
+          <p>13/05/2023</p>
           </div>
 
-        <div class="Projeto Python">
-          <div class="ImagemProjeto" id="Imagem4"></div>
-          <div class="BasicInfo">
-          <h2>Agendamento de monitoria</h2>
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python-icon">
-          <img src="./Images/QtDesigner.png" alt="qtDesigner-icon"> 
-          <p>Projeto que consegue gerenciar o reservamento de computadores de um laboratório para monitorias</p>
-          <p>Este projeto utiliza interfáce gráfica e consegue guardar as informações inseridas e alterá-las</p>
-          </div><br><br>
-          <a href="https://github.com/ArthurGamaJorge/Agendamento-de-monitoria" target="_blank" rel="noreferrer noopener">
-            <img src="./Images/Github logo.png" id="github" alt="github"/> VER NO GITHUB</a> <br><br>
-          <p>02/07/2023</p>
+          <div class="Projeto Web">
+              <div class="ImagemProjeto" id="Imagem1"></div>
+              <div class="BasicInfo">
+                <h2>Hollow Knight Guia</h2> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
+                <p>Projeto com informações sobre o jogo Hollow Knight </p>
+                <p>Meu primeiro site, ele foi feito como treino de design e javascript básico</p>
+              </div>  <br><br>
+                <a href="https://arthurgamajorge.github.io/Hollow-Knight-Guia/" target="_blank" rel="noreferrer noopener">
+                <img src="./Images/IconeHollow.png" alt="icone site hollow knight guia"/> VER SITE
+              <a href="https://github.com/ArthurGamaJorge/Hollow-Knight-Guia" target="_blank" rel="noreferrer noopener">
+                <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br> <br>
+              <p>27/03/2023</p>
+            </div>
+
+          <div class="Projeto Python">
+            <div class="ImagemProjeto" id="Imagem4"></div>
+            <div class="BasicInfo">
+            <h2>Agendamento de monitoria</h2>
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python-icon">
+            <img src="./Images/QtDesigner.png" alt="qtDesigner-icon"> 
+            <p>Projeto que consegue gerenciar o reservamento de computadores de um laboratório para monitorias</p>
+            <p>Este projeto utiliza interfáce gráfica e consegue guardar as informações inseridas e alterá-las</p>
+            </div><br><br>
+            <a href="https://github.com/ArthurGamaJorge/Agendamento-de-monitoria" target="_blank" rel="noreferrer noopener">
+              <img src="./Images/Github logo.png" id="github" alt="github"/> VER NO GITHUB</a> <br><br>
+            <p>02/07/2023</p>
+          </div>
+
+          <div class="Projeto Python">
+            <div class="ImagemProjeto" id="Imagem2"></div>
+            <div class="BasicInfo">
+            <h2>Cadastro e Estatísticas Alunos</h2>
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python-icon"> 
+            <p>Projeto que armazena altera e exclui registro de alunos</p>
+            <p>Este projeto utiliza interfáce em console e armazena as informações em arquivo de texto</p>
+          </div> <br><br>
+            <a href="https://github.com/ArthurGamaJorge/Cadastro-e-Estatisticas-Alunos" target="_blank" rel="noreferrer noopener">
+              <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
+            <p>24/04/2023</p>
+          </div>
+
+        
         </div>
 
-        <div class="Projeto Python">
-          <div class="ImagemProjeto" id="Imagem2"></div>
-          <div class="BasicInfo">
-          <h2>Cadastro e Estatísticas Alunos</h2>
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python-icon"> 
-          <p>Projeto que armazena altera e exclui registro de alunos</p>
-          <p>Este projeto utiliza interfáce em console e armazena as informações em arquivo de texto</p>
-        </div> <br><br>
-          <a href="https://github.com/ArthurGamaJorge/Cadastro-e-Estatisticas-Alunos" target="_blank" rel="noreferrer noopener">
-            <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
-          <p>24/04/2023</p>
-        </div>
-
-      
-</div>
-
-      <br><br><br><br><br><br>
-    </section>
+        <br><br><br><br><br><br>
+      </section>
     
-    <section class="Contato" id="Contato">
-      <div id="Texto2" >
-        <h1>Contato</h1>
-
-        <div class="divContato">
-          <a href="mailto: arthurgamajorgetec@gmail.com" target="_blank" rel="noreferrer noopener">
-            <img src="./Images/Gmail.png" alt="gmail-icon"/> arthurgamajorgetec@gmail.com</a>
-          
-          <a href="https://discordapp.com/users/659238913227096085" target="_blank" rel="noreferrer noopener">
-            <img src="./Images/Discord.png" alt="discord-icon"/> Ronin_Kanmuri#5566</a>
-        </div>
-            
-  </div> 
-        </div>
-        </div>
-        <br><br>
-
-      
-    </section>
-    
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
     <script src="./JavaScript/JavaScript.js"></script>
-  </body>
+    <script src="./JavaScript/scroll.js"></script>
+  </section>
+</nav>
 </html>

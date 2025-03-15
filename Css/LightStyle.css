@@ -1,3 +1,8 @@
+:root{
+  --brand: #00ff51;
+  --secondary: #017520;
+}
+
 .Light-theme {
   background: linear-gradient(0.25turn, rgb(250, 250, 250), rgb(234, 234, 234));
 }
@@ -6,8 +11,12 @@
   border-color: rgb(0, 0, 0, 0.2);
 }
 
-.Light-theme .Central #Texto{
-  color: black;
+.Light-theme {
+  color: var(--secondary) !important;
+}
+
+.Light-theme #Corvo{
+  opacity: 1 !important;
 }
 
 .Light-theme .Selecionado{
@@ -21,23 +30,17 @@
   .Light-theme #Imagem3 {background-image: url("../Images/FormularioLight.png");}
   .Light-theme #Imagem6 {background-image: url("../Images/CodeDraftsLight.png");}
 
-  .Light-theme #IconeMenu img{
+  .Light-theme #IconeMenu img, .Light-theme .Navbar img{
     filter: invert(100%);
-  }
-
-  .Light-theme header {
-    background-color: rgb(225, 225, 225, 0.5);
-    border: solid 2px black;
   }
 
   .Light-theme .Navbar a, .Light-theme .Principal{
-    filter: invert(100%);
+    color: black !important;
   }
 
   .Light-theme .Navbar a,
   .Light-theme button,
-  .Light-theme .Principal,
-  .Light-theme a {
+  .Light-theme .Principal{
     color: white;
   }
 
@@ -49,22 +52,14 @@
     }
   }
   
-  .Light-theme .Portifolio,
+  .Light-theme .Portfolio,
   .Light-theme .SobreMim {
     background-color: rgba(230, 230, 230, 0.88);
-  }
-
-  .Light-theme .Contato, .Light-theme .Contato a {
-    color: black !important;
   }
 
   .Light-theme .Cartão{
     background: linear-gradient(0.05turn, aqua, rgb(204, 255, 255));
     border-color: black;
-  }
-
-  .Light-theme .Cartão p{
-    color: black;
   }
 
   .Light-theme .Projeto {

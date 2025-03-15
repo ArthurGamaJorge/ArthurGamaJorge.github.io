@@ -1,3 +1,8 @@
+:root{
+  --brand: #00ff51;
+  --secondary: #017520;
+}
+
 /* ESTILOS GERAIS */
 * {
   padding: 0;
@@ -13,35 +18,22 @@ body {
   scroll-behavior: smooth;
   cursor: url("../Images/Cursor.png"), auto;
   background: linear-gradient(0.25turn, rgb(27, 27, 27), rgb(7, 7, 7));
-  color: aqua;
-}
-
-html{
-  scroll-padding-top: 100px;
-}
-
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px white;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: aqua;
-  border: 2px solid black;
-  border-radius: 10px;
+  color:  var(--brand);
+  overflow: hidden;
+  position: relative;
 }
 
 img {
   width: 30px;
 }
 
+.Navbar img:hover{
+  filter: brightness(0) saturate(100%) invert(72%) sepia(18%) saturate(3732%) hue-rotate(84deg) brightness(100%) contrast(116%) !important;
+}
+
 Section {
   padding: 0 18%;
-  border: 0.3px solid rgb(255, 255, 255, 0.1);
+  border-bottom: 0.3px solid rgb(255, 255, 255, 0.1);
 }
 
 a:hover,
@@ -60,29 +52,69 @@ button {
   font-size: calc(1vmax + 10px) !important;
 }
 
-#DivImagem,
-#Corvo,
-#ContainerGeral,
-#Texto {
-  visibility: hidden;
-}
 
-#ImagemCentral {
-  width: calc(25vw + 140px);
-  transition: transform 1800ms ease-in-out;
-  transition-delay: 0.1s;
-}
-
-#Corvo #ImagemCentral{
-  filter: drop-shadow(8px 10px 10px aqua);
-}
-
-#ImagemCentral:hover,  #Corvo #ImagemCentral:hover{
-  transform: translatex(20px) translatey(-10px) rotate(2.5deg);
-  filter: drop-shadow(11px 11px 11px);
+#Texto{
+  z-index: 1;
 }
 
 /* TEXTOS */
+.paragrafo{
+  display: inline-block;
+  max-width: calc(20vmax + 230px);
+}
+
+.redes{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.redes img{
+  filter: brightness(0) saturate(100%) invert(72%) sepia(18%) saturate(3732%) hue-rotate(84deg) brightness(100%) contrast(116%) !important;
+}
+
+.redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; 
+  height: 40px;
+  font-size: calc(1.2vmax + 10px);
+  color: var(--brand);
+  border: 1px solid var(--brand);
+  border-radius: 50%; 
+  transition: 0.3s ease;
+}
+
+.redes a:hover{
+  color: white;
+  transform: scale(1.1)translateY(-3px);
+  background-color: var(--secondary);
+  box-shadow:  0 0 15px var(--brand);
+}
+
+
+.paragrafo h2, .paragrafo h3{
+  text-align: left;
+  margin-left: 1%;
+  color: var(--secondary);
+}
+
+.paragrafo h2{
+  font-size: calc(2vmax + 5px);
+  margin-bottom: -2.5%;
+}
+
+.paragrafo h3{
+  text-align: center;
+  font-size: calc(1vmax + 5px);
+}
+
+#Escrever{
+  margin-left: 1%;
+  margin-bottom: 3%;
+}
 
 #Texto a img, #Texto2 a img, .Projeto a img{
   vertical-align: middle;
@@ -90,8 +122,7 @@ button {
 #Texto h1,
 #Texto2 h1 {
   font-size: calc(3.5vmax + 10px);
-  margin-bottom: 10px;
-  margin-top: 40px;
+  white-space: nowrap;
 }
 
 #Texto p,
@@ -101,27 +132,6 @@ button {
 
 .SobreMim #Texto p{
   font-size: calc(0.3vmax + 15px);
-}
-
-#Texto a,
-#Texto2 a,
-.Projeto a {
-  display: inline-block;
-  color: white;
-  background: rgb(58, 58, 58);
-  padding: calc(0.5vmax + 10px) calc(1vmax + 10px);
-  text-align: center;
-  border-radius: calc(1.5vmax + 30px);
-  transition: all 0.55s ease;
-  margin: auto;
-  margin-top: 20px;
-}
-
-.divContato {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; 
 }
 
 #Texto2 a {
@@ -138,7 +148,6 @@ button {
   vertical-align: middle; 
 }
 
-#Texto a:hover,
 .Projeto a:hover,
 #Texto2 a:hover {
   background: transparent;
@@ -146,25 +155,25 @@ button {
   transform: translateX(7px);
 }
 
-/* HEADER */
 
 header {
-  backdrop-filter: blur(4px);
-  background-color: rgb(33, 30, 30, 0.5);
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 10;
   width: 100%;
   display: flex;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  background-color: rgb(0, 0, 0, 0.3);
+  z-index: 10;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
-  border: solid 1px white;
+  padding: 25px 10%;
 }
 
 .Navbar {
   display: flex;
+}
+
+.Navbar li{
+  align-content: center;
 }
 
 .Principal {
@@ -178,23 +187,27 @@ header {
   color: white;
   margin-left: 50px;
   font-weight: 700;
-  transition: all 0.55s ease-in-out;
+  transition: all 0.55s, color 0s ease-in-out;
   border-bottom: transparent;
   justify-content: center;
 }
 
-#ahover {
+.Navbar li a {
   position: relative;
 }
 
-#ahover::after {
+.Navbar li a:hover{
+  color: var(--brand) !important;
+}
+
+.Navbar li a::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: white;
+  background-color: var(--brand);
   transition: width 0.3s;
 }
 
@@ -217,7 +230,6 @@ header {
   min-height: 100vh;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   align-items: center;
 }
 
@@ -226,18 +238,39 @@ header {
   align-items: center;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+
+#Corvo {
+  position: absolute; 
+  margin-top: 2vmax;
+  right: 0; 
+  z-index: 0; 
+  filter: drop-shadow(8px 10px 10px var(--brand));
+  opacity: 0.75;
+}
+
+#ImagemCentral {
+  width: calc(35vw + 120px);
+  -webkit-filter: drop-shadow(1px 1px 0 var(--brand))
+drop-shadow(-1px 1px 0 var(--brand))
+drop-shadow(1px -1px 0 var(--brand))
+drop-shadow(-1px -1px 0 var(--brand));
+filter: drop-shadow(1px 1px 0 var(--brand))
+drop-shadow(-1px 1px 0 var(--brand))
+drop-shadow(1px -1px 0 var(--brand))
+drop-shadow(-1px -1px 0 var(--brand));
 }
 
 #EfeitoEscrevendo {
   max-width: min-content;
   padding-right: calc(0.5vmax + 5px);
-  animation: Escrever 2s steps(37) forwards, effect 0.5s step-end infinite alternate;
+  animation: Escrever 3s steps(37) forwards, effect 0.75s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid aqua;
+  border-right: 3px solid  var(--brand);
   font-size: 2em;
-  display: inline-block; /* Necessário para o efeito de escrita funcionar corretamente */
+  display: inline-block;
 }
 
 @keyframes Escrever {
@@ -245,7 +278,7 @@ header {
     max-width: 0;
   }
   to {
-    max-width: 100%; /* Ajusta a largura máxima conforme o conteúdo */
+    max-width: 100%; 
   }
 }
 
@@ -253,27 +286,6 @@ header {
   50% {
     border-color: transparent;
   }
-}
-
-#SetaBaixo {
-  position: absolute;
-  bottom: 6%;
-  right: 9%;
-  visibility: hidden;
-}
-#SetaBaixo a {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  aspect-ratio: 1;
-  color: white;
-  background-color: rgb(58, 58, 58);
-  border-radius: 100%;
-  transition: all 0.55s ease;
-}
-
-#SetaBaixo a:hover {
-  transform: translatey(5px);
 }
 
 /* SEÇÃO HABILIDADES */
@@ -295,7 +307,7 @@ header {
   width: calc(2.5vmax + 30px);
 }
 
-.Habilidades, .SobreMim, .Portifolio, .Contato{
+.Habilidades, .SobreMim, .Portfolio{
   text-align: center;
 }
 
@@ -319,7 +331,7 @@ header {
   border-radius: 1vmax;
   width: calc(14vmax + 80px);
   height: calc(5vmax + 50px);
-  background: linear-gradient(0.05turn, aqua, rgb(0, 0, 0));
+  background: linear-gradient(0.05turn, var(--brand), rgb(0, 0, 0));
   display: flex;
   align-items: center;
   position: relative;
@@ -373,12 +385,7 @@ filter: drop-shadow(1px 1px 0 white)
 }
 
 
-.Contato {
-  background: rgb(59, 77, 195, 0.05);
-  color: white;
-}
-
-.SobreMim, .Portifolio {
+.SobreMim, .Portfolio {
   background: rgb(255, 255, 255, 0.02);
   color: #3b4dc3;
 }
@@ -390,8 +397,7 @@ filter: drop-shadow(1px 1px 0 white)
 
 /* SEÇÃO PROJETOS */
 
-.ContainerPortifolio {
-  visibility: hidden;
+.ContainerPortfolio {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -494,7 +500,7 @@ filter: drop-shadow(1px 1px 0 white)
   display: none;
 }
 
-.BotaoPortifolio {
+.BotaoPortfolio {
   height: 40px;
   width: 90px;
   background-color: rgb(39, 60, 200);
@@ -504,7 +510,7 @@ filter: drop-shadow(1px 1px 0 white)
   transition: all 0.55s ease-in-out;
 }
 
-.BotaoPortifolio:hover {
+.BotaoPortfolio:hover {
   scale: 1.2 !important;
   border-radius: 0.5vmax;
 }
@@ -519,20 +525,19 @@ filter: drop-shadow(1px 1px 0 white)
 @media (max-width: 1195px) {
   .Central {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* MENU DE MAIS OPÇÕES */
 @media (max-width: 1040px) {
-  html{
-    scroll-padding-top: 20px;
+  #Corvo{
+    position: unset;
   }
   #IconeMenu {
     display: block;
   }
-  #SetaBaixo {
-    display: none;
+  header{
+    padding: 10px 10%;
   }
   .Navbar {
     position: absolute;
@@ -541,7 +546,7 @@ filter: drop-shadow(1px 1px 0 white)
     width: 300px;
     height: 40vh;
     display: flex;
-    padding: 50px 20px;
+    padding: 25px 20px;
     flex-direction: column;
     align-items: center;
     background: rgb(0, 0, 0);
@@ -555,15 +560,20 @@ filter: drop-shadow(1px 1px 0 white)
   }
   .Navbar.open {
     right: 0;
-    height: 300px;
+    height: 200px;
     width: 200px;
     border-radius: 30px;
     border: solid 2px white;
     filter: drop-shadow(5px 5px 10px white);
   }
-  .Portifolio{
+  .Portfolio{
     padding: 4%;
     margin: 0;
+  }
+  .Central #Texto{
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
   }
 }
 
