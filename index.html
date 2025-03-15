@@ -2,9 +2,8 @@
 <html lang="pt">
   <head>
     <title>Arthur Gama Jorge - Portfólio</title>
-    <link rel="stylesheet" href="./Css/Style.css" />
-    <link rel="stylesheet" href="./Css/Animations.css" />
-    <link rel="stylesheet" href="./Css/LightStyle.css" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="./Css/lightStyle.css" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
     <meta charset="utf-8" />
@@ -17,7 +16,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./Images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./Images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./Images/favicon-16x16.png">
-    <link rel="manifest" href="./Images/site.webmanifest">
 
     <!-- Se o usuário desativar javascript, remove scroll reveal-->
     <noscript>
@@ -28,13 +26,13 @@
       #Texto,
       .ContainerPortfolio
        {
-        opacity: 1;
+        visibility: visible;
       }
       </style>
     </noscript>
 
   </head>
-  <body data-scroll-container>
+  <body>
     <script src="./JavaScript/avoidFlickering.js"></script>
     <header>
       <a href="#" class="Principal">Home</a>
@@ -50,9 +48,8 @@
       </div>
     </header>
     
-    <nav id="scroll">
       <section class="Central">
-        <div id="Texto"  class="reveal reveal" data-reveal-origin="left">
+        <div id="Texto">
           <div class="paragrafo">
             <h2>Olá! Eu sou</h2>
             <h1>Arthur Gama Jorge</h1>
@@ -68,7 +65,7 @@
               <a href="https://discordapp.com/users/659238913227096085" target="_blank" rel="noreferrer noopener"><i class="bx bxl-discord-alt"> </i></a>
               <a href="mailto: arthurgamajorgetec@gmail.com" target="_blank" rel="noreferrer noopener"><i class="bx bx-envelope" type="solid"></i></a>
               <a href="https://leetcode.com/u/arthurgamajorge/" target="_blank" rel="noreferrer noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 16 16" stroke-width="273">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1">
                   <path fill="currentColor" d="M 10.447266 0.265625 A 0.50005 0.50005 0 0 0 10.103516 0.41796875 L 5.65625 4.8671875 L 3.0957031 7.4257812 A 0.50005 0.50005 0 0 0 2.9785156 7.6035156 C 1.769869 8.9739016 1.7865696 11.063913 3.0957031 12.373047 L 5.65625 14.933594 C 7.0176322 16.294976 9.242133 16.294976 10.603516 14.933594 L 12.853516 12.683594 A 0.50063809 0.50063809 0 1 0 12.144531 11.976562 L 9.8945312 14.226562 C 8.9159134 15.20518 7.3418991 15.20518 6.3632812 14.226562 L 3.8027344 11.666016 C 2.8241166 10.687398 2.8241166 9.1114303 3.8027344 8.1328125 L 6.3632812 5.5742188 C 7.3418991 4.5956009 8.9159135 4.5956009 9.8945312 5.5742188 L 12.144531 7.8242188 A 0.50063784 0.50063784 0 1 0 12.853516 7.1171875 L 10.603516 4.8671875 C 9.9106907 4.174363 8.9943718 3.8431189 8.0820312 3.8554688 L 10.8125 1.125 A 0.50005 0.50005 0 0 0 10.447266 0.265625 z M 7.328125 9.4003906 A 0.50005 0.50005 0 1 0 7.328125 10.400391 L 14.228516 10.400391 A 0.50005 0.50005 0 1 0 14.228516 9.4003906 L 7.328125 9.4003906 z"></path>
                 </svg>
               </a>            
@@ -76,15 +73,15 @@
           </div>
           <br />
         </div>
-        <div id="Corvo" class="reveal revealFarR" data-reveal-origin="right">
-          <img src="./Images/corvo.png" usemap="#image-map" id="ImagemCentral" alt="Logo corvo site">
-        </div>
+          <div id="imagemCorvo">
+            <div id="Corvo"></div>
+      </div>
         
       </section>
       
       <section class="SobreMim" id="SobreMim">
         <br>
-        <div id="Texto" class="reveal" data-reveal-origin="left">
+        <div id="Texto">
           <h1>Sobre mim</h1>
           <br><br>
           <div id="Escrever">
@@ -96,7 +93,7 @@
           </div>
           <br/> <br><br><br>
 
-        <div id="DivImagem" class="reveal" data-reveal-origin="left">
+        <div id="DivImagem">
           <img src="./Images/Programador.png" id="ImagemCentral"  alt="programador na frente de um notebook" class="SecondaryImage">
         </div>
 
@@ -108,12 +105,12 @@
         <br>
         <div id="Texto" >
           <h1>Habilidades</h1>
-          <div id="Botoes" class="reveal" data-reveal-origin="left">
+          <div id="Botoes">
             <button onclick="Revelar('HabWeb')" class="BotaoPortfolio Selecionado" id="HabWeb">Web</button>
             <button onclick="Revelar('Linguagem')" class="BotaoPortfolio" id="Linguagem">Linguagens</button>
             <button onclick="Revelar('Ferramenta')" class="BotaoPortfolio" id="Ferramenta">Ferramentas</button>
           </div> <br>
-      <div id="ContainerGeral" class="reveal" data-reveal-origin="left">
+      <div id="ContainerGeral">
 
         <div class="Cartão HabWeb Visivel">
           <img id="habilidade" alt="html-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"> 
@@ -228,7 +225,7 @@
       </div> <br>
       <noscript><p><b>Ative javascript para ver outros projetos!</b></p></noscript>
 
-  <div class="ContainerPortfolio" class="reveal" data-reveal-origin="left"> 
+  <div class="ContainerPortfolio"> 
 
     <div class="Projeto Web">
       <div class="ImagemProjeto" id="Imagem6"></div>
@@ -335,11 +332,9 @@
         <br><br><br><br><br><br>
       </section>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
-    <script src="./JavaScript/JavaScript.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./JavaScript/javaScript.js"></script>
     <script src="./JavaScript/scroll.js"></script>
   </section>
-</nav>
 </html>

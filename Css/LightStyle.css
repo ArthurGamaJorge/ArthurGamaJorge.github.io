@@ -1,14 +1,41 @@
 :root{
   --brand: #00ff51;
   --secondary: #017520;
+  --white: #e8e8e8;
 }
 
 .Light-theme {
-  background: linear-gradient(0.25turn, rgb(250, 250, 250), rgb(234, 234, 234));
+  background: linear-gradient(0.25turn, hsl(250, 100%, 96%), hsla(250, 70%, 96%, 92%));
 }
 
 .Light-theme section {
   border-color: rgb(0, 0, 0, 0.2);
+}
+
+.Light-theme #Corvo{
+  background-color: var(--white);
+}
+
+.Light-theme header{
+  background: linear-gradient(0.25turn, hsla(250, 100%, 96%, 0.3), hsla(250, 70%, 96%, 0.3));
+}
+
+.Light-theme #imagemCorvo{
+  filter: drop-shadow(3px 3px 5px var(--secondary))
+  drop-shadow(1px 1px 0 var(--secondary)) 
+    drop-shadow(-1px 1px 0 var(--secondary)) 
+    drop-shadow(1px -1px 0 var(--secondary)) 
+    drop-shadow(-1px -1px 0 var(--secondary));
+}
+
+.Light-theme .redes a{
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.Light-theme .redes a:hover{
+  background-color: var(--brand);
+  color: var(--white);
 }
 
 .Light-theme {
@@ -24,7 +51,7 @@
 }
 
 .Light-theme #EfeitoEscrevendo{
-  border-color: black;
+  border-color: var(--secondary);
 }
 
   .Light-theme #Imagem3 {background-image: url("../Images/FormularioLight.png");}
@@ -41,12 +68,12 @@
   .Light-theme .Navbar a,
   .Light-theme button,
   .Light-theme .Principal{
-    color: white;
+    color: var(--white);
   }
 
   @media (max-width: 1040px) {
     .Light-theme .open {
-      background: white;
+      background: var(--white);
       filter: drop-shadow(5px 5px 10px black);
       border: 2px solid black
     }
@@ -54,11 +81,11 @@
   
   .Light-theme .Portfolio,
   .Light-theme .SobreMim {
-    background-color: rgba(230, 230, 230, 0.88);
+    background-color: hsl(250, 100%, 96%, 0.88);
   }
 
   .Light-theme .Cartão{
-    background: linear-gradient(0.05turn, aqua, rgb(204, 255, 255));
+    background: linear-gradient(0.05turn, (--brand), rgb(204, 255, 255));
     border-color: black;
   }
 
@@ -76,6 +103,6 @@
   }
 
   .Light-theme .Projeto a:hover {
-    border-color: white;
+    border-color: var(--white);
   }
   
