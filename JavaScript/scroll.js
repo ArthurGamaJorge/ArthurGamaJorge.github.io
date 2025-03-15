@@ -2,6 +2,12 @@
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#scroll'),
     smooth: true,
+    mobile: {
+        smooth: true
+    },
+    tablet: {
+        smooth: true
+    }
   });
   
   const revealElements = () => {

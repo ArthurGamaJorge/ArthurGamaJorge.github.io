@@ -579,7 +579,7 @@ filter: drop-shadow(1px 1px 0 white)
 
 @media (max-width: 730px) {
   #Texto{
-    margin-top: 10vmax;
+    margin-top: 20vmax;
     width: 100%;
   }
   .SobreMim #Texto{
