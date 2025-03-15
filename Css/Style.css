@@ -1,6 +1,7 @@
 :root{
   --brand: #00ff51;
   --secondary: #017520;
+  --darkBrand: #001005
 }
 
 html{
@@ -21,6 +22,17 @@ html{
   border: 2px solid black;
   border-radius: 10px;
 }
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: var(--brand);
+}
+
+::selection {
+  color: white;
+  background: var(--brand);
+}
+
 
 #DivImagem,
 #ContainerGeral,
@@ -156,13 +168,9 @@ button {
   font-size: calc(0.5vmax + 10px);
 }
 
-.SobreMim #Texto p{
-  font-size: calc(0.3vmax + 15px);
-}
-
 #Texto2 a {
   background: transparent;
-  border: 2px solid #3b4dc3;
+  border: 2px solid var(--secondary);
   display: flex; 
   margin: 10px;
   align-items: center; 
@@ -281,7 +289,7 @@ header {
   position: relative;
   aspect-ratio: 1 / 1;
   background-color: black; 
-  mask-image: url("../Images/corvo.png");
+  mask-image: url("https://arthurgamajorge.github.io/Images/corvo.png");
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -324,11 +332,10 @@ header {
 /* SEÇÃO HABILIDADES */
 
 .SecondaryImage{
-  filter: drop-shadow(10px 10px 15px #3b4dc3);
+  filter: drop-shadow(10px 10px 15px var(--secondary));
 }
 
 .Habilidades{
-  color: #3b4dc3;
   padding: 0;
 }
 
@@ -394,15 +401,6 @@ filter: drop-shadow(1px 1px 0 white)
         drop-shadow(-1px -1px 0 white);
 }
 
-.estrelas{
-  position: absolute;
-  left: calc(6vmax + 30px);
-  bottom: 10%;
-}
-
-.estrelas img{
-  width: calc(0.7vmax + 10px);
-}
 
 #Botoes{
   margin: auto;
@@ -420,12 +418,169 @@ filter: drop-shadow(1px 1px 0 white)
 
 .SobreMim, .Portfolio {
   background: rgb(255, 255, 255, 0.02);
-  color: #3b4dc3;
 }
 
-.SobreMim #Texto{
-  margin: auto;
-  width: 60%;
+/* SEÇÃO SOBRE MIM */
+.SobremimContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 40px;
+}
+
+.linha-do-tempo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 40%;
+  padding-right: 20px;
+}
+
+.linha-do-tempo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--brand);
+  z-index: 0;
+}
+
+.evento-data {
+  background-color: var(--brand);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  font-size: 20px;
+  color: var(--secondary);
+  font-weight: bold;
+  z-index: 1;
+}
+
+.SobreMim p {
+  font-size: 1em;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.medalha {
+  position: absolute;
+  top: -15px;
+  left: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gold;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.medalha-info {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.medalha:hover .medalha-info {
+  display: block;
+}
+
+#DivImagem {
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ImagemCentral {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Info{
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.evento-conteudo p {
+  font-size: 18px;
+  text-align: left;
+  margin-right: 5%;
+
+}
+.evento-conteudo i, .evento-conteudo svg{
+  font-size: calc(4vmax + 45px);
+  width: 30%;
+  margin-left: calc(0.5vmax + 10px);
+  position: absolute;
+}
+
+.evento-conteudo svg{
+  border: 1px solid white;
+}
+
+.evento-conteudo h3 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.evento {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+.SobreMim{
+  padding: 0;
+}
+.space{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: calc(5vmax + 60px);
+  align-items: center;
+}
+
+.evento-conteudo {
+  height: 95%;
+  background-color: var(--brand);
+  color: var(--darkBrand);
+  padding: 5px 0px;
+  border: 0px solid transparent;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 3rem;;
+  transition: 0.4s ease-in-out;
+  gap: calc(0.5vmax + 10px);
+}
+
+.evento-conteudo:hover {
+  background-color: var(--darkBrand);;
+  color: var(--brand);
+  border: 5px solid var(--brand);
+  transform: scale(1.03);
 }
 
 /* SEÇÃO PROJETOS */
@@ -445,7 +600,7 @@ filter: drop-shadow(1px 1px 0 white)
   text-align: center;
   border: white 2px solid;
   border-radius: calc(1vmax + 20px);
-  filter: drop-shadow(10px 10px 8px rgb(39, 60, 200));
+  filter: drop-shadow(10px 10px 8px var(--secondary));
   margin: 0 30px;
   flex-direction: column;
   flex-shrink: 0;
@@ -461,12 +616,12 @@ filter: drop-shadow(1px 1px 0 white)
 
 .Projeto:hover {
   scale: 1.03;
-  filter: drop-shadow(15px 15px 12px rgb(39, 60, 200));
+  filter: drop-shadow(15px 15px 12px var(--secondary));
 }
 
 .Projeto:active {
   scale: 0.98;
-  filter: drop-shadow(5px 5px 4px rgb(39, 60, 200));
+  filter: drop-shadow(5px 5px 4px var(--secondary));
 }
 
 .Projeto h2 {
@@ -474,7 +629,7 @@ filter: drop-shadow(1px 1px 0 white)
 }
 
 .Projeto a {
-  border: 2px dashed rgb(39, 60, 200);
+  border: 2px dashed var(--secondary);
   background: transparent;
   margin-left: 5px;
   text-align: center;
@@ -536,7 +691,7 @@ filter: drop-shadow(1px 1px 0 white)
 .BotaoPortfolio {
   height: 40px;
   width: 90px;
-  background-color: rgb(39, 60, 200);
+  background-color: var(--secondary);
   margin-left: 20px;
   margin-top: 20px;
   color: white;
@@ -618,9 +773,6 @@ filter: drop-shadow(1px 1px 0 white)
     margin-top: 20vmax;
     width: 100%;
   }
-  .SobreMim #Texto{
-    width: 100%;
-  }
   .Central {
     display: flex;
     flex-wrap: wrap;
@@ -630,12 +782,6 @@ filter: drop-shadow(1px 1px 0 white)
   #Corvo{
     display: flex;
     width: 100%;
-  }
-}
-
-@media (max-width: 400px) {
-  .Central, .SobreMim{
-    padding: 8%;
   }
 }
 
