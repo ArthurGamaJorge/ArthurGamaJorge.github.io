@@ -7,6 +7,21 @@ menu.onclick = () => {
   Navbar.classList.toggle("open");
 };
 
+const paragrafo = document.getElementById('EfeitoEscrevendo');
+const text = 'E esse é meu portfólio pessoal de programador ';
+let index = 0;
+
+function displayText() {
+    paragrafo.textContent = text.slice(0, index);
+    index++;
+
+    if (index <= text.length) {
+        setTimeout(displayText, 60 ); 
+    }
+}
+
+setTimeout(displayText, 600); 
+
 let currentCategory = "HabWeb";
 document.addEventListener("DOMContentLoaded", () => {
   const webCategoryCards = document.querySelectorAll('.Cartão.HabWeb');

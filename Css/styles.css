@@ -302,31 +302,40 @@ header {
   width: calc(35vw + 120px);
 }
 
-
-
 #EfeitoEscrevendo {
-  max-width: min-content;
-  padding-right: calc(0.5vmax + 5px);
-  animation: Escrever 3s steps(37) forwards, effect 0.75s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid  var(--brand);
-  font-size: 2em;
+  font-size: calc(0.5vmax + 10px);
+  font-family: monospace;
+  color: var(--brand);
+  white-space: pre-wrap;
+  margin-bottom: 4%;
+}
+
+#EfeitoEscrevendo::after {
+  content: ' ';
+  position: relative;
+  top: 0;
+  right: 0;
   display: inline-block;
+  width: 4px;
+  height: 100%;
+  background-color: var(--brand);
+
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-@keyframes Escrever {
-  from {
-    max-width: 0;
+@keyframes blink {
+  0% {
+      opacity: 1;
   }
-  to {
-    max-width: 100%; 
+  30% {
+      opacity: 1;
   }
-}
-
-@keyframes effect {
-  50% {
-    border-color: transparent;
+  100% {
+      opacity: 0;
   }
 }
 
