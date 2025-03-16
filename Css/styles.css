@@ -336,7 +336,9 @@ header {
 }
 
 .Habilidades{
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .Habilidades #Texto{
@@ -391,10 +393,6 @@ header {
   margin-left: 5px;
   width: calc(4vmax + 30px);
   margin-right: 2vmax;
-  -webkit-filter: drop-shadow(1px 1px 0 white)
-                drop-shadow(-1px 1px 0 white)
-                drop-shadow(1px -1px 0 white)
-                drop-shadow(-1px -1px 0 white);
 filter: drop-shadow(1px 1px 0 white)
         drop-shadow(-1px 1px 0 white)
         drop-shadow(1px -1px 0 white)
@@ -427,6 +425,7 @@ filter: drop-shadow(1px 1px 0 white)
   align-items: center;
   padding: 20px;
   gap: 40px;
+  border: none;
 }
 
 .linha-do-tempo {
@@ -435,14 +434,15 @@ filter: drop-shadow(1px 1px 0 white)
   position: relative;
   max-width: 40%;
   padding-right: 20px;
+  gap: 50px;
 }
 
 .linha-do-tempo::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 25px;
-  width: 2px;
+  left: 30px;
+  width: 3px;
   height: 100%;
   background-color: var(--brand);
   z-index: 0;
@@ -451,8 +451,8 @@ filter: drop-shadow(1px 1px 0 white)
 .evento-data {
   background-color: var(--brand);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -469,36 +469,70 @@ filter: drop-shadow(1px 1px 0 white)
   font-weight: 600;
 }
 
+.medalha-container {
+  position: absolute;
+  left: 6.5px;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .medalha {
   position: absolute;
-  top: -15px;
-  left: -30px;
+  font-size: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: gold;
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  z-index: 2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
+  transition: 0.3s ease-in-out;
+  z-index: 2;
+  transform: translateZ(-1px)
 }
 
+.ouro i{
+  color: gold;
+}
+.prata i{
+  color: silver;
+}
+.bronze i{
+  color: rgb(171, 111, 0)
+}
+.especial i{
+  color: aqua;
+}
+.importante i{
+  filter: drop-shadow(0px 0px 10px var(--brand))
+}
+.medalha:hover {
+  transform: scale(1.1);
+}
+.importante:hover {
+  transform: scale(1.4) rotate(90deg); 
+}
 .medalha-info {
   display: none;
   position: absolute;
-  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;
-  color: white;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 10;
 }
 
-.medalha:hover .medalha-info {
+.medalha-info p{
+  color: white !important;
+}
+
+.medalha:hover + .medalha-info {
   display: block;
 }
 
@@ -511,10 +545,6 @@ filter: drop-shadow(1px 1px 0 white)
 
 #ImagemCentral {
   width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .Info{
@@ -524,35 +554,45 @@ filter: drop-shadow(1px 1px 0 white)
 }
 
 .evento-conteudo p {
-  font-size: 18px;
+  font-size: calc(0.5vmax + 6px);
   text-align: left;
+  color: var(--darkBrand);
   margin-right: 5%;
 
 }
-.evento-conteudo i, .evento-conteudo svg{
-  font-size: calc(4vmax + 45px);
-  width: 30%;
-  margin-left: calc(0.5vmax + 10px);
-  position: absolute;
+.evento-conteudo i, .evento-conteudo svg {
+  font-size: calc(4vmax + 45px);  
+  margin-left: calc(0.5vmax + 10px); 
 }
 
-.evento-conteudo svg{
-  border: 1px solid white;
+.evento-conteudo svg {
+  padding: 2.5% 0%;
+  height: 100%;
+  text-align: center;
+  width: calc((5vmax + 105px) * 1.1);
 }
 
 .evento-conteudo h3 {
-  font-size: 1.5rem;
+  font-size: calc(1vmax + 10px);
   text-align: left;
 }
 
 .evento {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
   position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
+#conclusao{
+  margin-top: 100px;
+}
+#ensinoMedio{
+  margin-top: -25px;
+}
+
 .SobreMim{
-  padding: 0;
+  padding: 2% 0;
 }
 .space{
   flex: 1;
@@ -567,7 +607,7 @@ filter: drop-shadow(1px 1px 0 white)
   background-color: var(--brand);
   color: var(--darkBrand);
   padding: 5px 0px;
-  border: 0px solid transparent;
+  border: 5px solid transparent;
   flex: 1;
   display: flex;
   align-items: center;
@@ -581,6 +621,12 @@ filter: drop-shadow(1px 1px 0 white)
   color: var(--brand);
   border: 5px solid var(--brand);
   transform: scale(1.03);
+  fill: red;
+  stroke: red;
+}
+
+.evento-conteudo:hover p{
+  color: var(--brand);
 }
 
 /* SEÇÃO PROJETOS */
@@ -659,12 +705,12 @@ filter: drop-shadow(1px 1px 0 white)
   height: calc(11vmax + 80px);
 }
 
-#Imagem1 {background-image: url("../Images/HollowKnight.png");}
-#Imagem2 {background-image: url("../Images/Cadastro\ Alunos.png");}
-#Imagem3 {background-image: url("../Images/FormularioDark.png");}
-#Imagem4 {background-image: url("../Images/AgendamentoMonitoria.png");}
-#Imagem6 {background-image: url("../Images/CodeDraftsDark.png");}
-#Imagem7 {background-image: url("../Images/YourDle.png");}
+#Imagem1 {background-image: url("../Images/Projetos/HollowKnight.png");}
+#Imagem2 {background-image: url("../Images/Projetos/Cadastro\ Alunos.png");}
+#Imagem3 {background-image: url("../Images/Projetos/FormularioDark.png");}
+#Imagem4 {background-image: url("../Images/Projetos/AgendamentoMonitoria.png");}
+#Imagem6 {background-image: url("../Images/Projetos/CodeDraftsDark.png");}
+#Imagem7 {background-image: url("../Images/Projetos/YourDle.png");}
 
 .Python {
   display: none;
@@ -766,12 +812,33 @@ filter: drop-shadow(1px 1px 0 white)
     display: flex;
     justify-content: center;
   }
+  #DivImagem{
+    display: none;
+  }
+  .SobreMim{
+    padding: 10% 0% !important;
+  }
+  .SobremimContainer{
+    width: 100%;
+  }
+  .evento-conteudo svg{
+    padding: 0;
+  }
+  .linha-do-tempo{
+    gap: 100px;
+  }
 }
 
 @media (max-width: 730px) {
   #Texto{
-    margin-top: 20vmax;
     width: 100%;
+  }
+  .Central{
+    min-height: unset;
+    padding-top: 10%;
+  }
+  Section{
+    padding: 10% 9%;
   }
   .Central {
     display: flex;
@@ -779,16 +846,27 @@ filter: drop-shadow(1px 1px 0 white)
     justify-content: center;
     text-align: center;
   }
-  #Corvo{
-    display: flex;
+  #Corvo, #imagemCorvo{
     width: 100%;
+  }
+  #imagemCorvo{
+    position: unset;
+  }
+  .linha-do-tempo{
+    max-width: 100%;
+    padding: 0px;
+  }
+  .SobremimContainer{
+    padding: 0px;
+  }
+  .medalha-info{
+    left: 400%;
   }
 }
 
 @media (max-width: 920px) and (max-height: 420px) {
   #Texto a,
   #Texto2 a {
-    padding: 3% 12%;
     align-items: center;
     position: relative;
   }

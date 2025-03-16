@@ -2,6 +2,7 @@
   --brand: #00ff51;
   --secondary: #017520;
   --white: #e8e8e8;
+  --darkBrand: #001005
 }
 
 .Light-theme {
@@ -54,8 +55,8 @@
   border-color: var(--secondary);
 }
 
-  .Light-theme #Imagem3 {background-image: url("../Images/FormularioLight.png");}
-  .Light-theme #Imagem6 {background-image: url("../Images/CodeDraftsLight.png");}
+  .Light-theme #Imagem3 {background-image: url("../Images/Projetos/FormularioLight.png");}
+  .Light-theme #Imagem6 {background-image: url("../Images/Projetos/CodeDraftsLight.png");}
 
   .Light-theme #IconeMenu img, .Light-theme .Navbar img{
     filter: invert(100%);
@@ -69,6 +70,34 @@
   .Light-theme button,
   .Light-theme .Principal{
     color: var(--white);
+  }
+
+  .Light-theme .evento-conteudo{
+    background-color: var(--secondary);
+    color: var(--white);
+  }
+
+  .Light-theme .evento-conteudo p{
+    color: var(--white);
+  }
+
+  .Light-theme .evento-conteudo:hover{
+    background-color: var(--white);
+    color: var(--secondary);
+    border-color: var(--secondary)
+  }
+
+  .Light-theme .evento-conteudo:hover p{
+    color: var(--secondary);
+  }
+
+  .Light-theme .evento-data{
+    background-color: var(--secondary);
+    color: var(--white);
+  }
+
+  .Light-theme .linha-do-tempo::before{
+    background-color: var(--secondary);
   }
 
   @media (max-width: 1040px) {
