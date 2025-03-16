@@ -114,8 +114,7 @@
   }
 
   .Light-theme .Cartão{
-    background: linear-gradient(0.05turn, (--brand), rgb(204, 255, 255));
-    border-color: black;
+    border-color: var(--darkBrand);
   }
 
   .Light-theme .Projeto {

@@ -116,8 +116,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; 
-  height: 40px;
+  width: calc(1vmax + 30px); 
+  aspect-ratio: 1;
   font-size: calc(1.2vmax + 10px);
   color: var(--brand);
   border: 1px solid var(--brand);
@@ -282,13 +282,14 @@ header {
   position: absolute;
   right: 0;
   z-index: 0;
-  filter: drop-shadow(0px 0px 4px var(--brand));
+  filter: drop-shadow(3px 3px 5px transparent)
+          drop-shadow(0px 0px 4px var(--brand));
 }
 
 #Corvo {
   position: relative;
   aspect-ratio: 1 / 1;
-  background-color: black; 
+  background-color: var(--darkBrand); 
   mask-image: url("https://arthurgamajorge.github.io/Images/corvo.png");
   mask-size: contain;
   mask-repeat: no-repeat;
@@ -359,26 +360,51 @@ header {
   justify-content: center;
 }
 
-#ContainerGeral{
+#ContainerGeral {
   display: flex;
+  align-content: flex-start;
   flex-wrap: wrap;
   gap: 2%;
   padding: 0;
   width: 98vw;
   justify-content: center;
+  position: relative;
+  min-height: calc(10vmax + 140px);
 }
 
-.Cartão{
+.Cartão {
   border: 3px solid white;
   border-radius: 1vmax;
   width: calc(14vmax + 80px);
   height: calc(5vmax + 50px);
-  background: linear-gradient(0.05turn, var(--brand), rgb(0, 0, 0));
+  background: linear-gradient(0.05turn, var(--brand), var(--darkBrand));
   display: flex;
   align-items: center;
-  position: relative;
+  justify-content: center;
   margin-bottom: 20px;
+  transform: translateX(100vw);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease, box-shadow 03s ease;
   display: none;
+}
+
+#ContainerGeral .Cartão:hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4); /* Sombra mais forte para dar profundidade */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, translateY 0.3s ease;
+}
+
+.Cartão.VisivelEsquerda, .Cartão.VisivelDireita {
+  display: flex; 
+  opacity: 1;
+  transform: translateX(0); 
+}
+.Cartão.IniciarEsquerda, .Cartão.DesaparecerEsquerda {
+  transform: translateX(-100vw); 
+  opacity: 0;
+}
+.Cartão.IniciarDireita,.Cartão.DesaparecerDireita {
+  transform: translateX(100vw); 
+  opacity: 0;
 }
 
 #github{
@@ -399,20 +425,13 @@ filter: drop-shadow(1px 1px 0 white)
         drop-shadow(-1px -1px 0 white);
 }
 
-
 #Botoes{
-  margin: auto;
-}
-
-.Visivel {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  gap: 30px;
 }
-
-.Selecionado{
-  border: 2px solid white; 
-  scale:1.2;
-}
-
 
 .SobreMim, .Portfolio {
   background: rgb(255, 255, 255, 0.02);
@@ -463,10 +482,19 @@ filter: drop-shadow(1px 1px 0 white)
   z-index: 1;
 }
 
-.SobreMim p {
-  font-size: 1em;
+.SobreMim #Texto p {
+  font-size: calc(0.75vmax + 10px) !important;
   color: var(--secondary);
-  font-weight: 600;
+}
+
+#Texto p{
+  
+  font-weight: 800;
+}
+
+.SobreMim #Texto{
+  width: 50%;
+  margin: auto;
 }
 
 .medalha-container {
@@ -487,8 +515,6 @@ filter: drop-shadow(1px 1px 0 white)
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease-in-out;
   z-index: 2;
   transform: translateZ(-1px)
@@ -504,7 +530,7 @@ filter: drop-shadow(1px 1px 0 white)
   color: rgb(171, 111, 0)
 }
 .especial i{
-  color: aqua;
+  color: var(--darkBrand);
 }
 .importante i{
   filter: drop-shadow(0px 0px 10px var(--brand))
@@ -735,13 +761,13 @@ filter: drop-shadow(1px 1px 0 white)
 }
 
 .BotaoPortfolio {
-  height: 40px;
-  width: 90px;
+  height: calc(0.75vmax + 40px);
+  width: calc(1.5vmax + 100px);
+  font-size: calc(0.5vmax + 12px);
   background-color: var(--secondary);
-  margin-left: 20px;
-  margin-top: 20px;
   color: white;
   transition: all 0.55s ease-in-out;
+  border: 2px solid transparent;
 }
 
 .BotaoPortfolio:hover {
@@ -749,8 +775,8 @@ filter: drop-shadow(1px 1px 0 white)
   border-radius: 0.5vmax;
 }
 
-#BtnWeb {
-  border: 2px solid white;
+#BtnWeb, .Selecionado {
+  border-color: white;
   scale: 1.2;
 }
 
@@ -786,7 +812,7 @@ filter: drop-shadow(1px 1px 0 white)
     padding: 25px 20px;
     flex-direction: column;
     align-items: center;
-    background: rgb(0, 0, 0);
+    background: var(--darkBrand);
     transition: all 0.55s ease;
   }
   .Navbar a,
@@ -808,13 +834,13 @@ filter: drop-shadow(1px 1px 0 white)
     margin: 0;
   }
   .Central #Texto{
-    margin-top: 15%;
     display: flex;
     justify-content: center;
   }
   #DivImagem{
     display: none;
   }
+  
   .SobreMim{
     padding: 10% 0% !important;
   }
@@ -826,16 +852,16 @@ filter: drop-shadow(1px 1px 0 white)
   }
   .linha-do-tempo{
     gap: 100px;
+    max-width: 75%;
+  }
+  #ContainerGeral{
+    min-height: calc(15vmax + 210px);
   }
 }
 
 @media (max-width: 730px) {
   #Texto{
-    width: 100%;
-  }
-  .Central{
-    min-height: unset;
-    padding-top: 10%;
+    width: 100% !important;
   }
   Section{
     padding: 10% 9%;
@@ -844,7 +870,13 @@ filter: drop-shadow(1px 1px 0 white)
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
+    padding-top: 10%;
+  }
+  .Central #Texto{
+    padding-bottom: 25%;
+  }
+  #imagemCorvo{
+    padding-top: 2vmax;
   }
   #Corvo, #imagemCorvo{
     width: 100%;
@@ -861,6 +893,12 @@ filter: drop-shadow(1px 1px 0 white)
   }
   .medalha-info{
     left: 400%;
+  }
+  .Central .paragrafo, .paragrafo h2{
+    text-align: center !important;
+  }
+  .SobreMim #Texto{
+    margin-bottom: 10%;
   }
 }
 
