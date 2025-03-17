@@ -43,7 +43,7 @@
         <li><a><button onclick = "MudarTema()"> <img src="./Images/lightIcon.png" id="button" alt="Botão troca de tema" style="visibility: hidden;"></button></a></li>
       </ul>
 
-      <div class="Bx bx-menu" id="IconeMenu">
+      <div id="IconeMenu">
         <img src="./Images/Menu.png" id="IconeMenu" alt="Menu">
       </div>
     </header>
@@ -352,119 +352,99 @@
           <h1>Portfólio</h1>
         </div>
         <div id="Botoes">
-        <button onclick='RevelarWeb()' class="BotaoPortfolio" id="BtnWeb">Web</button>
-        <button onclick='RevelarPython()' class="BotaoPortfolio" id="BtnPy">Python</button> <br><br><br>
-      </div> <br>
-      <noscript><p><b>Ative javascript para ver outros projetos!</b></p></noscript>
+          <button onclick="RevelarPort('Web')" class="BotaoPortfolio Selecionado" id="BtnWeb">Web</button>
+          <button onclick="RevelarPort('Mobile')" class="BotaoPortfolio" id="BtnMobile">Mobile</button>
+          <button onclick="RevelarPort('Sistemas')" class="BotaoPortfolio" id="BtnSistemas">Sistemas</button>
+        </div><br><br><br><br>
 
   <div class="ContainerPortfolio"> 
 
-    <div class="Projeto Web">
-      <div class="ImagemProjeto" id="Imagem6"></div>
-      <div class="BasicInfo">
-        <h2>CodeDrafts</h2> 
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
-        <img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" alt="nodeJS-icon">
-        <img src="https://img.icons8.com/color/512/microsoft-sql-server.png" alt="MSSQL-icon">
-        <img src="https://static-00.iconduck.com/assets.00/google-cloud-icon-2048x1646-7admxejz.png" alt="Google Cloud-icon">
-        <img src="./Images/Habilidades/Java.png" alt="java-icon">
-        <p>Projeto de uma rede social totalmente funcional com banco de dados que permite interação entre usuários com posts, denúncias, comentários e muito mais </p>
-      </div> <br><br>
-      <a href="https://codedrafts-5as0.onrender.com/" target="_blank" rel="noreferrer noopener">
-        <img src="./Images/Projetos/CodeDraftsIcon.png" alt="icone site CodeDrafts" id="CodeDraftsIcon"/> VER SITE
-      <a href="https://github.com/cc23135/codedrafts" target="_blank" rel="noreferrer noopener">
-        <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
-      <p>04/09/2023</p>
+    <div class="Projeto Web Sistemas" id="CodeDrafts">
+      <h2>CodeDrafts</h2>
+      <div class="stacks">
+        <i class='bx bxl-html5'></i>
+        <i class='bx bxl-css3' ></i>
+        <i class='bx bxl-javascript' ></i>
+        <i class='bx bxl-nodejs' ></i>
+        <object type="image/svg+xml" data="./Images/Habilidades/icons8-sql-server.svg" class="sql-icon"></object>
+        <i class='bx bxl-google-cloud'></i>
+        <i class='bx bxl-java' ></i>
       </div>
+      <div class="info-bar">
+        <span class="data">04/09/2023</span>
+        <button class="btn-veja-mais">Veja mais</button>
+      </div>
+    </div>
 
-      <div class="Projeto Web">
-        <div class="ImagemProjeto" id="Imagem7"></div>
-        <div class="BasicInfo">
-          <h2>YourDle</h2> 
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
-          <img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" alt="nodeJS-icon">
-          <img src="https://img.icons8.com/color/512/microsoft-sql-server.png" alt="MSSQL-icon">
-          <p>Site onde você pode publicar e ver jogos estilos wordle e conexo</p>
-        </div> <br><br>
-        <a href="https://yourdle-seven.vercel.app/" target="_blank" rel="noreferrer noopener">
-          <img src="./Images/Projetos/YourDleIcon.png" alt="icone site CodeDrafts" id="CodeDraftsIcon"/> VER SITE
-        <a href="https://github.com/ArthurGamaJorge/YourDle" target="_blank" rel="noreferrer noopener">
-          <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
-        <p>15/11/2023</p>
-        </div>
+    <div class="Projeto Web" id="YourDle">
+      <h2>YourDle</h2>
+      <div class="stacks">
+        <i class='bx bxl-html5'></i>
+        <i class='bx bxl-css3' ></i>
+        <i class='bx bxl-javascript' ></i>
+        <i class='bx bxl-nodejs' ></i>
+        <object type="image/svg+xml" data="./Images/Habilidades/icons8-sql-server.svg" class="sql-icon"></object>
+      </div>
+      <div class="info-bar">
+        <span class="data">15/11/2023</span>
+        <button class="btn-veja-mais">Veja mais</button>
+      </div>
+    </div>
 
-        <div class="Projeto Web">
-          <div class="ImagemProjeto" id="Imagem3"></div>
-          <div class="BasicInfo">
-            <h2>IOOON Airlines</h2> 
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="html-icon">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
-            <p>Projeto que simula uma companhia área com sistema de login para acessar informações de passagens através de uma API </p>
-          </div> <br><br>
-          <a href="https://iooonairlines.netlify.app/" target="_blank" rel="noreferrer noopener">
-            <img src="./Images/Projetos/IOOON logo.png" alt="icone site iooon airlines"/> VER SITE
-          <a href="https://github.com/ArthurGamaJorge/Formulario-Login-localStorage" target="_blank" rel="noreferrer noopener">
-            <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
-          <p>13/05/2023</p>
-          </div>
+    <div class="Projeto Web" id="IOOON">
+      <h2>IOOON Airlines</h2>
+      <div class="stacks">
+        <i class='bx bxl-html5'></i>
+        <i class='bx bxl-css3' ></i>
+        <i class='bx bxl-javascript' ></i>
+        <i class='bx bxl-react' ></i>
+      </div>
+      <div class="info-bar">
+        <span class="data">13/05/2023</span>
+        <button class="btn-veja-mais">Veja mais</button>
+      </div>
+    </div>
 
-          <div class="Projeto Web">
-              <div class="ImagemProjeto" id="Imagem1"></div>
-              <div class="BasicInfo">
-                <h2>Hollow Knight Guia</h2> 
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html-icon">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css-icon">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="js-icon">
-                <p>Projeto com informações sobre o jogo Hollow Knight </p>
-                <p>Meu primeiro site, ele foi feito como treino de design e javascript básico</p>
-              </div>  <br><br>
-                <a href="https://arthurgamajorge.github.io/Hollow-Knight-Guia/" target="_blank" rel="noreferrer noopener">
-                <img src="./Images/Projetos/IconeHollow.png" alt="icone site hollow knight guia"/> VER SITE
-              <a href="https://github.com/ArthurGamaJorge/Hollow-Knight-Guia" target="_blank" rel="noreferrer noopener">
-                <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br> <br>
-              <p>27/03/2023</p>
-            </div>
+    <div class="Projeto Web" id="HollowKnight">
+      <h2>Hollow Knight Guia</h2>
+      <div class="stacks">
+        <i class='bx bxl-html5'></i>
+        <i class='bx bxl-css3' ></i>
+        <i class='bx bxl-javascript' ></i>
+      </div>
+      <div class="info-bar">
+        <span class="data">27/03/2023</span>
+        <button class="btn-veja-mais">Veja mais</button>
+      </div>
+    </div>
 
-          <div class="Projeto Python">
-            <div class="ImagemProjeto" id="Imagem4"></div>
-            <div class="BasicInfo">
-            <h2>Agendamento de monitoria</h2>
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python-icon">
-            <img src="./Images/Habilidades/QtDesigner.png" alt="qtDesigner-icon"> 
-            <p>Projeto que consegue gerenciar o reservamento de computadores de um laboratório para monitorias</p>
-            <p>Este projeto utiliza interfáce gráfica e consegue guardar as informações inseridas e alterá-las</p>
-            </div><br><br>
-            <a href="https://github.com/ArthurGamaJorge/Agendamento-de-monitoria" target="_blank" rel="noreferrer noopener">
-              <img src="./Images/Github logo.png" id="github" alt="github"/> VER NO GITHUB</a> <br><br>
-            <p>02/07/2023</p>
-          </div>
+    <div class="Projeto Sistemas" id="Monitoria">
+      <h2>Agendamento de monitoria</h2>
+      <div class="stacks">
+        <i class='bx bxl-python' ></i>
+      </div>
+      <div class="info-bar">
+        <span class="data">02/07/2023</span>
+        <button class="btn-veja-mais">Veja mais</button>
+      </div>
+    </div>
 
-          <div class="Projeto Python">
-            <div class="ImagemProjeto" id="Imagem2"></div>
-            <div class="BasicInfo">
-            <h2>Cadastro e Estatísticas Alunos</h2>
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python-icon"> 
-            <p>Projeto que armazena altera e exclui registro de alunos</p>
-            <p>Este projeto utiliza interfáce em console e armazena as informações em arquivo de texto</p>
-          </div> <br><br>
-            <a href="https://github.com/ArthurGamaJorge/Cadastro-e-Estatisticas-Alunos" target="_blank" rel="noreferrer noopener">
-              <img src="./Images/Github logo.png" id="github" alt="github-icon"/> VER NO GITHUB</a> <br><br>
-            <p>24/04/2023</p>
-          </div>
+    <div class="Projeto Sistemas" id="Cadastro">
+      <h2>Hollow Knight Guia</h2>
+      <div class="stacks">
+        <i class='bx bxl-python' ></i>
+      </div>
+      <div class="info-bar">
+        <span class="data">24/04/2023</span>
+        <button class="btn-veja-mais">Veja mais</button>
+      </div>
+    </div>
 
-        
-        </div>
-
-        <br><br><br><br><br><br>
       </section>
-    
 
+      <footer></footer>
+    
+      <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./JavaScript/scripts.js"></script>
     <script src="./JavaScript/scroll.js"></script>

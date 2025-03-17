@@ -23,7 +23,7 @@ html{
   border-radius: 10px;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection { 
   color: white;
   background: var(--brand);
 }
@@ -33,13 +33,6 @@ html{
   background: var(--brand);
 }
 
-
-#DivImagem,
-#ContainerGeral,
-#imagemCorvo,
-#Texto {
-  visibility: hidden;
-}
 
 /* ESTILOS GERAIS */
 * {
@@ -75,8 +68,8 @@ Section {
 }
 
 a:hover,
-.Projeto,
-button {
+.medalha,
+button, .ProjetoImg img, .Projeto {
   cursor: url("../Images/CursorPointer.png"), pointer;
 }
 
@@ -89,7 +82,6 @@ button {
   margin-bottom: 18px;
   font-size: calc(1vmax + 10px) !important;
 }
-
 
 #Texto{
   z-index: 1;
@@ -154,7 +146,7 @@ button {
   margin-bottom: 3%;
 }
 
-#Texto a img, #Texto2 a img, .Projeto a img{
+#Texto a img, #Texto2 a img{
   vertical-align: middle;
 }
 #Texto h1,
@@ -182,7 +174,6 @@ button {
   vertical-align: middle; 
 }
 
-.Projeto a:hover,
 #Texto2 a:hover {
   background: transparent;
   border: 1px solid white;
@@ -289,7 +280,7 @@ header {
 #Corvo {
   position: relative;
   aspect-ratio: 1 / 1;
-  background-color: var(--darkBrand); 
+  background-color: black; 
   mask-image: url("https://arthurgamajorge.github.io/Images/corvo.png");
   mask-size: contain;
   mask-repeat: no-repeat;
@@ -338,6 +329,7 @@ header {
       opacity: 0;
   }
 }
+
 
 /* SEÇÃO HABILIDADES */
 
@@ -666,107 +658,145 @@ filter: drop-shadow(1px 1px 0 white)
 
 /* SEÇÃO PROJETOS */
 
+.Portfolio{
+  padding: 2% 0;
+}
+
 .ContainerPortfolio {
   display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
   padding-top: 10px;
+  flex-wrap: wrap;
+  min-height: calc(20vmax + 200px);
+  gap: 80px;
+  justify-content: center;
+}
+
+.Projeto{
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 25%;
+  height: calc(8vmax + 100px);
+  border-bottom: 3px solid var(--brand);
+  transition: all 0.3s ease-in-out;
+  align-content: center;
+}
+
+.Projeto::before {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.4);
+  z-index: 0; 
+  transition: background-color 0.3s ease;
+}
+
+.Projeto:hover::before {
+  background-color: transparent; 
+}
+
+.Projeto:hover{
+  z-index: 1;
+  transform: scale(1.2);
+}
+
+.Projeto:hover h2, .Projeto:hover .stacks{
+  opacity: 0;
+}
+
+.Projeto .stacks{
+  position: relative;
+  z-index: 2;
+  color: var(--brand);
+  transition: all 0.3s ease-in-out;
+  font-size: calc(0.8vmax + 20px);
+}
+
+.stacks object{
+  width: 40px;
+  filter: brightness(0) saturate(100%) invert(55%) sepia(88%) saturate(500%) hue-rotate(89deg) brightness(108%) contrast(117%);
+}
+
+.Projeto h2{
+  font-size: calc(1vmax + 20px);
+  color: white;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
 }
 
 .Projeto {
-  background: rgb(3, 1, 67);
+  position: relative; /* Garantir que o info-bar fique posicionado corretamente dentro de .Projeto */
+}
+
+.Projeto .info-bar {
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  width: calc(20vmax + 160px);
-  text-align: center;
-  border: white 2px solid;
-  border-radius: calc(1vmax + 20px);
-  filter: drop-shadow(10px 10px 8px var(--secondary));
-  margin: 0 30px;
-  flex-direction: column;
-  flex-shrink: 0;
-  margin-bottom: 20px;
-  transition: all 0.5s ease-in-out;
-  user-select: none;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+  z-index: 2;
+  transform: translateY(100%); 
+  opacity: 0; 
 }
 
-.Projeto a, .Projeto img{
-  -webkit-user-drag: none;
-  width: auto;
+.Projeto:hover .info-bar {
+  transform: translateY(0);  
+  opacity: 1;  
 }
 
-.Projeto:hover {
-  scale: 1.03;
-  filter: drop-shadow(15px 15px 12px var(--secondary));
+.Projeto .info-bar .data {
+  font-size: 1.2rem;
 }
 
-.Projeto:active {
-  scale: 0.98;
-  filter: drop-shadow(5px 5px 4px var(--secondary));
+.Projeto .info-bar .btn-veja-mais {
+  background-color: var(--brand);
+  border: none;
+  color: var(--darkBrand);
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.Projeto h2 {
-  font-size: calc(1vmax + 10px);
+.Projeto .info-bar .btn-veja-mais:hover {
+  color: var(--secondary);
 }
-
-.Projeto a {
-  border: 2px dashed var(--secondary);
-  background: transparent;
-  margin-left: 5px;
-  text-align: center;
-  font-size: calc(0.5vmax + 10px);
-  padding: 4px 11px;
-  margin-top: 5px;
-}
-
-.BasicInfo{
-  height: calc(1vmax + 110px);
-  padding: 0% 4%
-}
-
-.BasicInfo p{
-  font-size: calc(0.4vmax + 12px);
-}
-
-.Projeto img{
-  height: calc(1vmax + 15px);
-  width: auto;
-}
-
-.ImagemProjeto {
-  background-size: cover;
-  background-position: center center;
-  border-radius: calc(1vmax + 20px) calc(1vmax + 20px) 0px 0px;
-  height: calc(11vmax + 80px);
-}
-
-#Imagem1 {background-image: url("../Images/Projetos/HollowKnight.png");}
-#Imagem2 {background-image: url("../Images/Projetos/Cadastro\ Alunos.png");}
-#Imagem3 {background-image: url("../Images/Projetos/FormularioDark.png");}
-#Imagem4 {background-image: url("../Images/Projetos/AgendamentoMonitoria.png");}
-#Imagem6 {background-image: url("../Images/Projetos/CodeDraftsDark.png");}
-#Imagem7 {background-image: url("../Images/Projetos/YourDle.png");}
-
-.Python {
-  display: none;
-}
-
-.PythonLigado .Python{
+.Web{
   display: block;
 }
-
-.PythonLigado #BtnPy{
-  border: 2px solid white; 
-  scale:1.2;
-}
-
-.PythonLigado #BtnWeb{
-  scale: 0.94; 
-  border: none;
-}
-
-.PythonLigado .Web{
+.Sistemas, .Mobile{
   display: none;
+}
+
+#CodeDrafts{
+  background-image: url("../Images/Projetos/CodeDraftsDark.png");
+}
+#YourDle{
+  background-image: url("../Images/Projetos/YourDle.png");
+}
+#IOOON{
+  background-image: url("../Images/Projetos/FormularioDark.png");
+}
+#HollowKnight{
+  background-image: url("../Images/Projetos/HollowKnight.png");
+}
+#Monitoria{
+  background-image: url("../Images/Projetos/AgendamentoMonitoria.png");
+}
+#Cadastro{
+  background-image: url("../Images/Projetos/Cadastro\ Alunos.png");
 }
 
 .BotaoPortfolio {
@@ -784,9 +814,15 @@ filter: drop-shadow(1px 1px 0 white)
   border-radius: 0.5vmax;
 }
 
-#BtnWeb, .Selecionado {
+.Selecionado {
   border-color: white;
   scale: 1.2;
+}
+
+/* FOOTER */
+footer{
+  height: calc(0.2vmax + 10px);
+  background-color: var(--brand);
 }
 
 /* RESPONSIVIDADE */
@@ -908,6 +944,9 @@ filter: drop-shadow(1px 1px 0 white)
   }
   .SobreMim #Texto{
     margin-bottom: 10%;
+  }
+  .Projeto{
+    width: 100%;
   }
 }
 

@@ -20,32 +20,3 @@ sr.reveal(".Container", { delay: 50, origin: "left" });
 sr.reveal(".linha-do-tempo", {delay: 50, origin: "left"});
 sr.reveal("#Botoes", { delay: 50, origin: "left" });
 sr.reveal(".ContainerPortifolio", { delay: 50, origin: "bottom" });
-
-// SLIDER PORTIFÓLIO
-container = document.querySelector('.ContainerPortfolio')
-
-let isDown = false;
-let startX;
-let scrollLeft;
-
-container.addEventListener('mousedown', (e) => {
-  isDown = true;
-  startX = e.pageX - container.offsetLeft;
-  scrollLeft = container.scrollLeft;
-});
-
-container.addEventListener('mouseleave', () => {
-  isDown = false;
-});
-
-container.addEventListener('mouseup', () => {
-  isDown = false;
-});
-
-document.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - container.offsetLeft;
-  const walkX = (x - startX) * 0.75; 
-  container.scrollLeft = scrollLeft - walkX;
-});

@@ -3,7 +3,6 @@ let Navbar = document.querySelector(".Navbar");
 let ImagemOriginal = document.getElementById('button').getAttribute('src');
 
 menu.onclick = () => {
-  menu.classList.toggle("bx-x");
   Navbar.classList.toggle("open");
 };
 
@@ -74,17 +73,33 @@ function getCategoryOrder(categoria) {
   return categories.indexOf(categoria);
 }
 
+let categoriaAtual = "Web";  // Categoria inicial
 
+function RevelarPort(categoria) {
+  if (categoria === categoriaAtual) return;  // Se a categoria já estiver ativa, não faz nada
 
+  // Remove a classe 'Selecionado' de todos os botões
+  const buttons = document.querySelectorAll(".BotaoPortfolio");
+  buttons.forEach(button => button.classList.remove("Selecionado"));
 
-function RevelarPython(){
-  document.body.classList.toggle("PythonLigado")
+  // Adiciona a classe 'Selecionado' ao botão clicado
+  document.getElementById(`Btn${categoria}`).classList.add("Selecionado");
+
+  // Esconde todos os projetos
+  const projetos = document.querySelectorAll(".Projeto");
+  projetos.forEach(projeto => {
+    projeto.style.display = "none";  // Oculta todos os projetos
+  });
+
+  // Exibe os projetos da categoria selecionada
+  const projetosCategoria = document.querySelectorAll(`.Projeto.${categoria}`);
+  projetosCategoria.forEach(projeto => {
+    projeto.style.display = "block";  // Exibe os projetos dessa categoria
+  });
+
+  // Atualiza a categoria atual
+  categoriaAtual = categoria;
 }
-
-function RevelarWeb(){
-  document.body.classList.toggle("PythonLigado")
-}
-
 
 darkMode = localStorage.getItem("dark-mode"); 
 botaoTema = document.getElementById('button');
@@ -109,3 +124,24 @@ function MudarTema() {
         localStorage.setItem('dark-mode', 'enabled');
     }
 }
+
+document.querySelectorAll('.imgProj').forEach(item => {
+  item.addEventListener('mousemove', (e) => {
+    const { clientX, clientY, target } = e;
+    const { offsetWidth: width, offsetHeight: height } = target;
+    const { left, top } = target.getBoundingClientRect();
+
+    // Calcular a intensidade da rotação
+    const xRotation = ((clientY - top) / height - 0.5) * 30;  // Intensidade de rotação X
+    const yRotation = ((clientX - left) / width - 0.5) * -30; // Intensidade de rotação Y
+
+    // Aplicar rotação baseada na posição do mouse
+    target.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+  });
+
+  item.addEventListener('mouseleave', (e) => {
+    // Resetar a rotação de volta à posição original
+    e.target.style.transform = "rotateX(0deg) rotateY(0deg)";
+  });
+});
+

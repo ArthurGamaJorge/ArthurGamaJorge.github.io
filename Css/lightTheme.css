@@ -29,9 +29,13 @@
     drop-shadow(-1px -1px 0 var(--secondary));
 }
 
-.Light-theme .redes a{
+.Light-theme .redes a, #EfeitoEscrevendo {
   color: var(--secondary);
   border-color: var(--secondary);
+}
+
+.Light-theme #EfeitoEscrevendo::after{
+  background-color: var(--secondary);
 }
 
 .Light-theme .redes a:hover{
@@ -39,7 +43,7 @@
   color: var(--white);
 }
 
-.Light-theme {
+.Light-theme{
   color: var(--secondary) !important;
 }
 
@@ -55,8 +59,8 @@
   border-color: var(--secondary);
 }
 
-  .Light-theme #Imagem3 {background-image: url("../Images/Projetos/FormularioLight.png");}
-  .Light-theme #Imagem6 {background-image: url("../Images/Projetos/CodeDraftsLight.png");}
+  .Light-theme #IOOON {background-image: url("../Images/Projetos/FormularioLight.png");}
+  .Light-theme #CodeDrafts {background-image: url("../Images/Projetos/CodeDraftsLight.png");}
 
   .Light-theme #IconeMenu img, .Light-theme .Navbar img{
     filter: invert(100%);
@@ -117,20 +121,4 @@
     border-color: var(--darkBrand);
   }
 
-  .Light-theme .Projeto {
-    border-color: black;
-    background-color: rgb(39, 60, 200);
-  }
-
-  .Light-theme .Projeto a{
-    border-color: rgb(3, 1, 67)
-  }
-
-  .Light-theme .Projeto #github {
-    filter: brightness(0) saturate(100%) invert(5%) sepia(90%) saturate(6124%) hue-rotate(248deg) brightness(61%) contrast(111%);
-  }
-
-  .Light-theme .Projeto a:hover {
-    border-color: var(--white);
-  }
   
