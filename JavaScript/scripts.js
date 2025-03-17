@@ -73,31 +73,25 @@ function getCategoryOrder(categoria) {
   return categories.indexOf(categoria);
 }
 
-let categoriaAtual = "Web";  // Categoria inicial
-
+let categoriaAtual = "Web"; 
 function RevelarPort(categoria) {
-  if (categoria === categoriaAtual) return;  // Se a categoria já estiver ativa, não faz nada
+  if (categoria === categoriaAtual) return;  
 
-  // Remove a classe 'Selecionado' de todos os botões
   const buttons = document.querySelectorAll(".BotaoPortfolio");
   buttons.forEach(button => button.classList.remove("Selecionado"));
 
-  // Adiciona a classe 'Selecionado' ao botão clicado
   document.getElementById(`Btn${categoria}`).classList.add("Selecionado");
 
-  // Esconde todos os projetos
   const projetos = document.querySelectorAll(".Projeto");
   projetos.forEach(projeto => {
-    projeto.style.display = "none";  // Oculta todos os projetos
+    projeto.style.display = "none";  
   });
 
-  // Exibe os projetos da categoria selecionada
   const projetosCategoria = document.querySelectorAll(`.Projeto.${categoria}`);
   projetosCategoria.forEach(projeto => {
-    projeto.style.display = "block";  // Exibe os projetos dessa categoria
+    projeto.style.display = "block";  
   });
 
-  // Atualiza a categoria atual
   categoriaAtual = categoria;
 }
 
@@ -145,3 +139,38 @@ document.querySelectorAll('.imgProj').forEach(item => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("projetoModal");
+  const modalFundo = document.getElementById("modalFundo");
+  const modalImg = document.getElementById("modal-img");
+  const modalTitle = document.getElementById("modal-title");
+  const modalDescription = document.getElementById("modal-description");
+  const modalDate = document.getElementById("modal-date");
+  const closeModal = document.querySelector(".close");
+  const projetos = document.querySelectorAll(".Projeto");
+  let projetoAberto = null; 
+
+  projetos.forEach(projeto => {
+    projeto.addEventListener("click", () => {
+      modalTitle.textContent = projeto.getAttribute("data-title")
+      modalDescription.textContent = projeto.getAttribute("data-description")
+      modalDate.textContent = projeto.getAttribute("data-date")
+      modalImg.src = projeto.getAttribute("data-image")
+
+      projetoAberto = projeto
+      projetoAberto.classList.add("DesativarHover");
+      modal.classList.add("Aberto");
+      modalFundo.classList.add("Aberto");
+    });
+  });
+
+  function fecharModal() {
+    modal.classList.remove("Aberto");
+    modalFundo.classList.remove("Aberto");
+    projetoAberto.classList.remove("DesativarHover")
+  }
+
+  closeModal.addEventListener("click", fecharModal);
+
+  modalFundo.addEventListener("click", fecharModal);
+});

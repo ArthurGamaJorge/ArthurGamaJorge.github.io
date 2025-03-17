@@ -355,7 +355,23 @@
           <button onclick="RevelarPort('Web')" class="BotaoPortfolio Selecionado" id="BtnWeb">Web</button>
           <button onclick="RevelarPort('Mobile')" class="BotaoPortfolio" id="BtnMobile">Mobile</button>
           <button onclick="RevelarPort('Sistemas')" class="BotaoPortfolio" id="BtnSistemas">Sistemas</button>
-        </div><br><br><br><br>
+        </div><br>
+
+    <div id="modalFundo" class="modal-fundo"></div>
+
+    <div id="projetoModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img id="modal-img" src="" alt="Imagem do Projeto" class="modal-img">
+          <div class="modal-text">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <span id="modal-date" class="modal-date"></span>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <div class="ContainerPortfolio"> 
 
@@ -376,7 +392,7 @@
       </div>
     </div>
 
-    <div class="Projeto Web" id="YourDle">
+    <div class="Projeto Web" id="YourDle" data-title="YourDle" data-description="Descrição do YourDle." data-date="15/11/2023" data-image="./Images/Projetos/YourDle.png">
       <h2>YourDle</h2>
       <div class="stacks">
         <i class='bx bxl-html5'></i>

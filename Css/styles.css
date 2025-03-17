@@ -69,7 +69,7 @@ Section {
 
 a:hover,
 .medalha,
-button, .ProjetoImg img, .Projeto {
+button, .ProjetoImg img, .Projeto, .close {
   cursor: url("../Images/CursorPointer.png"), pointer;
 }
 
@@ -244,7 +244,6 @@ header {
 #IconeMenu {
   width: 50px;
   z-index: 11;
-  cursor: pointer;
   display: none;
 }
 
@@ -660,14 +659,14 @@ filter: drop-shadow(1px 1px 0 white)
 
 .Portfolio{
   padding: 2% 0;
+  min-height: calc(28vmax + 300px);
 }
 
 .ContainerPortfolio {
   display: flex;
-  padding-top: 10px;
+  padding-top: 2%;
   flex-wrap: wrap;
-  min-height: calc(20vmax + 200px);
-  gap: 80px;
+  gap: 40px;
   justify-content: center;
 }
 
@@ -677,7 +676,7 @@ filter: drop-shadow(1px 1px 0 white)
   background-size: cover;
   background-position: center center;
   width: 25%;
-  height: calc(8vmax + 100px);
+  aspect-ratio: 2.2/1;
   border-bottom: 3px solid var(--brand);
   transition: all 0.3s ease-in-out;
   align-content: center;
@@ -704,6 +703,11 @@ filter: drop-shadow(1px 1px 0 white)
   transform: scale(1.2);
 }
 
+.Projeto.DesativarHover:hover {
+  transform: none;
+  z-index: 0;
+}
+
 .Projeto:hover h2, .Projeto:hover .stacks{
   opacity: 0;
 }
@@ -717,7 +721,7 @@ filter: drop-shadow(1px 1px 0 white)
 }
 
 .stacks object{
-  width: 40px;
+  width: calc(0.8vmax + 20px);
   filter: brightness(0) saturate(100%) invert(55%) sepia(88%) saturate(500%) hue-rotate(89deg) brightness(108%) contrast(117%);
 }
 
@@ -764,7 +768,6 @@ filter: drop-shadow(1px 1px 0 white)
   border: none;
   color: var(--darkBrand);
   padding: 5px 15px;
-  cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
   transition: background-color 0.3s ease;
@@ -773,11 +776,12 @@ filter: drop-shadow(1px 1px 0 white)
 .Projeto .info-bar .btn-veja-mais:hover {
   color: var(--secondary);
 }
-.Web{
-  display: block;
-}
+
 .Sistemas, .Mobile{
   display: none;
+}
+.Web{
+  display: block;
 }
 
 #CodeDrafts{
@@ -817,6 +821,79 @@ filter: drop-shadow(1px 1px 0 white)
 .Selecionado {
   border-color: white;
   scale: 1.2;
+}
+
+.modal-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease, z-index 0s linear 0.3s;
+}
+
+/* Modal oculta antes do clique */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background: var(--darkBrand);
+  border: 2px solid var(--brand);
+  padding: 2%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 1s ease, z-index 0s linear 0.3s;
+}
+
+/* Quando a modal estiver aberta */
+.modal.Aberto,
+.modal-fundo.Aberto {
+  opacity: 1;
+  z-index: 1000;
+  transition: opacity 1s ease, z-index 0s linear;
+}
+
+/* Fechar modal */
+.close {
+  position: absolute;
+  padding: 10px;
+  top: 10px;
+  right: 15px;
+  font-size: calc(1vmax + 20px);
+}
+.modal-body {
+  display: flex;
+  gap: 40px;
+}
+
+.modal-img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.modal-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.modal-text h2 {
+  margin-bottom: 10px;
+}
+
+.modal-date {
+  font-size: 14px;
+  color: gray;
+  margin-top: 10px;
 }
 
 /* FOOTER */
@@ -902,6 +979,12 @@ footer{
   #ContainerGeral{
     min-height: calc(15vmax + 210px);
   }
+  .Projeto{
+    width: 45%;
+  }
+  .modal{
+    width: 80%;
+  }
 }
 
 @media (max-width: 730px) {
@@ -945,8 +1028,17 @@ footer{
   .SobreMim #Texto{
     margin-bottom: 10%;
   }
+  .Portfolio{
+    padding: 4% 0;
+  }
+  .ContainerPortfolio{
+    padding-top: 0%;
+  }
   .Projeto{
-    width: 100%;
+    width: 90%;
+  }
+  .modal{
+    width: 95%;
   }
 }
 
