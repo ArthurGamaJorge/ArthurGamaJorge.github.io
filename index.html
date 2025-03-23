@@ -362,6 +362,8 @@
     <div id="projetoModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
+        <!-- Abas (Tabs) agora estão acima da div.modal-body -->
+        <div class="tabs" id="tabs"></div> <!-- Novas abas -->
         <div class="modal-body">
           <img id="modal-img" src="" alt="Imagem do Projeto" class="modal-img">
           <div class="modal-text">
@@ -369,13 +371,25 @@
             <p id="modal-description"></p>
             <span id="modal-date" class="modal-date"></span>
           </div>
+          <div class="tab-content" id="tab-content"></div> <!-- Conteúdo das abas -->
+        </div>
+        <div class="links">
+          <a href="" target="_blank" rel="noreferrer noopener"> <img src=""/> Site </a>
+          <a href="" target="_blank" rel="noreferrer noopener" id="imgGithub"> <img src="./Images/Github logo.png"/> Github </a>
+          <a href="" target="_blank" rel="noreferrer noopener"> <img src="https://community.appinventor.mit.edu/uploads/default/51de1aad4bfd4519201315eee03607910eb0772c"/> Baixar AIA </a>
         </div>
       </div>
     </div>
+    
+    
 
   <div class="ContainerPortfolio"> 
 
-    <div class="Projeto Web Sistemas" id="CodeDrafts">
+    <div class="Projeto Web Sistemas" id="CodeDrafts" data-title="CodeDrafts" data-date="4 de setembro de 2023" data-image="./Images/Projetos/CodeDraftsDark.png"
+    data-icon="CodeDraftsIcon.png" data-site="https://codedrafts-5as0.onrender.com/" data-github="https://github.com/ArthurGamaJorge/codedrafts" data-categories="Web,Java" 
+    data-web-image="./Images/Projetos/CodeDraftsDark.png" data-java-image="./Images/Projetos/CodeDraftsJava.png"
+    data-web-description="Uma rede social gamificada e interativa, desenvolvida com integração a um banco de dados robusto, onde os usuários podem criar e gerenciar postagens, interagir com conteúdos por meio de curtidas e comentários, realizar buscas avançadas por temas ou usuários, denunciar publicações inadequadas, acompanhar perfis, além de visualizar rankings baseados em engajamento. A plataforma também permite o envio e exibição de imagens, e conta com um sistema de conquistas desbloqueáveis, incentivando a participação ativa dos usuários por meio de desafios e recompensas."
+    data-java-description="O painel administrativo do aplicativo, desenvolvido em Java, oferece uma interface para a moderação e gestão da plataforma. Nele, é possível visualizar todas as postagens, comentários e usuários denunciados, permitindo que administradores tomem medidas como banir ou desativar contas que violem as diretrizes. Além disso, o sistema permite a criação e gerenciamento de tópicos e conquistas, que podem ser atribuídos a usuários para incentivar o engajamento. O painel também inclui ferramentas de análise, fornecendo estatísticas sobre a atividade da rede social.">
       <h2>CodeDrafts</h2>
       <div class="stacks">
         <i class='bx bxl-html5'></i>
@@ -392,7 +406,11 @@
       </div>
     </div>
 
-    <div class="Projeto Web" id="YourDle" data-title="YourDle" data-description="Descrição do YourDle." data-date="15/11/2023" data-image="./Images/Projetos/YourDle.png">
+    <div class="Projeto Web" id="YourDle" data-title="YourDle" data-date="15 de novembro de 2023" data-image="./Images/Projetos/YourDle.png" 
+     data-icon="YourDleIcon.png" data-site="https://yourdle-seven.vercel.app/" data-categories="Web" data-github="https://github.com/ArthurGamaJorge/YourDle"
+     data-description="YourDle é uma plataforma interativa onde você pode explorar diversos desafios de palavras, como o clássico Termo (Wordle), onde precisa adivinhar uma palavra — ou várias, dependendo do modo — e o Conexo, que testa sua habilidade de identificar padrões entre quatro palavras.  
+      <br><br> Com uma conta, você pode criar seus próprios desafios, compartilhar com a comunidade e interagir avaliando as criações de outros jogadores.
+      <br> O site utiliza um banco de dados hospedado para armazenar todas as informações.">
       <h2>YourDle</h2>
       <div class="stacks">
         <i class='bx bxl-html5'></i>
@@ -407,7 +425,9 @@
       </div>
     </div>
 
-    <div class="Projeto Web" id="IOOON">
+    <div class="Projeto Web" id="IOOON" data-title="IOOON Airlines" data-date="13 de maio de 2023" data-image="./Images/Projetos/FormularioDark.png" 
+    data-icon="IOOON logo.png" data-site="https://iooonairlines.netlify.app/" data-categories="Web" data-github="https://github.com/ArthurGamaJorge/Iooon-Airlines"
+    data-description="Após o login, este site permite que os usuários consultem informações detalhadas sobre voos reais, acessando dados por meio de uma API integrada. A plataforma oferece funcionalidades para visualizar horários de partidas e chegadas, status dos voos, e outros detalhes relevantes">
       <h2>IOOON Airlines</h2>
       <div class="stacks">
         <i class='bx bxl-html5'></i>
@@ -421,7 +441,9 @@
       </div>
     </div>
 
-    <div class="Projeto Web" id="HollowKnight">
+    <div class="Projeto Web" id="HollowKnight" data-title="Hollow Knight Guia" data-date="27 de março de 2023" data-image="./Images/Projetos/HollowKnight.png" 
+    data-icon="IconeHollow.png" data-site="https://arthurgamajorge.github.io/Hollow-Knight-Guia/" data-categories="Web" data-github="https://github.com/ArthurGamaJorge/Hollow-Knight-Guia"
+    data-description="Este site é um guia completo sobre Hollow Knight, oferecendo informações detalhadas sobre locais, personagens, inimigos, história e muito mais <br><br> Foi meu primeiro projeto, desenvolvido para treinar minhas habilidades em HTML, CSS e JavaScript">
       <h2>Hollow Knight Guia</h2>
       <div class="stacks">
         <i class='bx bxl-html5'></i>
@@ -434,24 +456,47 @@
       </div>
     </div>
 
-    <div class="Projeto Sistemas" id="Monitoria">
+    <div class="Projeto Mobile" id="AlzCare" data-title="AlzCare" data-date="11 de julho de 2024" data-image="./Images/Projetos/AlzCare.png" 
+    data-categories="Mobile" data-aia="./Images/Projetos/AlzCare.aia"
+    data-description="aaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaa">
+      <h2>AlzCare</h2>
+      <div class="stacks">
+        <i class='bx bxl-html5'></i>
+        <i class='bx bxl-css3' ></i>
+        <i class='bx bxl-javascript' ></i>
+        <i class='bx bxl-nodejs' ></i>
+      </div>
+      <div class="info-bar">
+        <span class="data">11/07/2024</span>
+        <button class="btn-veja-mais">Veja mais</button>
+      </div>
+    </div>
+
+    <div class="Projeto Mobile" id="Aprendize" data-title="Aprendize" data-date="14 de novembro de 2024" data-image="./Images/Projetos/Aprendize.png" 
+    data-categories="Mobile" data-github="https://github.com/cc23135/aprendize"
+    data-description="">
+      <h2>Aprendize</h2>
+      <div class="stacks">
+        <i class='bx bxl-flutter'></i>
+        <i class='bx bxl-javascript' ></i>
+        <i class='bx bxl-nodejs' ></i>
+        <i class='bx bxl-google-cloud' ></i>
+      </div>
+      <div class="info-bar">
+        <span class="data">14/11/2024</span>
+        <button class="btn-veja-mais">Veja mais</button>
+      </div>
+    </div>
+
+    <div class="Projeto Sistemas" id="Monitoria" data-title="Agendamento de monitoria" data-date="02 de julho de 2023" data-image="./Images/Projetos/AgendamentoMonitoria.png" 
+    data-categories="Sistemas" data-github="https://github.com/ArthurGamaJorge/Agendamento-de-monitoria"
+    data-description="Programa desenvolvido em Python utilizando Qt Designer para criar uma interface gráfica, o sistema permite o gerenciamento de alunos, computadores e horários, facilitando o processo de agendamento de monitorias na escola Cotuca e garantindo uma gestão eficiente.">
       <h2>Agendamento de monitoria</h2>
       <div class="stacks">
         <i class='bx bxl-python' ></i>
       </div>
       <div class="info-bar">
         <span class="data">02/07/2023</span>
-        <button class="btn-veja-mais">Veja mais</button>
-      </div>
-    </div>
-
-    <div class="Projeto Sistemas" id="Cadastro">
-      <h2>Hollow Knight Guia</h2>
-      <div class="stacks">
-        <i class='bx bxl-python' ></i>
-      </div>
-      <div class="info-bar">
-        <span class="data">24/04/2023</span>
         <button class="btn-veja-mais">Veja mais</button>
       </div>
     </div>

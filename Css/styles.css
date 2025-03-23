@@ -67,9 +67,7 @@ Section {
   border-bottom: 0.3px solid rgb(255, 255, 255, 0.1);
 }
 
-a:hover,
-.medalha,
-button, .ProjetoImg img, .Projeto, .close {
+a, .medalha, button, .ProjetoImg img, .Projeto, .close, .tabs button {
   cursor: url("../Images/CursorPointer.png"), pointer;
 }
 
@@ -207,7 +205,7 @@ header {
   color: white;
 }
 
-.Navbar a {
+.Navbar a, .tabs button {
   font-size: calc(80% + 10px);
   color: white;
   margin-left: 50px;
@@ -217,16 +215,16 @@ header {
   justify-content: center;
 }
 
-.Navbar li a, .Principal {
+.Navbar li a, .Principal, .tabs button  {
   position: relative;
   transition: 0.2s;
 }
 
-.Navbar li a:hover, .Principal:hover{
+.Navbar li a:hover, .Principal:hover, .tabs button:hover{
   color: var(--brand) !important;
 }
 
-.Navbar li a::after {
+.Navbar li a::after, .tabs button::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -237,7 +235,7 @@ header {
   transition: width 0.3s;
 }
 
-#ahover:hover::after {
+#ahover:hover::after, .tabs button:hover::after, .tab.active::after  {
   width: 100%;
 }
 
@@ -308,7 +306,7 @@ header {
   display: inline-block;
   width: 4px;
   height: 100%;
-  background-color: var(--brand);
+  background-color: var(--secondary);
 
   animation-name: blink;
   animation-duration: 0.5s;
@@ -676,10 +674,16 @@ filter: drop-shadow(1px 1px 0 white)
   background-size: cover;
   background-position: center center;
   width: 25%;
+  will-change: transform;
   aspect-ratio: 2.2/1;
   border-bottom: 3px solid var(--brand);
   transition: all 0.3s ease-in-out;
   align-content: center;
+}
+
+.Mobile{
+  aspect-ratio: 1/2 !important;
+  width: 12%;
 }
 
 .Projeto::before {
@@ -799,8 +803,11 @@ filter: drop-shadow(1px 1px 0 white)
 #Monitoria{
   background-image: url("../Images/Projetos/AgendamentoMonitoria.png");
 }
-#Cadastro{
-  background-image: url("../Images/Projetos/Cadastro\ Alunos.png");
+#AlzCare{
+  background-image: url("../Images/Projetos/AlzCare.png");
+}
+#Aprendize{
+  background-image: url("../Images/Projetos/Aprendize.png");
 }
 
 .BotaoPortfolio {
@@ -836,7 +843,6 @@ filter: drop-shadow(1px 1px 0 white)
   transition: opacity 0.3s ease, z-index 0s linear 0.3s;
 }
 
-/* Modal oculta antes do clique */
 .modal {
   position: fixed;
   top: 50%;
@@ -847,13 +853,12 @@ filter: drop-shadow(1px 1px 0 white)
   border: 2px solid var(--brand);
   padding: 2%;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 5px 10px var(--brand));
   opacity: 0;
   z-index: -1;
   transition: opacity 1s ease, z-index 0s linear 0.3s;
 }
 
-/* Quando a modal estiver aberta */
 .modal.Aberto,
 .modal-fundo.Aberto {
   opacity: 1;
@@ -861,7 +866,6 @@ filter: drop-shadow(1px 1px 0 white)
   transition: opacity 1s ease, z-index 0s linear;
 }
 
-/* Fechar modal */
 .close {
   position: absolute;
   padding: 10px;
@@ -871,30 +875,109 @@ filter: drop-shadow(1px 1px 0 white)
 }
 .modal-body {
   display: flex;
-  gap: 40px;
+  gap: 60px;
+  align-items: stretch;
 }
 
 .modal-img {
-  width: 50%;
-  border-radius: 10px;
+  width: 40%;
 }
 
 .modal-text {
-  width: 50%;
+  flex: 1;
+  width: 60%;
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
 .modal-text h2 {
+  font-size: calc(1vmax + 20px);
   margin-bottom: 10px;
 }
 
-.modal-date {
-  font-size: 14px;
-  color: gray;
-  margin-top: 10px;
+.modal-text p{
+  color: var(--secondary);
+  font-size: calc(0.4vmax + 12px);
 }
+
+.modal-date {
+  font-size: 20px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.modal .links{
+  text-align: left;
+}
+
+.modal .links a {
+  align-items: center; 
+  gap: 8px; 
+  padding: 1% 2%;
+  border: 1px solid white;
+  border-radius: 20px;
+  height: calc(0.5vmax + 40px);
+  color: white; 
+  margin-top: 50px;
+  font-size: calc(0.4vmax + 10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal .links a:hover{
+  transform: translateY(-5px);
+  background-color: var(--secondary);
+  filter: drop-shadow(0px 0px 5px var(--brand));
+}
+
+.modal .links img{
+  height: calc(0.2vmax + 30px);
+  width: auto;
+}
+.modal #imgGithub{
+  display: inline-flex;
+  margin-left: 10px;
+}
+.modal #imgGithub img{
+  filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(7413%) hue-rotate(80deg) brightness(112%) contrast(100%);
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.tab {
+  color: white;
+  font-size: calc(0.5vmax + 10px);
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 0px !important;
+}
+
+.tab.active {
+  color: var(--brand);
+}
+
+.tab-content {
+  display: flex;
+  gap: 20px;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+}
+
+.tab-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+
 
 /* FOOTER */
 footer{
@@ -982,8 +1065,26 @@ footer{
   .Projeto{
     width: 45%;
   }
+  .Mobile{
+    width: 20%;
+  }
   .modal{
     width: 80%;
+  }
+  .modal-body{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .modal .links a{
+    margin-top: 25px;
+  }
+  .modal-date{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+  .modal-img{
+    width: 100%;
   }
 }
 
@@ -1036,6 +1137,9 @@ footer{
   }
   .Projeto{
     width: 90%;
+  }
+  .Mobile{
+    width: 30%;
   }
   .modal{
     width: 95%;

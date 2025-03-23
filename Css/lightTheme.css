@@ -34,17 +34,17 @@
   border-color: var(--secondary);
 }
 
-.Light-theme #EfeitoEscrevendo::after{
-  background-color: var(--secondary);
-}
-
 .Light-theme .redes a:hover{
   background-color: var(--brand);
   color: var(--white);
 }
 
-.Light-theme{
+.Light-theme, .Light-theme .Navbar li a:hover{
   color: var(--secondary) !important;
+}
+
+.Light-theme .Navbar li a::after {
+  background-color: var(--secondary);
 }
 
 .Light-theme #Corvo{
@@ -68,6 +68,24 @@
 
   .Light-theme .Navbar a, .Light-theme .Principal{
     color: black !important;
+  }
+
+  .Light-theme .modal{
+    filter: drop-shadow(0 5px 10px var(--secondary));
+  }
+
+  .Light-theme .modal{
+    background-color: rgb(221, 221, 221);
+  }
+  .Light-theme .links a{
+    border-color: var(--secondary);
+    color: var(--secondary);
+  }
+  .Light-theme .links #imgGithub img{
+    filter: brightness(0) saturate(100%) invert(5%) sepia(30%) saturate(1613%) hue-rotate(100deg) brightness(97%) contrast(103%);
+  }
+  .Light-theme .links a:hover{
+    color: white !important;
   }
 
   .Light-theme .Navbar a,
@@ -100,7 +118,7 @@
     color: var(--white);
   }
 
-  .Light-theme .linha-do-tempo::before{
+  .Light-theme .linha-do-tempo::before, .Light-theme footer{
     background-color: var(--secondary);
   }
 

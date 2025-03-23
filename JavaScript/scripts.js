@@ -93,6 +93,12 @@ function RevelarPort(categoria) {
   });
 
   categoriaAtual = categoria;
+
+  if (categoriaAtual === "Sistemas") {
+    document.getElementById("CodeDrafts").style.backgroundImage = "url('../Images/Projetos/CodeDraftsJava.png')";
+} else {
+    document.getElementById("CodeDrafts").style.backgroundImage = "url('../Images/Projetos/CodeDraftsDark.png')";
+}
 }
 
 darkMode = localStorage.getItem("dark-mode"); 
@@ -119,26 +125,6 @@ function MudarTema() {
     }
 }
 
-document.querySelectorAll('.imgProj').forEach(item => {
-  item.addEventListener('mousemove', (e) => {
-    const { clientX, clientY, target } = e;
-    const { offsetWidth: width, offsetHeight: height } = target;
-    const { left, top } = target.getBoundingClientRect();
-
-    // Calcular a intensidade da rotação
-    const xRotation = ((clientY - top) / height - 0.5) * 30;  // Intensidade de rotação X
-    const yRotation = ((clientX - left) / width - 0.5) * -30; // Intensidade de rotação Y
-
-    // Aplicar rotação baseada na posição do mouse
-    target.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
-  });
-
-  item.addEventListener('mouseleave', (e) => {
-    // Resetar a rotação de volta à posição original
-    e.target.style.transform = "rotateX(0deg) rotateY(0deg)";
-  });
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("projetoModal");
   const modalFundo = document.getElementById("modalFundo");
@@ -148,16 +134,111 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalDate = document.getElementById("modal-date");
   const closeModal = document.querySelector(".close");
   const projetos = document.querySelectorAll(".Projeto");
-  let projetoAberto = null; 
+
+  
+  const siteLink = document.querySelector(".links a:first-of-type"); 
+  const siteImg = siteLink.querySelector("img");
+  const githubLink = document.querySelector(".links a:nth-of-type(2)"); 
+  const aiaLink = document.querySelector(".links a:last-of-type");
+
+  const tabsContainer = document.getElementById("tabs");
+  const tabContent = document.getElementById("tab-content");
+
+  let projetoAberto = null;
 
   projetos.forEach(projeto => {
     projeto.addEventListener("click", () => {
-      modalTitle.textContent = projeto.getAttribute("data-title")
-      modalDescription.textContent = projeto.getAttribute("data-description")
-      modalDate.textContent = projeto.getAttribute("data-date")
-      modalImg.src = projeto.getAttribute("data-image")
+      modalTitle.textContent = projeto.getAttribute("data-title");
+      modalDescription.innerHTML = projeto.getAttribute("data-description");
+      modalDate.textContent = projeto.getAttribute("data-date");
+      modalImg.src = projeto.getAttribute("data-image");
 
-      projetoAberto = projeto
+      // Pegando os links do projeto
+      const siteUrl = projeto.getAttribute("data-site");
+      const aiaUrl = projeto.getAttribute("data-aia");
+      const githubUrl = projeto.getAttribute("data-github");
+      const iconUrl = `./Images/Projetos/${projeto.getAttribute("data-icon")}`;
+
+      // Atualizando o link do site se existir
+      if (siteUrl) {
+        siteLink.href = siteUrl;
+        siteLink.style.display = "inline-flex"; 
+        siteImg.src = iconUrl;
+      } else {
+        siteLink.style.display = "none"; 
+      }
+      if(githubUrl){
+        githubLink.href = githubUrl;
+        githubLink.style.display = "inline-flex"; 
+      } else{
+        githubLink.style.display = "none"
+      }
+      if (aiaUrl) {
+        aiaLink.href = aiaUrl;
+        aiaLink.style.display = "inline-flex";  
+      } else {
+        aiaLink.style.display = "none"; 
+      }
+
+      // Limpar as abas e conteúdos
+      tabsContainer.innerHTML = '';
+      tabContent.innerHTML = '';
+
+      // Resetar a exibição das abas para evitar que fiquem escondidas ao alternar entre projetos
+      tabsContainer.style.display = "flex";
+
+      // Verifica as categorias
+      const categorias = projeto.getAttribute("data-categories").split(",");
+      if (categorias.includes("Mobile")) {
+        modalImg.style.width = "15%"; 
+      } else {
+        modalImg.style.width = "40%";  
+      }
+
+      // Se o projeto tiver múltiplas categorias, exibe as abas
+      if (categorias.length > 1) {
+        categorias.forEach((categoria, index) => {
+          const tab = document.createElement("button");
+          tab.classList.add("tab");
+          tab.textContent = categoria;
+          tab.setAttribute("data-index", index);
+          tabsContainer.appendChild(tab);
+
+          // Descrição e imagem específicas de cada categoria
+          const categoriaDesc = projeto.getAttribute(`data-${categoria.toLowerCase()}-description`);
+          const categoriaImg = projeto.getAttribute(`data-${categoria.toLowerCase()}-image`);
+
+          tab.addEventListener("click", () => {
+            document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            // Atualiza a descrição e a imagem conforme a categoria
+            modalDescription.innerHTML = categoriaDesc;
+            modalImg.src = categoriaImg;
+          });
+        });
+
+        let categoriaInicial = categoriaAtual === "Web" ? "Web" : categorias[1] || categorias[0];
+
+        // Encontra o botão correspondente à categoria inicial e ativa ele
+        const categoriaInicialTab = Array.from(tabsContainer.querySelectorAll(".tab")).find(tab => tab.textContent === categoriaInicial);
+        if (categoriaInicialTab) {
+            categoriaInicialTab.classList.add("active");
+        }
+    
+        modalDescription.innerHTML = projeto.getAttribute(`data-${categoriaInicial.toLowerCase()}-description`);
+        modalImg.src = projeto.getAttribute(`data-${categoriaInicial.toLowerCase()}-image`);
+
+      } else {
+        // Se tiver apenas uma categoria, exibe a descrição e a imagem normais
+        modalDescription.innerHTML = projeto.getAttribute("data-description");
+        modalImg.src = projeto.getAttribute("data-image");
+
+        // Oculta os botões de navegação
+        tabsContainer.style.display = "none";
+      }
+
+      projetoAberto = projeto;
       projetoAberto.classList.add("DesativarHover");
       modal.classList.add("Aberto");
       modalFundo.classList.add("Aberto");
@@ -167,10 +248,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function fecharModal() {
     modal.classList.remove("Aberto");
     modalFundo.classList.remove("Aberto");
-    projetoAberto.classList.remove("DesativarHover")
+    if (projetoAberto) {
+      projetoAberto.classList.remove("DesativarHover");
+    }
   }
 
   closeModal.addEventListener("click", fecharModal);
-
   modalFundo.addEventListener("click", fecharModal);
 });
+
