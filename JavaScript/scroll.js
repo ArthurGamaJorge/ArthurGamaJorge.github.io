@@ -6,13 +6,11 @@ window.sr = ScrollReveal({
 });
 
 sr.reveal("#Texto", { delay: 50, origin: "left" });
-sr.reveal("#imagemCorvo", { delay: 50, origin: "right" });
-
-var tamanho = window.matchMedia("(max-width: 500px)");
-if (tamanho.matches) {
+if (window.matchMedia("(max-width: 730px)").matches) {
   sr.reveal("#imagemCorvo", { delay: 50, origin: "left" });
+} else{
+  sr.reveal("#imagemCorvo", { delay: 50, origin: "right" });
 }
-
 
 sr.reveal("#DivImagem", { delay: 50, origin: "right" });
 sr.reveal("#ContainerGeral", { delay: 50, origin: "left" });

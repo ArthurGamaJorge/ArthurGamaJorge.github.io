@@ -277,23 +277,25 @@ document.addEventListener("DOMContentLoaded", () => {
   nextButton.addEventListener("click", (event) => navegarProjeto(1, event));
 
   const ajustarModal = () => {
-    let modalImgWidth = (window.innerWidth < 1040 && categorias.includes("Mobile")) ? "20%" : "100%";
-    if (window.innerWidth >= 1040) {
-      modalImgWidth = categorias.includes("Mobile") ? "15%" : "40%";
-    }
-    modalImg.style.width = modalImgWidth;
+    if(projetoAberto != null){
+      let modalImgWidth = (window.innerWidth < 1040 && categorias.includes("Mobile")) ? "20%" : "100%";
+      if (window.innerWidth >= 1040) {
+        modalImgWidth = categorias.includes("Mobile") ? "15%" : "40%";
+      }
+      modalImg.style.width = modalImgWidth;
 
-    if (categorias.includes("Mobile")) {
-      const paragraphs = modalBody.querySelectorAll("p");
-      if (window.innerWidth < 1040 && paragraphs.length > 2) {
-        const secondParagraph = paragraphs[2];
-        modalDescription.removeChild(secondParagraph);
-        modalBody.appendChild(secondParagraph);
-      } else if (paragraphs.length > 1) {
-        const secondParagraph = paragraphs[2];
-        if (!modalDescription.contains(secondParagraph)) {
-          modalBody.removeChild(secondParagraph);
-          modalDescription.appendChild(secondParagraph);
+      if (categorias.includes("Mobile")) {
+        const paragraphs = modalBody.querySelectorAll("p");
+        if (window.innerWidth < 1040 && paragraphs.length > 2) {
+          if(modalDescription.contains(paragraphs[2])){
+            modalDescription.removeChild(paragraphs[2]);
+            modalBody.appendChild(paragraphs[2]);
+          }
+        } else if (paragraphs.length > 1) {
+          if (!modalDescription.contains(paragraphs[2])) {
+            modalBody.removeChild(paragraphs[2]);
+            modalDescription.appendChild(paragraphs[2]);
+          }
         }
       }
     }
