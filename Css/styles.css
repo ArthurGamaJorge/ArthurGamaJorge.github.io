@@ -681,7 +681,7 @@ filter: drop-shadow(1px 1px 0 white)
   align-content: center;
 }
 
-.Mobile{
+.ContainerPortfolio .Mobile{
   aspect-ratio: 1/2 !important;
   width: 12%;
 }
@@ -738,7 +738,8 @@ filter: drop-shadow(1px 1px 0 white)
 }
 
 .Projeto {
-  position: relative; /* Garantir que o info-bar fique posicionado corretamente dentro de .Projeto */
+  position: relative; 
+  overflow: visible !important;
 }
 
 .Projeto .info-bar {
@@ -754,7 +755,7 @@ filter: drop-shadow(1px 1px 0 white)
   align-items: center;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
   z-index: 2;
-  transform: translateY(100%); 
+  transform: translateY(50%); 
   opacity: 0; 
 }
 
@@ -781,7 +782,7 @@ filter: drop-shadow(1px 1px 0 white)
   color: var(--secondary);
 }
 
-.Sistemas, .Mobile{
+.Sistemas, .ContainerPortfolio .Mobile{
   display: none;
 }
 .Web{
@@ -1085,7 +1086,7 @@ footer{
   .Projeto{
     width: 45%;
   }
-  .Mobile{
+  .ContainerPortfolio .Mobile{
     width: 20%;
   }
   .modal{
@@ -1155,7 +1156,7 @@ footer{
   .Projeto{
     width: 90%;
   }
-  .Mobile{
+  .ContainerPortfolio .Mobile{
     width: 30%;
   }
   .modal{
