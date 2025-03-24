@@ -67,7 +67,7 @@ Section {
   border-bottom: 0.3px solid rgb(255, 255, 255, 0.1);
 }
 
-a, .medalha, button, .ProjetoImg img, .Projeto, .close, .tabs button {
+a, .medalha, button, .ProjetoImg img, .Projeto, .close, .tabs button, #prevProject, #nextProject {
   cursor: url("../Images/CursorPointer.png"), pointer;
 }
 
@@ -840,7 +840,26 @@ filter: drop-shadow(1px 1px 0 white)
   backdrop-filter: blur(5px);
   opacity: 0;
   z-index: -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   transition: opacity 0.3s ease, z-index 0s linear 0.3s;
+  font-size: calc(5vmax + 70px);
+}
+
+#prevProject, #nextProject {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; 
+}
+
+#prevProject {
+  left: 0px;
+}
+
+#nextProject {
+  right: 0px;
 }
 
 .modal {
@@ -896,13 +915,14 @@ filter: drop-shadow(1px 1px 0 white)
   margin-bottom: 10px;
 }
 
-.modal-text p{
+.modal p{
   color: var(--secondary);
-  font-size: calc(0.4vmax + 12px);
+  font-size: calc(0.6vmax + 8px);
+  text-align: left;
 }
 
 .modal-date {
-  font-size: 20px;
+  font-size: calc(0.6vmax + 10px);
   margin-top: auto;
   padding-top: 20px;
 }
@@ -1083,9 +1103,6 @@ footer{
     right: 15px;
     bottom: 15px;
   }
-  .modal-img{
-    width: 100%;
-  }
 }
 
 @media (max-width: 730px) {
@@ -1143,6 +1160,9 @@ footer{
   }
   .modal{
     width: 95%;
+  }
+  #prevProject, #nextProject{
+    top: 7%;
   }
 }
 
