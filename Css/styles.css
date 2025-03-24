@@ -1004,6 +1004,7 @@ filter: drop-shadow(1px 1px 0 white)
 footer{
   height: calc(0.2vmax + 10px);
   background-color: var(--brand);
+  transform: translateZ(1px);
 }
 
 /* RESPONSIVIDADE */
@@ -1110,6 +1111,10 @@ footer{
   #Texto{
     width: 100% !important;
   }
+  .redes svg{
+    stroke-width: 0.5;
+    height: 20px;
+  }
   Section{
     padding: 10% 9%;
   }
@@ -1161,6 +1166,12 @@ footer{
   }
   .modal{
     width: 95%;
+  }
+  .Projeto .info-bar {
+    opacity: 1 !important;
+  }
+  .Projeto:hover{
+    transform: none !important;
   }
   #prevProject, #nextProject{
     top: 7%;
