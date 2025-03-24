@@ -1,0 +1,129 @@
+:root{
+    --brand: #00ff51;
+    --secondary: #017520;
+    --darkBrand: #001005
+}
+
+html{
+    scroll-padding-top: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--brand);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+::-moz-selection { 
+    color: white;
+    background: var(--brand);
+}
+
+::selection {
+    color: white;
+    background: var(--brand);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    cursor: url("../Images/Cursor.png"), auto;
+    background: linear-gradient(0.25turn, rgb(27, 27, 27), rgb(7, 7, 7));
+    color:  var(--brand);
+    overflow-x: hidden;
+    position: relative;
+}
+
+img {
+    width: 30px;
+}
+
+Section {
+    padding: 0 18%;
+    border-bottom: 0.3px solid rgb(255, 255, 255, 0.1);
+}
+  
+button {
+    border: 0px solid;
+    background-color: transparent;
+}
+  
+#h2 {
+    margin-bottom: 18px;
+    font-size: calc(1vmax + 10px) !important;
+}
+  
+#Texto{
+    z-index: 1;
+}
+
+#Texto p{
+    font-weight: 800;
+}
+
+a, .medalha, button, .ProjetoImg img, .Projeto, .close, .tabs button, #prevProject, #nextProject {
+    cursor: url("../Images/CursorPointer.png"), pointer;
+}
+
+#Texto a img, #Texto2 a img{
+    vertical-align: middle;
+}
+
+#Texto h1,
+#Texto2 h1 {
+    font-size: calc(3.5vmax + 10px);
+    white-space: nowrap;
+}
+
+#Texto p,
+#Texto2 p {
+    font-size: calc(0.5vmax + 10px);
+}
+
+#Texto2 a {
+    background: transparent;
+    border: 2px solid var(--secondary);
+    display: flex; 
+    margin: 10px;
+    align-items: center; 
+    font-size: calc(0.5vmax + 10px);
+}
+
+#Texto2 img {
+    margin-right: 8px; 
+    vertical-align: middle; 
+}
+
+#Texto2 a:hover {
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(7px);
+}
+
+.SobreMim, .Portfolio {
+    background: rgb(255, 255, 255, 0.02);
+}
+
+footer{
+    height: calc(0.2vmax + 10px);
+    background-color: var(--brand);
+    transform: translateZ(1px);
+  }

@@ -1,0 +1,211 @@
+.SobremimContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 40px;
+  border: none;
+}
+
+.linha-do-tempo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 40%;
+  padding-right: 20px;
+  gap: 50px;
+}
+
+.linha-do-tempo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 3px;
+  height: 100%;
+  background-color: var(--brand);
+  z-index: 0;
+}
+
+.evento-data {
+  background-color: var(--brand);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  font-size: 20px;
+  color: var(--secondary);
+  font-weight: bold;
+  z-index: 1;
+}
+
+.SobreMim #Texto p {
+  font-size: calc(0.75vmax + 10px) !important;
+  color: var(--secondary);
+}
+
+.SobreMim #Texto {
+  width: 50%;
+  margin: auto;
+}
+
+.medalha-container {
+  position: absolute;
+  left: 6.5px;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.medalha {
+  position: absolute;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  z-index: 2;
+  transform: translateZ(-1px);
+}
+
+.ouro i {
+  color: gold;
+}
+.prata i {
+  color: silver;
+}
+.bronze i {
+  color: rgb(171, 111, 0);
+}
+.especial i {
+  color: var(--darkBrand);
+}
+.importante i {
+  filter: drop-shadow(0px 0px 10px var(--brand));
+}
+.medalha:hover {
+  transform: scale(1.1);
+}
+.importante:hover {
+  transform: scale(1.4) rotate(90deg);
+}
+.medalha-info {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.medalha-info p {
+  color: white !important;
+}
+
+.medalha:hover + .medalha-info {
+  display: block;
+}
+
+#DivImagem {
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ImagemCentral {
+  width: 100%;
+}
+
+.Info {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.evento-conteudo p {
+  font-size: calc(0.5vmax + 6px);
+  text-align: left;
+  color: var(--darkBrand);
+  margin-right: 5%;
+}
+.evento-conteudo i,
+.evento-conteudo svg {
+  font-size: calc(4vmax + 45px);
+  margin-left: calc(0.5vmax + 10px);
+}
+
+.evento-conteudo svg {
+  padding: 2.5% 0%;
+  height: 100%;
+  text-align: center;
+  width: calc((5vmax + 105px) * 1.1);
+}
+
+.evento-conteudo h3 {
+  font-size: calc(1vmax + 10px);
+  text-align: left;
+}
+
+.evento {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#conclusao {
+  margin-top: 100px;
+}
+#ensinoMedio {
+  margin-top: -25px;
+}
+
+.SobreMim {
+  padding: 2% 0;
+}
+.space {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: calc(5vmax + 60px);
+  align-items: center;
+}
+
+.evento-conteudo {
+  height: 95%;
+  background-color: var(--brand);
+  color: var(--darkBrand);
+  padding: 5px 0px;
+  border: 5px solid transparent;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 3rem;
+  transition: 0.4s ease-in-out;
+  gap: calc(0.5vmax + 10px);
+}
+
+.evento-conteudo:hover {
+  background-color: var(--darkBrand);
+  color: var(--brand);
+  border: 5px solid var(--brand);
+  transform: scale(1.03);
+  fill: red;
+  stroke: red;
+}
+
+.evento-conteudo:hover p {
+  color: var(--brand);
+}

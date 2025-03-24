@@ -1,0 +1,107 @@
+.SecondaryImage {
+  filter: drop-shadow(10px 10px 15px var(--secondary));
+}
+
+.Habilidades {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Habilidades #Texto {
+  width: unset !important;
+}
+
+.Habilidades img {
+  width: calc(2.5vmax + 30px);
+}
+
+.Habilidades,
+.SobreMim,
+.Portfolio {
+  text-align: center;
+}
+
+#DivImagem {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#ContainerGeral {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2%;
+  padding: 0;
+  width: 98vw;
+  justify-content: center;
+  position: relative;
+  min-height: calc(10vmax + 140px);
+}
+
+.Cartão {
+  border: 3px solid white;
+  border-radius: 1vmax;
+  width: calc(14vmax + 80px);
+  height: calc(5vmax + 50px);
+  background: linear-gradient(0.05turn, var(--brand), var(--darkBrand));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform: translateX(100vw);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease, box-shadow 03s ease;
+  display: none;
+}
+
+#ContainerGeral .Cartão:hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4); /* Sombra mais forte para dar profundidade */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, translateY 0.3s ease;
+}
+
+.VisivelEsquerda,
+.VisivelDireita {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.IniciarEsquerda,
+.DesaparecerEsquerda {
+  transform: translateX(-100vw);
+  opacity: 0;
+}
+
+.IniciarDireita,
+.DesaparecerDireita {
+  transform: translateX(100vw);
+  opacity: 0;
+}
+
+#github {
+  filter: brightness(0) saturate(100%) invert(25%) sepia(89%) saturate(2932%)
+    hue-rotate(229deg) brightness(76%) contrast(108%);
+}
+
+.Cartão p {
+  font-size: calc(1vmax + 10px) !important;
+  color: white;
+}
+
+#habilidade {
+  margin-left: 5px;
+  width: calc(4vmax + 30px);
+  margin-right: 2vmax;
+  filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white)
+    drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+}
+
+#Botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  gap: 30px;
+}

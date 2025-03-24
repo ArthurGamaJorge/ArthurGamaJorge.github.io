@@ -1,0 +1,182 @@
+@media (max-width: 1195px) {
+  .Central {
+    display: grid;
+  }
+}
+
+/* MENU DE MAIS OPÇÕES */
+@media (max-width: 1040px) {
+  html {
+    scroll-padding-top: 20px;
+  }
+  #Corvo {
+    position: unset;
+  }
+  #IconeMenu {
+    display: block;
+  }
+  header {
+    padding: 10px 10%;
+  }
+  .Navbar {
+    position: absolute;
+    top: 100%;
+    right: -120%;
+    width: 300px;
+    height: 40vh;
+    display: flex;
+    padding: 25px 20px;
+    flex-direction: column;
+    align-items: center;
+    background: var(--darkBrand);
+    transition: all 0.55s ease;
+  }
+  .Navbar a,
+  .Navbar button {
+    margin-left: 0;
+    display: block;
+    margin: 5px 0;
+  }
+  .Navbar.open {
+    right: 0;
+    height: 200px;
+    width: 200px;
+    border-radius: 30px;
+    border: solid 2px white;
+    filter: drop-shadow(5px 5px 10px white);
+  }
+  .Portfolio {
+    padding: 4%;
+    margin: 0;
+  }
+  .Central #Texto {
+    display: flex;
+    justify-content: center;
+  }
+  #DivImagem {
+    display: none;
+  }
+
+  .SobreMim {
+    padding: 10% 0% !important;
+  }
+  .SobremimContainer {
+    width: 100%;
+  }
+  .evento-conteudo svg {
+    padding: 0;
+  }
+  .linha-do-tempo {
+    gap: 100px;
+    max-width: 75%;
+  }
+  #ContainerGeral {
+    min-height: calc(15vmax + 210px);
+  }
+  .Projeto {
+    width: 45%;
+  }
+  .ContainerPortfolio .Mobile {
+    width: 25%;
+  }
+  .modal {
+    width: 80%;
+  }
+  .modal-body {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .modal .links a {
+    margin-top: 25px;
+  }
+  .modal-date {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 730px) {
+  #Texto {
+    width: 100% !important;
+  }
+  .redes svg {
+    stroke-width: 0.5;
+    height: 20px;
+  }
+  Section {
+    padding: 10% 9%;
+  }
+  .Central {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10%;
+  }
+  .Central #Texto {
+    padding-bottom: 25%;
+  }
+  #imagemCorvo {
+    padding-top: 2vmax;
+  }
+  #Corvo,
+  #imagemCorvo {
+    width: 100%;
+  }
+  #imagemCorvo {
+    position: unset;
+  }
+  .linha-do-tempo {
+    max-width: 100%;
+    padding: 0px;
+  }
+  .SobremimContainer {
+    padding: 0px;
+  }
+  .medalha-info {
+    left: 400%;
+  }
+  .Central .paragrafo,
+  .paragrafo h2 {
+    text-align: center !important;
+  }
+  .SobreMim #Texto {
+    margin-bottom: 10%;
+  }
+  .Portfolio {
+    padding: 4% 0;
+  }
+  .ContainerPortfolio {
+    padding-top: 0%;
+  }
+  .Projeto {
+    width: 90%;
+  }
+  .ContainerPortfolio .Mobile {
+    width: 40%;
+  }
+  .modal {
+    width: 95%;
+  }
+  .Projeto .info-bar {
+    opacity: 1 !important;
+  }
+  .Projeto:hover {
+    transform: none !important;
+  }
+  #prevProject,
+  #nextProject {
+    top: 7%;
+  }
+  .Portfolio {
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 920px) and (max-height: 420px) {
+  #Texto a,
+  #Texto2 a {
+    align-items: center;
+    position: relative;
+  }
+}
