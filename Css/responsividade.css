@@ -155,6 +155,9 @@
   .ContainerPortfolio .Mobile {
     width: 40%;
   }
+  .Projeto .info-bar .btn-veja-mais{
+    padding: 5px;
+  }
   .modal {
     width: 95%;
   }

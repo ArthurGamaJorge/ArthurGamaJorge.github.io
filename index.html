@@ -3,11 +3,11 @@
   <head>
     <title>Arthur Gama Jorge - Portfólio</title>
     <link rel="stylesheet" href="./Css/base.css" />
-    <link rel="stylesheet" href="./Css/habilidades.css" />
     <link rel="stylesheet" href="./Css/hero.css" />
+    <link rel="stylesheet" href="./Css/sobreMim.css" />
+    <link rel="stylesheet" href="./Css/habilidades.css" />
     <link rel="stylesheet" href="./Css/portfolio.css" />
     <link rel="stylesheet" href="./Css/responsividade.css" />
-    <link rel="stylesheet" href="./Css/sobreMim.css" />
     <link rel="stylesheet" href="./Css/lightTheme.css" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
@@ -21,21 +21,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./Images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./Images/Icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./Images/Icons/favicon-16x16.png">
-
-    <!-- Se o usuário desativar javascript, remove scroll reveal-->
-    <noscript>
-      <style>
-      #DivImagem,
-      #Corvo,
-      #ContainerGeral,
-      #Texto,
-      .ContainerPortfolio
-       {
-        visibility: visible;
-      }
-      </style>
-    </noscript>
-
   </head>
   <body>
     <script src="./JavaScript/avoidFlickering.js"></script>
@@ -54,7 +39,7 @@
     </header>
     
       <section class="Central">
-        <div id="imagemCorvo"><div id="Corvo"></div></div>
+        <div id="imagemCorvo" class="glitch"><div id="Corvo"></div></div>
         <div id="Texto">
           <div class="paragrafo">
             <h2>Olá! Eu sou</h2>
@@ -62,11 +47,11 @@
             <p id="EfeitoEscrevendo"></p>
             <h3>Sou um desenvolvedor full-stack e técnico em informática pelo Cotuca apaixonado por tecnologia e aprendizado contínuo, sempre explorando novos desafios para criar soluções inovadoras.</h3>
             <div class="redes">
-              <a href="https://github.com/ArthurGamaJorge" target="_blank" rel="noreferrer noopener"><i class="bx bxl-github"> </i></a>
-              <a href="https://www.linkedin.com/in/arthurgamajorge/" target="_blank" rel="noreferrer noopener"><i class="bx bxl-linkedin-square"> </i></a>
-              <a href="https://discordapp.com/users/659238913227096085" target="_blank" rel="noreferrer noopener"><i class="bx bxl-discord-alt"> </i></a>
-              <a href="mailto: arthurgamajorgetec@gmail.com" target="_blank" rel="noreferrer noopener"><i class="bx bx-envelope" type="solid"></i></a>
-              <a href="https://leetcode.com/u/arthurgamajorge/" target="_blank" rel="noreferrer noopener">
+              <a href="https://github.com/ArthurGamaJorge" target="_blank" rel="noreferrer noopener" class="glitch-icon"><i class="bx bxl-github"> </i></a>
+              <a href="https://www.linkedin.com/in/arthurgamajorge/" target="_blank" rel="noreferrer noopener" class="glitch-icon"><i class="bx bxl-linkedin-square"> </i></a>
+              <a href="https://discordapp.com/users/659238913227096085" target="_blank" rel="noreferrer noopener" class="glitch-icon"><i class="bx bxl-discord-alt"> </i></a>
+              <a href="mailto: arthurgamajorgetec@gmail.com" target="_blank" rel="noreferrer noopener" class="glitch-icon"><i class="bx bx-envelope" type="solid"></i></a>
+              <a href="https://leetcode.com/u/arthurgamajorge/" target="_blank" rel="noreferrer noopener" class="glitch-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1">
                   <path fill="currentColor" d="M 10.447266 0.265625 A 0.50005 0.50005 0 0 0 10.103516 0.41796875 L 5.65625 4.8671875 L 3.0957031 7.4257812 A 0.50005 0.50005 0 0 0 2.9785156 7.6035156 C 1.769869 8.9739016 1.7865696 11.063913 3.0957031 12.373047 L 5.65625 14.933594 C 7.0176322 16.294976 9.242133 16.294976 10.603516 14.933594 L 12.853516 12.683594 A 0.50063809 0.50063809 0 1 0 12.144531 11.976562 L 9.8945312 14.226562 C 8.9159134 15.20518 7.3418991 15.20518 6.3632812 14.226562 L 3.8027344 11.666016 C 2.8241166 10.687398 2.8241166 9.1114303 3.8027344 8.1328125 L 6.3632812 5.5742188 C 7.3418991 4.5956009 8.9159135 4.5956009 9.8945312 5.5742188 L 12.144531 7.8242188 A 0.50063784 0.50063784 0 1 0 12.853516 7.1171875 L 10.603516 4.8671875 C 9.9106907 4.174363 8.9943718 3.8431189 8.0820312 3.8554688 L 10.8125 1.125 A 0.50005 0.50005 0 0 0 10.447266 0.265625 z M 7.328125 9.4003906 A 0.50005 0.50005 0 1 0 7.328125 10.400391 L 14.228516 10.400391 A 0.50005 0.50005 0 1 0 14.228516 9.4003906 L 7.328125 9.4003906 z"></path>
                 </svg>
@@ -222,7 +207,7 @@
                     <i class='bx bxs-graduation'></i>
                     <div class="Info">
                       <h3>Conclusão Ensino Médio</h3>
-                      <p>TCC:  Interface de Controle por Voz para Navegação Intuitiva em Computadores: Inclusão Digital para Pessoas com Dificuldades de Acessibilidade</p>
+                      <p>TCC: Identificação de Possíveis Focos de Dengue em Ambientes Residenciais: Uma Abordagem Baseada em Inteligência Artificial</p>
                     </div>
                   </div>
               </div>
@@ -523,6 +508,7 @@
     
       <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
       <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
       <script src="./JavaScript/layout.js"></script>
       <script src="./JavaScript/ui.js"></script>
       <script src="./JavaScript/scroll.js"></script>

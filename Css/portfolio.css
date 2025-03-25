@@ -112,7 +112,7 @@
 }
 
 .Projeto .info-bar .data {
-  font-size: 1.2rem;
+  font-size: calc(0.3vmax + 10px);
 }
 
 .Projeto .info-bar .btn-veja-mais {

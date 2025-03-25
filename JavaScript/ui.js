@@ -44,3 +44,32 @@ function MudarTema() {
     localStorage.setItem("dark-mode", "enabled");
   }
 }
+
+const corvo = document.getElementById("Corvo");
+
+const { startGlitch, stopGlitch } = PowerGlitch.glitch(corvo, {
+  playMode: 'manual',
+});
+
+function randomizeGlitch() {
+  const randomChance = Math.random(); 
+  if (randomChance > 0.6) { 
+    startGlitch();
+  } else {
+    stopGlitch();
+  }
+}
+setInterval(randomizeGlitch, 3000); 
+
+const glitchIcons = document.querySelectorAll('.glitch-icon');
+glitchIcons.forEach(icon => {
+    icon.addEventListener('mouseenter', () => {
+        PowerGlitch.glitch(icon, {
+            playMode: 'always',
+        });
+    });
+
+    icon.addEventListener('mouseleave', () => {
+        PowerGlitch.glitch(icon, { playMode: 'manual' }); 
+    });
+});

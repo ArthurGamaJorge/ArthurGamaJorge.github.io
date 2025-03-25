@@ -1,211 +1,223 @@
-/* HEADER */ 
+/* HEADER */
 
-.Navbar img:hover{
-    filter: brightness(0) saturate(100%) invert(72%) sepia(18%) saturate(3732%) hue-rotate(84deg) brightness(100%) contrast(116%) !important;
+.Navbar img:hover {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(18%) saturate(3732%)
+    hue-rotate(84deg) brightness(100%) contrast(116%) !important;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  backdrop-filter: blur(4px);
+  background: linear-gradient(
+    0.25turn,
+    rgb(27, 27, 27, 0.3),
+    rgb(7, 7, 7, 0.3)
+  );
+  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+}
+
+.Navbar {
+  display: flex;
+}
+
+.Navbar li {
+  align-content: center;
+}
+
+.Principal {
+  font-size: calc(1.5vmax + 10px);
+  font-weight: 1000;
+  color: white;
+}
+
+.Navbar a,
+.tabs button {
+  font-size: calc(80% + 10px);
+  color: white;
+  margin-left: 50px;
+  font-weight: 700;
+  transition: all 0.55s, color 0s ease-in-out;
+  border-bottom: transparent;
+  justify-content: center;
+}
+
+.Navbar li a,
+.Principal,
+.tabs button {
+  position: relative;
+  transition: 0.2s;
+}
+
+.Navbar li a:hover,
+.Principal:hover,
+.tabs button:hover {
+  color: var(--brand) !important;
+}
+
+.Navbar li a::after,
+.tabs button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--brand);
+  transition: width 0.3s;
+}
+
+#ahover:hover::after,
+.tabs button:hover::after,
+.tab.active::after {
+  width: 100%;
+}
+
+#IconeMenu {
+  width: 50px;
+  z-index: 11;
+  display: none;
+}
+
+/* SEÇÃO PRINCIPAL */
+
+.Central {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  align-items: center;
+}
+
+#DivImagem,
+#Corvo {
+  align-items: center;
+  position: relative;
+  display: grid;
+  justify-content: center;
+}
+
+#imagemCorvo {
+  transition: filter 0.2s ease-in-out;
+  position: absolute;
+  right: 0;
+  z-index: 0;
+  filter: drop-shadow(3px 3px 5px transparent)
+    drop-shadow(0px 0px 4px var(--brand));
+}
+
+#Corvo {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background-color: black;
+  mask-image: url("https://arthurgamajorge.github.io/Images/corvo.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  width: calc(35vw + 120px);
+}
+
+#ImagemCentral {
+  width: calc(35vw + 120px);
+}
+
+.paragrafo {
+  display: inline-block;
+  max-width: calc(20vmax + 230px);
+}
+
+.redes {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.redes img {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(18%) saturate(3732%)
+    hue-rotate(84deg) brightness(100%) contrast(116%) !important;
+}
+
+.redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(1vmax + 30px);
+  aspect-ratio: 1;
+  font-size: calc(1.2vmax + 10px);
+  color: var(--brand);
+  border: 1px solid var(--brand);
+  border-radius: 50%;
+  transition: 0.3s ease, color 0.4s;
+}
+
+.redes a:hover {
+  color: white;
+  transform: scale(1.1) translateY(-3px);
+  background-color: var(--secondary);
+  box-shadow: 0 0 15px var(--brand);
+}
+
+.paragrafo h2,
+.paragrafo h3 {
+  text-align: left;
+  margin-left: 1%;
+  color: var(--secondary);
+}
+
+.paragrafo h2 {
+  font-size: calc(2vmax + 5px);
+  margin-bottom: -2.5%;
+}
+
+.paragrafo h3 {
+  text-align: center;
+  font-size: calc(1vmax + 5px);
+}
+
+#Escrever {
+  margin-left: 1%;
+  margin-bottom: 3%;
+}
+
+#EfeitoEscrevendo {
+  font-size: calc(0.5vmax + 10px);
+  font-family: monospace;
+  color: var(--brand);
+  white-space: pre-wrap;
+  margin-bottom: 4%;
+}
+
+#EfeitoEscrevendo::after {
+  content: " ";
+  position: relative;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 4px;
+  height: 100%;
+  background-color: var(--secondary);
+
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
   }
-  
-  header {
-    width: 100%;
-    display: flex;
-    position: fixed;
-    backdrop-filter: blur(4px);
-    background: linear-gradient(0.25turn, rgb(27, 27, 27, 0.3), rgb(7, 7, 7, 0.3));
-    z-index: 10;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10%;
+  30% {
+    opacity: 1;
   }
-  
-  .Navbar {
-    display: flex;
+  100% {
+    opacity: 0;
   }
-  
-  .Navbar li{
-    align-content: center;
-  }
-  
-  .Principal {
-    font-size: calc(1.5vmax + 10px);
-    font-weight: 1000;
-    color: white;
-  }
-  
-  .Navbar a, .tabs button {
-    font-size: calc(80% + 10px);
-    color: white;
-    margin-left: 50px;
-    font-weight: 700;
-    transition: all 0.55s, color 0s ease-in-out;
-    border-bottom: transparent;
-    justify-content: center;
-  }
-  
-  .Navbar li a, .Principal, .tabs button  {
-    position: relative;
-    transition: 0.2s;
-  }
-  
-  .Navbar li a:hover, .Principal:hover, .tabs button:hover{
-    color: var(--brand) !important;
-  }
-  
-  .Navbar li a::after, .tabs button::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--brand);
-    transition: width 0.3s;
-  }
-  
-  #ahover:hover::after, .tabs button:hover::after, .tab.active::after  {
-    width: 100%;
-  }
-  
-  #IconeMenu {
-    width: 50px;
-    z-index: 11;
-    display: none;
-  }
-  
-  /* SEÇÃO PRINCIPAL */
-  
-  .Central {
-    height: 100%;
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    display: grid;
-    align-items: center;
-  }
-  
-  #DivImagem,
-  #Corvo {
-    align-items: center;
-    position: relative;
-    display: grid;
-    justify-content: center;
-  }
-  
-  #imagemCorvo {
-    transition: filter 0.2s ease-in-out;
-    position: absolute;
-    right: 0;
-    z-index: 0;
-    filter: drop-shadow(3px 3px 5px transparent)
-            drop-shadow(0px 0px 4px var(--brand));
-  }
-  
-  #Corvo {
-    position: relative;
-    aspect-ratio: 1 / 1;
-    background-color: black; 
-    mask-image: url("https://arthurgamajorge.github.io/Images/corvo.png");
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    
-    width: calc(35vw + 120px);
-  }
-  
-  #ImagemCentral{
-    width: calc(35vw + 120px);
-  }
-  
-  .paragrafo{
-    display: inline-block;
-    max-width: calc(20vmax + 230px);
-  }
-  
-  .redes{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .redes img{
-    filter: brightness(0) saturate(100%) invert(72%) sepia(18%) saturate(3732%) hue-rotate(84deg) brightness(100%) contrast(116%) !important;
-  }
-  
-  .redes a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(1vmax + 30px); 
-    aspect-ratio: 1;
-    font-size: calc(1.2vmax + 10px);
-    color: var(--brand);
-    border: 1px solid var(--brand);
-    border-radius: 50%; 
-    transition: 0.3s ease, color 0.4s;
-  }
-  
-  .redes a:hover{
-    color: white;
-    transform: scale(1.1)translateY(-3px);
-    background-color: var(--secondary);
-    box-shadow:  0 0 15px var(--brand);
-  }
-  
-  .paragrafo h2, .paragrafo h3{
-    text-align: left;
-    margin-left: 1%;
-    color: var(--secondary);
-  }
-  
-  .paragrafo h2{
-    font-size: calc(2vmax + 5px);
-    margin-bottom: -2.5%;
-  }
-  
-  .paragrafo h3{
-    text-align: center;
-    font-size: calc(1vmax + 5px);
-  }
-  
-  #Escrever{
-    margin-left: 1%;
-    margin-bottom: 3%;
-  }
-  
-  #EfeitoEscrevendo {
-    font-size: calc(0.5vmax + 10px);
-    font-family: monospace;
-    color: var(--brand);
-    white-space: pre-wrap;
-    margin-bottom: 4%;
-  }
-  
-  #EfeitoEscrevendo::after {
-    content: ' ';
-    position: relative;
-    top: 0;
-    right: 0;
-    display: inline-block;
-    width: 4px;
-    height: 100%;
-    background-color: var(--secondary);
-  
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-delay: 0.3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-  }
-  
-  @keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-  }
-  
-  
+}
