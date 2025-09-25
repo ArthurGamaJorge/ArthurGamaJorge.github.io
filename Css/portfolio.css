@@ -129,7 +129,7 @@
   color: var(--secondary);
 }
 
-.Sistemas,
+.Software,
 .ContainerPortfolio .Mobile {
   display: none;
 }
@@ -139,6 +139,9 @@
 
 #CodeDrafts {
   background-image: url("../Images/Projetos/CodeDraftsDark.png");
+}
+#Previdengue{
+  background-image: url("../Images/Projetos/previdengue.png");
 }
 #YourDle {
   background-image: url("../Images/Projetos/YourDle.png");

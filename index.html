@@ -1,351 +1,407 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <title>Arthur Gama Jorge - Portfólio</title>
-    <link rel="stylesheet" href="./Css/base.css" />
-    <link rel="stylesheet" href="./Css/hero.css" />
-    <link rel="stylesheet" href="./Css/sobreMim.css" />
-    <link rel="stylesheet" href="./Css/habilidades.css" />
-    <link rel="stylesheet" href="./Css/portfolio.css" />
-    <link rel="stylesheet" href="./Css/responsividade.css" />
-    <link rel="stylesheet" href="./Css/lightTheme.css" />
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="google-site-verification" content="HA1D1OCcfKpxRkkOsWkLDPAp8qKG4MSqnf6uO7xq_tE" />
-    <meta name="description" content="Site pessoal de portfólio de programação full-stack de Arthur Gama Jorge. Confira quem eu sou, minhas habilidades, projetos prévios e formas de me contatar!">
+<head>
+  <title>Arthur Gama Jorge - Portfólio</title>
+  <link rel="stylesheet" href="./Css/base.css" />
+  <link rel="stylesheet" href="./Css/hero.css" />
+  <link rel="stylesheet" href="./Css/sobreMim.css" />
+  <link rel="stylesheet" href="./Css/habilidades.css" />
+  <link rel="stylesheet" href="./Css/portfolio.css" />
+  <link rel="stylesheet" href="./Css/responsividade.css" />
+  <link rel="stylesheet" href="./Css/lightTheme.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="./Images/Icons/favicon.ico"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="./Images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./Images/Icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./Images/Icons/favicon-16x16.png">
-  </head>
-  <body>
-    <script src="./JavaScript/avoidFlickering.js"></script>
-    <header>
-      <a href="#" class="Principal">Home</a>
-      <ul class="Navbar">
-        <li><a href="#SobreMim" id="ahover">Sobre mim</a></li>
-        <li><a href="#Habilidades" id="ahover">Habilidades</a></li>
-        <li><a href="#Portfolio" id="ahover">Portfólio</a></li>
-        <li><a><button onclick = "MudarTema()"> <img src="./Images/lightIcon.png" id="button" alt="Botão troca de tema" style="visibility: hidden;"></button></a></li>
-      </ul>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="HA1D1OCcfKpxRkkOsWkLDPAp8qKG4MSqnf6uO7xq_tE" />
+  <meta name="description"
+    content="Site pessoal de portfólio de programação full-stack de Arthur Gama Jorge. Confira quem eu sou, minhas habilidades, projetos prévios e formas de me contatar!">
 
-      <div id="IconeMenu">
-        <img src="./Images/Menu.png" id="IconeMenu" alt="Menu">
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="./Images/Icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./Images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./Images/Icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./Images/Icons/favicon-16x16.png">
+</head>
+
+<body>
+  <script src="./JavaScript/avoidFlickering.js"></script>
+  <header>
+    <a href="#" class="Principal">Home</a>
+    <ul class="Navbar">
+      <li><a href="#SobreMim" id="ahover">Sobre mim</a></li>
+      <li><a href="#Habilidades" id="ahover">Habilidades</a></li>
+      <li><a href="#Portfolio" id="ahover">Portfólio</a></li>
+      <li><a><button onclick="MudarTema()"> <img src="./Images/lightIcon.png" id="button" alt="Botão troca de tema"
+              style="visibility: hidden;"></button></a></li>
+    </ul>
+
+    <div id="IconeMenu">
+      <img src="./Images/Menu.png" id="IconeMenu" alt="Menu">
+    </div>
+  </header>
+
+  <section class="Central">
+    <div id="imagemCorvo" class="glitch">
+      <div id="Corvo"></div>
+    </div>
+    <div id="Texto">
+      <div class="paragrafo">
+        <h2>Olá! Eu sou</h2>
+        <h1>Arthur Gama Jorge</h1>
+        <p id="EfeitoEscrevendo"></p>
+        <h3>Sou um desenvolvedor full-stack e técnico em informática pelo Cotuca apaixonado por tecnologia e aprendizado
+          contínuo, sempre explorando novos desafios para criar soluções inovadoras.</h3>
+        <div class="redes">
+          <a href="https://github.com/ArthurGamaJorge" target="_blank" rel="noreferrer noopener" class="glitch-icon"><i
+              class="bx bxl-github"> </i></a>
+          <a href="https://www.linkedin.com/in/arthurgamajorge/" target="_blank" rel="noreferrer noopener"
+            class="glitch-icon"><i class="bx bxl-linkedin-square"> </i></a>
+          <a href="https://discordapp.com/users/659238913227096085" target="_blank" rel="noreferrer noopener"
+            class="glitch-icon"><i class="bx bxl-discord-alt"> </i></a>
+          <a href="mailto: arthurgamajorgetec@gmail.com" target="_blank" rel="noreferrer noopener"
+            class="glitch-icon"><i class="bx bx-envelope" type="solid"></i></a>
+          <a href="https://leetcode.com/u/arthurgamajorge/" target="_blank" rel="noreferrer noopener"
+            class="glitch-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 16 16"
+              stroke="currentColor" stroke-width="1">
+              <path fill="currentColor"
+                d="M 10.447266 0.265625 A 0.50005 0.50005 0 0 0 10.103516 0.41796875 L 5.65625 4.8671875 L 3.0957031 7.4257812 A 0.50005 0.50005 0 0 0 2.9785156 7.6035156 C 1.769869 8.9739016 1.7865696 11.063913 3.0957031 12.373047 L 5.65625 14.933594 C 7.0176322 16.294976 9.242133 16.294976 10.603516 14.933594 L 12.853516 12.683594 A 0.50063809 0.50063809 0 1 0 12.144531 11.976562 L 9.8945312 14.226562 C 8.9159134 15.20518 7.3418991 15.20518 6.3632812 14.226562 L 3.8027344 11.666016 C 2.8241166 10.687398 2.8241166 9.1114303 3.8027344 8.1328125 L 6.3632812 5.5742188 C 7.3418991 4.5956009 8.9159135 4.5956009 9.8945312 5.5742188 L 12.144531 7.8242188 A 0.50063784 0.50063784 0 1 0 12.853516 7.1171875 L 10.603516 4.8671875 C 9.9106907 4.174363 8.9943718 3.8431189 8.0820312 3.8554688 L 10.8125 1.125 A 0.50005 0.50005 0 0 0 10.447266 0.265625 z M 7.328125 9.4003906 A 0.50005 0.50005 0 1 0 7.328125 10.400391 L 14.228516 10.400391 A 0.50005 0.50005 0 1 0 14.228516 9.4003906 L 7.328125 9.4003906 z">
+              </path>
+            </svg>
+          </a>
+        </div>
       </div>
-    </header>
-    
-      <section class="Central">
-        <div id="imagemCorvo" class="glitch"><div id="Corvo"></div></div>
-        <div id="Texto">
-          <div class="paragrafo">
-            <h2>Olá! Eu sou</h2>
-            <h1>Arthur Gama Jorge</h1>
-            <p id="EfeitoEscrevendo"></p>
-            <h3>Sou um desenvolvedor full-stack e técnico em informática pelo Cotuca apaixonado por tecnologia e aprendizado contínuo, sempre explorando novos desafios para criar soluções inovadoras.</h3>
-            <div class="redes">
-              <a href="https://github.com/ArthurGamaJorge" target="_blank" rel="noreferrer noopener" class="glitch-icon"><i class="bx bxl-github"> </i></a>
-              <a href="https://www.linkedin.com/in/arthurgamajorge/" target="_blank" rel="noreferrer noopener" class="glitch-icon"><i class="bx bxl-linkedin-square"> </i></a>
-              <a href="https://discordapp.com/users/659238913227096085" target="_blank" rel="noreferrer noopener" class="glitch-icon"><i class="bx bxl-discord-alt"> </i></a>
-              <a href="mailto: arthurgamajorgetec@gmail.com" target="_blank" rel="noreferrer noopener" class="glitch-icon"><i class="bx bx-envelope" type="solid"></i></a>
-              <a href="https://leetcode.com/u/arthurgamajorge/" target="_blank" rel="noreferrer noopener" class="glitch-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1">
-                  <path fill="currentColor" d="M 10.447266 0.265625 A 0.50005 0.50005 0 0 0 10.103516 0.41796875 L 5.65625 4.8671875 L 3.0957031 7.4257812 A 0.50005 0.50005 0 0 0 2.9785156 7.6035156 C 1.769869 8.9739016 1.7865696 11.063913 3.0957031 12.373047 L 5.65625 14.933594 C 7.0176322 16.294976 9.242133 16.294976 10.603516 14.933594 L 12.853516 12.683594 A 0.50063809 0.50063809 0 1 0 12.144531 11.976562 L 9.8945312 14.226562 C 8.9159134 15.20518 7.3418991 15.20518 6.3632812 14.226562 L 3.8027344 11.666016 C 2.8241166 10.687398 2.8241166 9.1114303 3.8027344 8.1328125 L 6.3632812 5.5742188 C 7.3418991 4.5956009 8.9159135 4.5956009 9.8945312 5.5742188 L 12.144531 7.8242188 A 0.50063784 0.50063784 0 1 0 12.853516 7.1171875 L 10.603516 4.8671875 C 9.9106907 4.174363 8.9943718 3.8431189 8.0820312 3.8554688 L 10.8125 1.125 A 0.50005 0.50005 0 0 0 10.447266 0.265625 z M 7.328125 9.4003906 A 0.50005 0.50005 0 1 0 7.328125 10.400391 L 14.228516 10.400391 A 0.50005 0.50005 0 1 0 14.228516 9.4003906 L 7.328125 9.4003906 z"></path>
-                </svg>
-              </a>            
-            </div>
+      <br />
+    </div>
+
+  </section>
+
+  <section class="SobreMim" id="SobreMim">
+    <div id="Texto">
+      <h1>Sobre Mim</h1>
+      <p>Programador há 4 anos, desenvolvedor full-stack e estudante no 6.º semestre de informática do Colégio Técnico
+        de Campinas - Unicamp.</p>
+      <p>Eu amo aprender tecnologias novas e me adaptar a elas, sempre tentando criar novos projetos por conta própria
+        para reforçar meu aprendizado.</p>
+    </div>
+
+    <section class="SobremimContainer">
+      <div class="linha-do-tempo">
+
+        <div class="medalha-container">
+          <div class="medalha bronze" style="top: 0%">
+            <i class='bx bxs-certification'></i>
           </div>
-          <br />
+          <div class="medalha-info" style="top: 5%">
+            <p>Medalha de bronze</p>
+            <p>Olimpiada Brasileira de Astronomia (OBA)</p>
+            <p>Out. 2021</p>
+          </div>
+
+          <div class="medalha ouro" style="top: 17.5%">
+            <i class='bx bxs-certification'></i>
+          </div>
+          <div class="medalha-info" style="top: 22.5%">
+            <p>Medalha de ouro</p>
+            <p>Olimpiada Brasileira de Astronomia (OBA)</p>
+            <p>Out. 2022</p>
+          </div>
+
+          <div class="medalha prata" style="top: 24.5%">
+            <i class='bx bxs-certification'></i>
+          </div>
+          <div class="medalha-info" style="top: 29.5%">
+            <p>Medalha de prata</p>
+            <p>Olimpiada Nacional de Ciências (ONC)</p>
+            <p>Ago. 2023</p>
+          </div>
+
+          <div class="medalha prata" style="top: 31.5%">
+            <i class='bx bxs-certification'></i>
+          </div>
+          <div class="medalha-info" style="top: 36.5%">
+            <p>Medalha de prata</p>
+            <p>Competição USP de Conhecimentos e Oportunidades (CUCO)</p>
+            <p>Set. 2023</p>
+          </div>
+
+          <div class="medalha bronze" style="top: 46%">
+            <i class='bx bxs-certification'></i>
+          </div>
+          <div class="medalha-info" style="top: 51%">
+            <p>Medalha de bronze</p>
+            <p>Canguru (Matemática)</p>
+            <p>Jun. 2024</p>
+          </div>
+
+          <div class="medalha bronze importante" style="top: 52%">
+            <i class='bx bxs-certification'></i>
+          </div>
+          <div class="medalha-info" style="top: 57%">
+            <p>Medalha de bronze</p>
+            <p>
+            <p>AlzCare: Olimpiada Brasileira de Tecnologia (OBT)</p>
+            <p>Jul. 2024</p>
+          </div>
+
+          <div class="medalha especial importante" style="top: 58%">
+            <i class='bx bxs-certification'></i>
+          </div>
+          <div class="medalha-info" style="top: 63%">
+            <p>Terceiro lugar nacional no desafio app</p>
+            <p>
+            <p>AlzCare: Olimpiada Brasileira de Tecnologia (OBT)</p>
+            <p>Out. 2024</p>
+          </div>
+
+          <div class="medalha ouro" style="top: 64%">
+            <i class='bx bxs-certification'></i>
+          </div>
+          <div class="medalha-info" style="top: 69%">
+            <p>Medalha de ouro</p>
+            <p>Competição USP de Conhecimentos e Oportunidades (CUCO)</p>
+            <p>Set. 2024</p>
+          </div>
+
+          <div class="medalha ouro" style="top: 70%">
+            <i class='bx bxs-certification'></i>
+          </div>
+          <div class="medalha-info" style="top: 75%">
+            <p>Medalha de ouro</p>
+            <p>Olimpiada Nacional de Ciências (ONC)</p>
+            <p>Out. 2024</p>
+          </div>
+
+          <div class="medalha especial importante" style="top: 76%">
+            <i class='bx bxs-certification'></i>
+          </div>
+          <div class="medalha-info" style="top: 81%">
+            <p>Projeto vencedor no estado de São Paulo</p>
+            <p>
+            <p>AlzCare: Desafio Liga Jovem</p>
+            <p>Out. 2024</p>
+          </div>
+
         </div>
-        
-      </section>
-      
-      <section class="SobreMim" id="SobreMim">
-        <div id="Texto">
-          <h1>Sobre Mim</h1>
-          <p>Programador há 4 anos, desenvolvedor full-stack e estudante no 5.º semestre de informática do Colégio Técnico de Campinas - Unicamp.</p>
-          <p>Eu amo aprender tecnologias novas e me adaptar a elas, sempre tentando criar novos projetos por conta própria para reforçar meu aprendizado.</p>
+
+        <div class="evento">
+          <div class="space">
+            <div class="evento-data">Dez. 2021</div>
+            <div class="evento-conteudo">
+              <i class="bx bx-code-alt"></i>
+              <div class="Info">
+                <h3>Início como Programador</h3>
+                <p>Comecei aprendendo o básico de desenvolvimento web utilizando HTML, CSS e JS e programação com
+                  Python.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <section class="SobremimContainer">
-          <div class="linha-do-tempo">
-
-            <div class="medalha-container">
-              <div class="medalha bronze" style="top: 0%">
-                <i class='bx bxs-certification' ></i>
-              </div>
-                <div class="medalha-info" style="top: 5%">
-                  <p>Medalha de bronze</p>
-                  <p>Olimpiada Brasileira de Astronomia (OBA)</p>
-                  <p>Out. 2021</p>
-              </div>
-
-              <div class="medalha ouro" style="top: 17.5%">
-                <i class='bx bxs-certification' ></i>
-              </div>
-                <div class="medalha-info" style="top: 22.5%">
-                  <p>Medalha de ouro</p>
-                  <p>Olimpiada Brasileira de Astronomia (OBA)</p>
-                  <p>Out. 2022</p>
-              </div>
-
-              <div class="medalha prata" style="top: 24.5%">
-                <i class='bx bxs-certification' ></i>
-              </div>
-                <div class="medalha-info" style="top: 29.5%">
-                  <p>Medalha de prata</p>
-                  <p>Olimpiada Nacional de Ciências (ONC)</p>
-                  <p>Ago. 2023</p>
-              </div>
-
-              <div class="medalha prata" style="top: 31.5%">
-                <i class='bx bxs-certification' ></i>
-              </div>
-                <div class="medalha-info" style="top: 36.5%">
-                  <p>Medalha de prata</p>
-                  <p>Competição USP de Conhecimentos e Oportunidades (CUCO)</p>
-                  <p>Set. 2023</p>
-              </div>
-
-              <div class="medalha bronze" style="top: 46%">
-                <i class='bx bxs-certification' ></i>
-              </div>
-                <div class="medalha-info" style="top: 51%">
-                  <p>Medalha de bronze</p>
-                  <p>Canguru (Matemática)</p>
-                  <p>Jun. 2024</p>
-              </div>
-
-              <div class="medalha bronze importante" style="top: 52%">
-                <i class='bx bxs-certification' ></i>
-              </div>
-                <div class="medalha-info" style="top: 57%">
-                  <p>Medalha de bronze</p>
-                  <p><p>AlzCare: Olimpiada Brasileira de Tecnologia (OBT)</p>
-                  <p>Jul. 2024</p>
-              </div>
-
-              <div class="medalha especial importante" style="top: 58%">
-                <i class='bx bxs-certification' ></i>
-              </div>
-                <div class="medalha-info" style="top: 63%">
-                  <p>Terceiro lugar nacional no desafio app</p>
-                  <p><p>AlzCare: Olimpiada Brasileira de Tecnologia (OBT)</p>
-                  <p>Out. 2024</p>
-              </div>
-
-              <div class="medalha ouro" style="top: 64%">
-                <i class='bx bxs-certification' ></i>
-              </div>
-                <div class="medalha-info" style="top: 69%">
-                  <p>Medalha de ouro</p>
-                  <p>Competição USP de Conhecimentos e Oportunidades (CUCO)</p>
-                  <p>Set. 2024</p>
-              </div>
-
-              <div class="medalha ouro" style="top: 70%">
-                <i class='bx bxs-certification' ></i>
-              </div>
-                <div class="medalha-info" style="top: 75%">
-                  <p>Medalha de ouro</p>
-                  <p>Olimpiada Nacional de Ciências (ONC)</p>
-                  <p>Out. 2024</p>
-              </div>
-
-              <div class="medalha especial importante" style="top: 76%">
-                <i class='bx bxs-certification' ></i>
-              </div>
-                <div class="medalha-info" style="top: 81%">
-                  <p>Projeto vencedor no estado de São Paulo</p>
-                  <p><p>AlzCare: Desafio Liga Jovem</p>
-                  <p>Out. 2024</p>
-              </div>
-              
+        <div class="evento" id="ensinoMedio">
+          <div class="space">
+            <div class="evento-data">Fev. 2023</div>
+            <div class="evento-conteudo">
+              <svg viewBox="0 0 498 480" fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="240" cy="240" r="235" stroke="currentColor" stroke-width="10" />
+                <path
+                  d="M474 248C479.605 333.5 371.498 510.501 207.498 472C74.9497 472 1.5 308.85 1.5 236.5C299.5 220 33.0019 244.499 265 384C487 424 468.002 156.499 474 248Z"
+                  fill="currentColor" />
+                <path
+                  d="M185.514 135.859C202.5 115.5 266.409 53.9484 362.579 87.1555C442.508 102.609 482.488 262.002 472.489 227.502C362.585 261 469.994 187.001 337.489 111.501C226.117 74.4067 186.114 163.494 185.514 135.859Z"
+                  fill="currentColor" />
+                <line y1="235" x2="151" y2="235" stroke="currentColor" stroke-width="10" />
+                <line x1="420" y1="235" x2="462" y2="235" stroke="currentColor" stroke-width="10" />
+                <circle cx="285.5" cy="231.5" r="129.5" stroke="currentColor" stroke-width="10" />
+                <circle cx="310.5" cy="231.5" r="154.5" stroke="currentColor" stroke-width="10" />
+                </ svg>
+                <div class="Info">
+                  <h3>Ensino Médio Técnico</h3>
+                  <p>Entrei no curso de informática no Colégio Técnico de Campinas - Unicamp.</p>
+                </div>
             </div>
-      
-              <div class="evento">
-                  <div class="space">
-                      <div class="evento-data">Dez. 2021</div>
-                      <div class="evento-conteudo">
-                          <i class="bx bx-code-alt"></i>
-                          <div class="Info">
-                              <h3>Início como Programador</h3>
-                              <p>Comecei aprendendo o básico de desenvolvimento web utilizando HTML, CSS e JS e programação com Python.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-      
-              <div class="evento" id="ensinoMedio">
-                  <div class="space">
-                      <div class="evento-data">Fev. 2023</div>
-                      <div class="evento-conteudo">
-                            <svg viewBox="0 0 498 480" fill="none" stroke="currentColor" stroke-width="1">
-                              <circle cx="240" cy="240" r="235" stroke="currentColor" stroke-width="10"/>
-                              <path d="M474 248C479.605 333.5 371.498 510.501 207.498 472C74.9497 472 1.5 308.85 1.5 236.5C299.5 220 33.0019 244.499 265 384C487 424 468.002 156.499 474 248Z" fill="currentColor"/>
-                              <path d="M185.514 135.859C202.5 115.5 266.409 53.9484 362.579 87.1555C442.508 102.609 482.488 262.002 472.489 227.502C362.585 261 469.994 187.001 337.489 111.501C226.117 74.4067 186.114 163.494 185.514 135.859Z" fill="currentColor"/>
-                              <line y1="235" x2="151" y2="235" stroke="currentColor" stroke-width="10"/>
-                              <line x1="420" y1="235" x2="462" y2="235" stroke="currentColor" stroke-width="10"/>
-                              <circle cx="285.5" cy="231.5" r="129.5" stroke="currentColor" stroke-width="10"/>
-                              <circle cx="310.5" cy="231.5" r="154.5" stroke="currentColor" stroke-width="10"/>
-                            </ svg>
-                          <div class="Info">
-                              <h3>Ensino Médio Técnico</h3>
-                              <p>Entrei no curso de informática no Colégio Técnico de Campinas - Unicamp.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+          </div>
+        </div>
 
-              <div class="evento" id="conclusao">
-                <div class="space">
-                  <div class="evento-data">Dez. 2025</div>
-                  <div class="evento-conteudo">
-                    <i class='bx bxs-graduation'></i>
-                    <div class="Info">
-                      <h3>Conclusão Ensino Médio</h3>
-                      <p>TCC: Identificação de Possíveis Focos de Dengue em Ambientes Residenciais: Uma Abordagem Baseada em Inteligência Artificial</p>
-                    </div>
-                  </div>
+        <div class="evento" id="conclusao">
+          <div class="space">
+            <div class="evento-data">Dez. 2025</div>
+            <div class="evento-conteudo">
+              <i class='bx bxs-graduation'></i>
+              <div class="Info">
+                <h3>Conclusão Ensino Médio</h3>
+                <p>TCC: Identificação de Possíveis Focos de Dengue em Ambientes Residenciais: Uma Abordagem Baseada em
+                  Inteligência Artificial</p>
               </div>
             </div>
-      
           </div>
-          <div id="DivImagem">
-            <img src="./Images/Arvore.png" id="ImagemCentral" alt="programador na frente de um notebook" class="SecondaryImage">
-          </div>
-        </section>
-        
-      </section>
-      
-      <section class="Habilidades" id="Habilidades">
-        <br>
-        <div id="Texto" >
-          <h1>Habilidades</h1>
-          <div id="Botoes">
-            <button onclick="Revelar('HabWeb')" class="BotaoPortfolio Selecionado" id="HabWeb">Web</button>
-            <button onclick="Revelar('Mobile')" class="BotaoPortfolio" id="Mobile">Mobile</button>
-            <button onclick="Revelar('Sistemas')" class="BotaoPortfolio" id="Sistemas">Sistemas</button>
-            <button onclick="Revelar('BancoDeDados')" class="BotaoPortfolio" id="BancoDeDados">Banco de Dados</button>
-            <button onclick="Revelar('Outros')" class="BotaoPortfolio" id="Outros">Outros</button>
-          </div> <br>
+        </div>
+
+      </div>
+      <div id="DivImagem">
+        <img src="./Images/Arvore.png" id="ImagemCentral" alt="programador na frente de um notebook"
+          class="SecondaryImage">
+      </div>
+    </section>
+
+  </section>
+
+  <section class="Habilidades" id="Habilidades">
+    <br>
+    <div id="Texto">
+      <h1>Habilidades</h1>
+      <div id="Botoes">
+        <button onclick="Revelar('HabWeb')" class="BotaoPortfolio Selecionado" id="HabWeb">Web</button>
+        <button onclick="Revelar('Mobile')" class="BotaoPortfolio" id="Mobile">Mobile</button>
+        <button onclick="Revelar('Software')" class="BotaoPortfolio" id="Software">Software</button>
+        <button onclick="Revelar('BancoDeDados')" class="BotaoPortfolio" id="BancoDeDados">Banco de Dados</button>
+        <button onclick="Revelar('Outros')" class="BotaoPortfolio" id="Outros">Outros</button>
+      </div> <br>
       <div id="ContainerGeral">
 
         <div class="Cartão HabWeb">
-          <img id="habilidade" alt="html-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"> 
+          <img id="habilidade" alt="html-icon"
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
           <p>HTML</p>
         </div>
 
         <div class="Cartão HabWeb">
-          <img id="habilidade" alt="css-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"> 
+          <img id="habilidade" alt="css-icon"
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
           <p>CSS</p>
         </div>
 
         <div class="Cartão HabWeb">
-          <img id="habilidade" alt="js-icon" src="./Images/Habilidades/javascript.png"> 
+          <img id="habilidade" alt="js-icon" src="./Images/Habilidades/javascript.png">
           <p>Javascript</p>
         </div>
 
         <div class="Cartão HabWeb">
-          <img id="habilidade" alt="node-icon" src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png"> 
+          <img id="habilidade" alt="ts-icon" src="./Images/Habilidades/typescript.png">
+          <p>Typescript</p>
+        </div>
+
+        <div class="Cartão HabWeb">
+          <img id="habilidade" alt="node-icon" src="./Images/Habilidades/node.png">
           <p>NodeJS</p>
         </div>
 
         <div class="Cartão HabWeb">
-          <img id="habilidade" alt="react-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"> 
+          <img id="habilidade" alt="react-icon"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png">
           <p>React</p>
         </div>
 
-        <div class="Cartão HabWeb">
-          <img id="habilidade" alt="springBoot-icon" src="https://img.icons8.com/color/600/spring-logo.png"> 
-          <p>Spring Boot</p>
+        <div class="Cartão Mobile">
+          <img id="habilidade" alt="flutter-icon" src="https://img.icons8.com/fluent/512/flutter.png">
+          <p>Flutter</p>
         </div>
 
         <div class="Cartão Mobile">
-          <img id="habilidade" alt="flutter-icon" src="https://img.icons8.com/fluent/512/flutter.png"> 
-          <p>Flutter</p>
+          <img id="habilidade" alt="Dart-icon" src="./Images/Habilidades/dart.png">
+          <p>Dart</p>
         </div>
-        
+
         <div class="Cartão Mobile">
-          <img id="habilidade" alt="c#-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1024px-Kotlin_Icon.png"> 
+          <img id="habilidade" alt="kotlin-icon"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1024px-Kotlin_Icon.png">
           <p>Kotlin</p>
         </div>
 
         <div class="Cartão Mobile">
-          <img id="habilidade" alt="swift-icon" src="https://cdn-icons-png.flaticon.com/512/732/732250.png"> 
+          <img id="habilidade" alt="swift-icon" src="https://cdn-icons-png.flaticon.com/512/732/732250.png">
           <p>Swift</p>
         </div>
 
-        <div class="Cartão Sistemas">
-          <img id="habilidade" alt="python-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"> 
+        <div class="Cartão Software">
+          <img id="habilidade" alt="python-icon"
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
           <p>Python</p>
         </div>
 
-        <div class="Cartão Sistemas">
-          <img id="habilidade" alt="java-icon" src="./Images/Habilidades/Java.png"> 
+        <div class="Cartão Software">
+          <img id="habilidade" alt="java-icon" src="./Images/Habilidades/Java.png">
           <p>Java</p>
         </div>
 
-        <div class="Cartão Sistemas">
-          <img id="habilidade" alt="c#-icon" src="https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png"> 
+        <div class="Cartão Software">
+          <img id="habilidade" alt="springBoot-icon" src="https://img.icons8.com/color/600/spring-logo.png">
+          <p>Spring Boot</p>
+        </div>
+
+        <div class="Cartão Software">
+          <img id="habilidade" alt="c-icon" src="./Images/Habilidades/c.png">
+          <p>C</p>
+        </div>
+
+
+        <div class="Cartão Software">
+          <img id="habilidade" alt="c#-icon" src="./Images/Habilidades/csharp.png">
           <p>C#</p>
         </div>
 
-        <div class="Cartão Sistemas">
-          <img id="habilidade" alt=".net-icon" src="https://img.icons8.com/color/512/net-framework.png"> 
+        <div class="Cartão Software">
+          <img id="habilidade" alt=".net-icon" src="https://img.icons8.com/color/512/net-framework.png">
           <p>.NET</p>
         </div>
 
-        <div class="Cartão Sistemas">
-          <img id="habilidade" alt="c++-icon" src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png"> 
+        <div class="Cartão Software">
+          <img id="habilidade" alt="c++-icon" src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png">
           <p>C++</p>
         </div>
 
-        <div class="Cartão Sistemas">
-          <img id="habilidade" alt="unity-icon" src="https://static-00.iconduck.com/assets.00/unity-icon-1998x2048-c6v0ej9o.png"> 
+        <div class="Cartão Outros">
+          <img id="habilidade" alt="unity-icon"
+            src="./Images/Habilidades/unity.png">
           <p>Unity</p>
         </div>
 
         <div class="Cartão BancoDeDados">
-          <img id="habilidade" alt="mssql-icon" src="https://img.icons8.com/color/512/microsoft-sql-server.png"> 
+          <img id="habilidade" alt="mssql-icon" src="https://img.icons8.com/color/512/microsoft-sql-server.png">
           <p>MSSQL</p>
         </div>
 
         <div class="Cartão BancoDeDados">
-          <img id="habilidade" alt="firebase-icon" src="https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png"> 
+          <img id="habilidade" alt="MySQL-icon" src="./Images/Habilidades/mysql.png">
+          <p>MySQL</p>
+        </div>
+
+        <div class="Cartão BancoDeDados">
+          <img id="habilidade" alt="firebase-icon"
+            src="https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png">
           <p>Firebase</p>
         </div>
 
         <div class="Cartão Outros">
-          <img id="habilidade" alt="arduino-icon" src="https://cdn.iconscout.com/icon/free/png-256/free-arduino-226072.png?f=webp"> 
+          <img id="habilidade" alt="arduino-icon"
+            src="https://cdn.iconscout.com/icon/free/png-256/free-arduino-226072.png?f=webp">
           <p>Arduino</p>
         </div>
 
         <div class="Cartão Outros">
-          <img id="habilidade" alt="git-icon" src="https://img.icons8.com/color/512/git.png"> 
+          <img id="habilidade" alt="git-icon" src="https://img.icons8.com/color/512/git.png">
           <p>Git</p>
         </div>
 
+      </div>
+
     </div>
 
-          </div>
+    <br><br>
 
-        <br><br>
+  </section>
 
-      </section>
-
-      <section class="Portfolio" id="Portfolio">
-        <div id="Texto" >
-          <h1>Portfólio</h1>
-        </div>
-        <div id="Botoes">
-          <button onclick="RevelarPort('Web')" class="BotaoPortfolio Selecionado" id="BtnWeb">Web</button>
-          <button onclick="RevelarPort('Mobile')" class="BotaoPortfolio" id="BtnMobile">Mobile</button>
-          <button onclick="RevelarPort('Sistemas')" class="BotaoPortfolio" id="BtnSistemas">Sistemas</button>
-        </div><br>
+  <section class="Portfolio" id="Portfolio">
+    <div id="Texto">
+      <h1>Portfólio</h1>
+    </div>
+    <div id="Botoes">
+      <button onclick="RevelarPort('Web')" class="BotaoPortfolio Selecionado" id="BtnWeb">Web</button>
+      <button onclick="RevelarPort('Mobile')" class="BotaoPortfolio" id="BtnMobile">Mobile</button>
+      <button onclick="RevelarPort('Software')" class="BotaoPortfolio" id="BtnSoftware">Software</button>
+    </div><br>
 
     <div id="modalFundo" class="modal-fundo">
       <i class='bx bx-chevron-left' id="prevProject" class="arrow-left"></i>
@@ -367,150 +423,180 @@
           <div class="tab-content" id="tab-content"></div> <!-- Conteúdo das abas -->
         </div>
         <div class="links">
-          <a href="" target="_blank" rel="noreferrer noopener"> <img src=""/> Site </a>
-          <a href="" target="_blank" rel="noreferrer noopener" id="imgGithub"> <img src="./Images/Github logo.png"/> Github </a>
-          <a href="" target="_blank" rel="noreferrer noopener"> <img src="https://community.appinventor.mit.edu/uploads/default/51de1aad4bfd4519201315eee03607910eb0772c"/> Baixar AIA </a>
+          <a href="" target="_blank" rel="noreferrer noopener"> <img src="" /> Site </a>
+          <a href="" target="_blank" rel="noreferrer noopener" id="imgGithub"> <img src="./Images/Github logo.png" />
+            Github </a>
+          <a href="" target="_blank" rel="noreferrer noopener"> <img
+              src="https://community.appinventor.mit.edu/uploads/default/51de1aad4bfd4519201315eee03607910eb0772c" />
+            Baixar AIA </a>
         </div>
       </div>
     </div>
-    
-    
 
-  <div class="ContainerPortfolio"> 
 
-    <div class="Projeto Web Sistemas" id="CodeDrafts" data-title="CodeDrafts" data-date="4 de setembro de 2023" data-image="./Images/Projetos/CodeDraftsDark.png"
-    data-icon="CodeDraftsIcon.png" data-site="https://codedrafts-5as0.onrender.com/" data-github="https://github.com/ArthurGamaJorge/codedrafts" data-categories="Web,Java" 
-    data-web-image="./Images/Projetos/CodeDraftsDark.png" data-java-image="./Images/Projetos/CodeDraftsJava.png"
-    data-web-description="Uma rede social gamificada e interativa, desenvolvida com integração a um banco de dados robusto, onde os usuários podem criar e gerenciar postagens, interagir com conteúdos por meio de curtidas e comentários, realizar buscas avançadas por temas ou usuários, denunciar publicações inadequadas, acompanhar perfis, além de visualizar rankings baseados em engajamento. A plataforma também permite o envio e exibição de imagens, e conta com um sistema de conquistas desbloqueáveis, incentivando a participação ativa dos usuários por meio de desafios e recompensas."
-    data-java-description="O painel administrativo do aplicativo, desenvolvido em Java, oferece uma interface para a moderação e gestão da plataforma. Nele, é possível visualizar todas as postagens, comentários e usuários denunciados, permitindo que administradores tomem medidas como banir ou desativar contas que violem as diretrizes. Além disso, o sistema permite a criação e gerenciamento de tópicos e conquistas, que podem ser atribuídos a usuários para incentivar o engajamento. O painel também inclui ferramentas de análise, fornecendo estatísticas sobre a atividade da rede social.">
-      <h2>CodeDrafts</h2>
-      <div class="stacks">
-        <i class='bx bxl-html5'></i>
-        <i class='bx bxl-css3' ></i>
-        <i class='bx bxl-javascript' ></i>
-        <i class='bx bxl-nodejs' ></i>
-        <object type="image/svg+xml" data="./Images/Habilidades/icons8-sql-server.svg" class="sql-icon"></object>
-        <i class='bx bxl-google-cloud'></i>
-        <i class='bx bxl-java' ></i>
+
+    <div class="ContainerPortfolio">
+      <div class="Projeto Web" id="Previdengue" data-title="Previdengue" data-date="25 de setembro de 2025"
+        data-image="./Images/Projetos/previdengue.png" data-icon="iconePrevidengue.png"
+        data-site="https://previdengue.vercel.app/" data-github="https://github.com/IonMateus/PreviDengue"
+        data-categories="Web"
+        data-description="Previdengue é uma plataforma web que integra previsões semanais de casos de dengue e uma ferramenta de identificação de criadouros a partir de fotos aéreas. A interface permite consultar previsões por município, visualizar mapas de risco, acessar relatórios históricos e usar a ferramenta de inspeção para marcar e mapear possíveis focos, facilitando ações preventivas por cidadãos e equipes de saúde.">
+        <h2>Previdengue (TCC)</h2>
+        <div class="stacks">
+          <i class="bx bxl-html5"></i>
+          <i class="bx bxl-css3"></i>
+          <i class="bx bxl-typescript"></i>
+          <i class="bx bxl-react"></i>
+          <i class="bx bxl-python"></i>
+        </div>
+        <div class="info-bar">
+          <span class="data">25/09/2025</span>
+          <button class="btn-veja-mais">Veja mais</button>
+        </div>
       </div>
-      <div class="info-bar">
-        <span class="data">04/09/2023</span>
-        <button class="btn-veja-mais">Veja mais</button>
-      </div>
-    </div>
 
-    <div class="Projeto Web" id="YourDle" data-title="YourDle" data-date="15 de novembro de 2023" data-image="./Images/Projetos/YourDle.png" 
-     data-icon="YourDleIcon.png" data-site="https://yourdle-seven.vercel.app/" data-categories="Web" data-github="https://github.com/ArthurGamaJorge/YourDle"
-     data-description="YourDle é uma plataforma interativa onde você pode explorar diversos desafios de palavras, como o clássico Termo (Wordle), onde precisa adivinhar uma palavra — ou várias, dependendo do modo — e o Conexo, que testa sua habilidade de identificar padrões entre quatro palavras.  
+
+      <div class="Projeto Web Software" id="CodeDrafts" data-title="CodeDrafts" data-date="4 de setembro de 2023"
+        data-image="./Images/Projetos/CodeDraftsDark.png" data-icon="CodeDraftsIcon.png"
+        data-site="https://codedrafts-5as0.onrender.com/" data-github="https://github.com/ArthurGamaJorge/codedrafts"
+        data-categories="Web,Java" data-web-image="./Images/Projetos/CodeDraftsDark.png"
+        data-java-image="./Images/Projetos/CodeDraftsJava.png"
+        data-web-description="Uma rede social gamificada e interativa, desenvolvida com integração a um banco de dados robusto, onde os usuários podem criar e gerenciar postagens, interagir com conteúdos por meio de curtidas e comentários, realizar buscas avançadas por temas ou usuários, denunciar publicações inadequadas, acompanhar perfis, além de visualizar rankings baseados em engajamento. A plataforma também permite o envio e exibição de imagens, e conta com um sistema de conquistas desbloqueáveis, incentivando a participação ativa dos usuários por meio de desafios e recompensas."
+        data-java-description="O painel administrativo do aplicativo, desenvolvido em Java, oferece uma interface para a moderação e gestão da plataforma. Nele, é possível visualizar todas as postagens, comentários e usuários denunciados, permitindo que administradores tomem medidas como banir ou desativar contas que violem as diretrizes. Além disso, o sistema permite a criação e gerenciamento de tópicos e conquistas, que podem ser atribuídos a usuários para incentivar o engajamento. O painel também inclui ferramentas de análise, fornecendo estatísticas sobre a atividade da rede social.">
+        <h2>CodeDrafts</h2>
+        <div class="stacks">
+          <i class='bx bxl-html5'></i>
+          <i class='bx bxl-css3'></i>
+          <i class='bx bxl-javascript'></i>
+          <i class='bx bxl-nodejs'></i>
+          <object type="image/svg+xml" data="./Images/Habilidades/icons8-sql-server.svg" class="sql-icon"></object>
+          <i class='bx bxl-google-cloud'></i>
+          <i class='bx bxl-java'></i>
+        </div>
+        <div class="info-bar">
+          <span class="data">04/09/2023</span>
+          <button class="btn-veja-mais">Veja mais</button>
+        </div>
+      </div>
+
+      <div class="Projeto Web" id="YourDle" data-title="YourDle" data-date="15 de novembro de 2023"
+        data-image="./Images/Projetos/YourDle.png" data-icon="YourDleIcon.png"
+        data-site="https://yourdle-seven.vercel.app/" data-categories="Web"
+        data-github="https://github.com/ArthurGamaJorge/YourDle" data-description="YourDle é uma plataforma interativa onde você pode explorar diversos desafios de palavras, como o clássico Termo (Wordle), onde precisa adivinhar uma palavra — ou várias, dependendo do modo — e o Conexo, que testa sua habilidade de identificar padrões entre quatro palavras.  
       <br><br> Com uma conta, você pode criar seus próprios desafios, compartilhar com a comunidade e interagir avaliando as criações de outros jogadores.
       <br> O site utiliza um banco de dados hospedado para armazenar todas as informações.">
-      <h2>YourDle</h2>
-      <div class="stacks">
-        <i class='bx bxl-html5'></i>
-        <i class='bx bxl-css3' ></i>
-        <i class='bx bxl-javascript' ></i>
-        <i class='bx bxl-nodejs' ></i>
-        <object type="image/svg+xml" data="./Images/Habilidades/icons8-sql-server.svg" class="sql-icon"></object>
+        <h2>YourDle</h2>
+        <div class="stacks">
+          <i class='bx bxl-html5'></i>
+          <i class='bx bxl-css3'></i>
+          <i class='bx bxl-javascript'></i>
+          <i class='bx bxl-nodejs'></i>
+          <object type="image/svg+xml" data="./Images/Habilidades/icons8-sql-server.svg" class="sql-icon"></object>
+        </div>
+        <div class="info-bar">
+          <span class="data">15/11/2023</span>
+          <button class="btn-veja-mais">Veja mais</button>
+        </div>
       </div>
-      <div class="info-bar">
-        <span class="data">15/11/2023</span>
-        <button class="btn-veja-mais">Veja mais</button>
-      </div>
-    </div>
 
-    <div class="Projeto Web" id="IOOON" data-title="IOOON Airlines" data-date="13 de maio de 2023" data-image="./Images/Projetos/FormularioDark.png" 
-    data-icon="IOOON logo.png" data-site="https://iooonairlines.netlify.app/" data-categories="Web" data-github="https://github.com/ArthurGamaJorge/Iooon-Airlines"
-    data-description="Após o login, este site permite que os usuários consultem informações detalhadas sobre voos reais, acessando dados por meio de uma API integrada. A plataforma oferece funcionalidades para visualizar horários de partidas e chegadas, status dos voos, e outros detalhes relevantes">
-      <h2>IOOON Airlines</h2>
-      <div class="stacks">
-        <i class='bx bxl-html5'></i>
-        <i class='bx bxl-css3' ></i>
-        <i class='bx bxl-javascript' ></i>
-        <i class='bx bxl-react' ></i>
+      <div class="Projeto Web" id="IOOON" data-title="IOOON Airlines" data-date="13 de maio de 2023"
+        data-image="./Images/Projetos/FormularioDark.png" data-icon="IOOON logo.png"
+        data-site="https://iooonairlines.netlify.app/" data-categories="Web"
+        data-github="https://github.com/ArthurGamaJorge/Iooon-Airlines"
+        data-description="Após o login, este site permite que os usuários consultem informações detalhadas sobre voos reais, acessando dados por meio de uma API integrada. A plataforma oferece funcionalidades para visualizar horários de partidas e chegadas, status dos voos, e outros detalhes relevantes">
+        <h2>IOOON Airlines</h2>
+        <div class="stacks">
+          <i class='bx bxl-html5'></i>
+          <i class='bx bxl-css3'></i>
+          <i class='bx bxl-javascript'></i>
+          <i class='bx bxl-react'></i>
+        </div>
+        <div class="info-bar">
+          <span class="data">13/05/2023</span>
+          <button class="btn-veja-mais">Veja mais</button>
+        </div>
       </div>
-      <div class="info-bar">
-        <span class="data">13/05/2023</span>
-        <button class="btn-veja-mais">Veja mais</button>
-      </div>
-    </div>
 
-    <div class="Projeto Web" id="HollowKnight" data-title="Hollow Knight Guia" data-date="27 de março de 2023" data-image="./Images/Projetos/HollowKnight.png" 
-    data-icon="IconeHollow.png" data-site="https://arthurgamajorge.github.io/Hollow-Knight-Guia/" data-categories="Web" data-github="https://github.com/ArthurGamaJorge/Hollow-Knight-Guia"
-    data-description="Este site é um guia completo sobre Hollow Knight, oferecendo informações detalhadas sobre locais, personagens, inimigos, história e muito mais <br><br> Foi meu primeiro projeto, desenvolvido para treinar minhas habilidades em HTML, CSS e JavaScript">
-      <h2>Hollow Knight Guia</h2>
-      <div class="stacks">
-        <i class='bx bxl-html5'></i>
-        <i class='bx bxl-css3' ></i>
-        <i class='bx bxl-javascript' ></i>
+      <div class="Projeto Web" id="HollowKnight" data-title="Hollow Knight Guia" data-date="27 de março de 2023"
+        data-image="./Images/Projetos/HollowKnight.png" data-icon="IconeHollow.png"
+        data-site="https://arthurgamajorge.github.io/Hollow-Knight-Guia/" data-categories="Web"
+        data-github="https://github.com/ArthurGamaJorge/Hollow-Knight-Guia"
+        data-description="Este site é um guia completo sobre Hollow Knight, oferecendo informações detalhadas sobre locais, personagens, inimigos, história e muito mais <br><br> Foi meu primeiro projeto, desenvolvido para treinar minhas habilidades em HTML, CSS e JavaScript">
+        <h2>Hollow Knight Guia</h2>
+        <div class="stacks">
+          <i class='bx bxl-html5'></i>
+          <i class='bx bxl-css3'></i>
+          <i class='bx bxl-javascript'></i>
+        </div>
+        <div class="info-bar">
+          <span class="data">27/03/2023</span>
+          <button class="btn-veja-mais">Veja mais</button>
+        </div>
       </div>
-      <div class="info-bar">
-        <span class="data">27/03/2023</span>
-        <button class="btn-veja-mais">Veja mais</button>
-      </div>
-    </div>
 
-    <div class="Projeto Mobile" id="AlzCare" data-title="AlzCare" data-date="11 de julho de 2024" data-image="./Images/Projetos/AlzCare.png" 
-    data-categories="Mobile" data-aia="./Images/Projetos/AlzCare.aia"
-    data-description="<p> AlzCare é um aplicativo inovador desenvolvido para oferecer suporte integral a cuidadores informais de idosos com Alzheimer. Com um conjunto completo de ferramentas e recursos, o AlzCare auxilia os cuidadores na criação de rotinas guiadas, aprendizado contínuo, suporte rápido para desafios diários e monitoramento da saúde do idoso, garantindo mais qualidade de vida tanto para o cuidador quanto para o idoso.  </p> <br>
+      <div class="Projeto Mobile" id="AlzCare" data-title="AlzCare" data-date="11 de julho de 2024"
+        data-image="./Images/Projetos/AlzCare.png" data-categories="Mobile" data-aia="./Images/Projetos/AlzCare.aia"
+        data-description="<p> AlzCare é um aplicativo inovador desenvolvido para oferecer suporte integral a cuidadores informais de idosos com Alzheimer. Com um conjunto completo de ferramentas e recursos, o AlzCare auxilia os cuidadores na criação de rotinas guiadas, aprendizado contínuo, suporte rápido para desafios diários e monitoramento da saúde do idoso, garantindo mais qualidade de vida tanto para o cuidador quanto para o idoso.  </p> <br>
       <p> A plataforma conta com a presença de gerenciador de rotinas, mini cursos, soluções rápidas para emergências, comunidade para troca de experiências, agenda integrada, anotações e jogos cognitivos desenvolvidos para desacelerar a progressão da doença e integrados a relatórios médicos automáticos. <br> <br>
       Graças à sua proposta inovadora e impacto social, o AlzCare foi reconhecido em importantes competições tecnológicas:  <br>
       <b>🏆 Melhor projeto do estado de SP pelo Desafio Liga Jovem </b> <br>
       <b>🥉 Medalha de Bronze na Olimpíada Brasileira de Tecnologia </b> <br>
       <b>🥉 3º Lugar no Desafio App da OBT 2024 </b> </p>">
-      <h2>AlzCare</h2>
-      <div class="stacks">
-        <i class='bx bxl-html5'></i>
-        <i class='bx bxl-css3' ></i>
-        <i class='bx bxl-javascript' ></i>
-        <i class='bx bxl-nodejs' ></i>
+        <h2>AlzCare</h2>
+        <div class="stacks">
+          <i class='bx bxl-html5'></i>
+          <i class='bx bxl-css3'></i>
+          <i class='bx bxl-javascript'></i>
+          <i class='bx bxl-nodejs'></i>
+          <i class='bx bxs-trophy'></i>
+        </div>
+        <div class="info-bar">
+          <span class="data">11/07/2024</span>
+          <button class="btn-veja-mais">Veja mais</button>
+        </div>
       </div>
-      <div class="stacks">
-        <i class='bx bxs-trophy' ></i> <i class='bx bxs-medal' ></i> <i class='bx bxs-medal' ></i>
-      </div>
-      <div class="info-bar">
-        <span class="data">11/07/2024</span>
-        <button class="btn-veja-mais">Veja mais</button>
-      </div>
-    </div>
 
-    <div class="Projeto Mobile" id="Aprendize" data-title="Aprendize" data-date="14 de novembro de 2024" data-image="./Images/Projetos/Aprendize.png" 
-    data-categories="Mobile" data-github="https://github.com/cc23135/aprendize"
-    data-description="Aprendize é um aplicativo completo para organização e otimização dos estudos. Ele oferece cronômetros para focar, tarefas para organizar atividades, revisões marcáveis para reforçar o aprendizado e um calendário que registra o histórico de estudo. Com estatísticas detalhadas e um ranking de tempo e exercícios, o Aprendize mantém os usuários motivados a progredir. Além disso, suas comunidades de estudo permitem a troca de conhecimento entre estudantes por matéria e tópico, criando um ambiente colaborativo. Simples, eficiente e interativo.">
-      <h2>Aprendize</h2>
-      <div class="stacks">
-        <i class='bx bxl-flutter'></i>
-        <i class='bx bxl-javascript' ></i>
-        <i class='bx bxl-nodejs' ></i>
-        <i class='bx bxl-google-cloud' ></i>
+      <div class="Projeto Mobile" id="Aprendize" data-title="Aprendize" data-date="14 de novembro de 2024"
+        data-image="./Images/Projetos/Aprendize.png" data-categories="Mobile"
+        data-github="https://github.com/cc23135/aprendize"
+        data-description="Aprendize é um aplicativo completo para organização e otimização dos estudos. Ele oferece cronômetros para focar, tarefas para organizar atividades, revisões marcáveis para reforçar o aprendizado e um calendário que registra o histórico de estudo. Com estatísticas detalhadas e um ranking de tempo e exercícios, o Aprendize mantém os usuários motivados a progredir. Além disso, suas comunidades de estudo permitem a troca de conhecimento entre estudantes por matéria e tópico, criando um ambiente colaborativo. Simples, eficiente e interativo.">
+        <h2>Aprendize</h2>
+        <div class="stacks">
+          <i class='bx bxl-flutter'></i>
+          <i class='bx bxl-javascript'></i>
+          <i class='bx bxl-nodejs'></i>
+          <i class='bx bxl-google-cloud'></i>
+        </div>
+        <div class="info-bar">
+          <span class="data">14/11/2024</span>
+          <button class="btn-veja-mais">Veja mais</button>
+        </div>
       </div>
-      <div class="info-bar">
-        <span class="data">14/11/2024</span>
-        <button class="btn-veja-mais">Veja mais</button>
-      </div>
-    </div>
 
-    <div class="Projeto Sistemas" id="Monitoria" data-title="Agendamento de monitoria" data-date="02 de julho de 2023" data-image="./Images/Projetos/AgendamentoMonitoria.png" 
-    data-categories="Sistemas" data-github="https://github.com/ArthurGamaJorge/Agendamento-de-monitoria"
-    data-description="Programa desenvolvido em Python utilizando Qt Designer para criar uma interface gráfica, o sistema permite o gerenciamento de alunos, computadores e horários, facilitando o processo de agendamento de monitorias na escola Cotuca e garantindo uma gestão eficiente.">
-      <h2>Agendamento de monitoria</h2>
-      <div class="stacks">
-        <i class='bx bxl-python' ></i>
+      <div class="Projeto Software" id="Monitoria" data-title="Agendamento de monitoria" data-date="02 de julho de 2023"
+        data-image="./Images/Projetos/AgendamentoMonitoria.png" data-categories="Software"
+        data-github="https://github.com/ArthurGamaJorge/Agendamento-de-monitoria"
+        data-description="Programa desenvolvido em Python utilizando Qt Designer para criar uma interface gráfica, o sistema permite o gerenciamento de alunos, computadores e horários, facilitando o processo de agendamento de monitorias na escola Cotuca e garantindo uma gestão eficiente.">
+        <h2>Agendamento de monitoria</h2>
+        <div class="stacks">
+          <i class='bx bxl-python'></i>
+        </div>
+        <div class="info-bar">
+          <span class="data">02/07/2023</span>
+          <button class="btn-veja-mais">Veja mais</button>
+        </div>
       </div>
-      <div class="info-bar">
-        <span class="data">02/07/2023</span>
-        <button class="btn-veja-mais">Veja mais</button>
-      </div>
-    </div>
 
-      </section>
-
-      <footer></footer>
-    
-      <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
-      <script src="https://unpkg.com/scrollreveal"></script>
-      <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
-      <script src="./JavaScript/layout.js"></script>
-      <script src="./JavaScript/ui.js"></script>
-      <script src="./JavaScript/scroll.js"></script>
   </section>
+
+  <footer></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
+  <script src="./JavaScript/layout.js"></script>
+  <script src="./JavaScript/ui.js"></script>
+  <script src="./JavaScript/scroll.js"></script>
+  </section>
+
 </html>

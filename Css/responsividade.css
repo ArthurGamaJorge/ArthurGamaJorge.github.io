@@ -73,27 +73,6 @@
   #ContainerGeral {
     min-height: calc(15vmax + 210px);
   }
-  .Projeto {
-    width: 45%;
-  }
-  .ContainerPortfolio .Mobile {
-    width: 25%;
-  }
-  .modal {
-    width: 80%;
-  }
-  .modal-body {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .modal .links a {
-    margin-top: 25px;
-  }
-  .modal-date {
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-  }
 }
 
 @media (max-width: 730px) {
@@ -159,7 +138,25 @@
     padding: 5px;
   }
   .modal {
-    width: 95%;
+    width: 80%;
+  }
+  .modal-body {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .modal .links a {
+    margin-top: 25px;
+  }
+  .modal-date {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+    .Projeto {
+    width: 45%;
+  }
+  .ContainerPortfolio .Mobile {
+    width: 25%;
   }
   .Projeto .info-bar {
     opacity: 1 !important;
@@ -173,6 +170,12 @@
   }
   .Portfolio {
     min-height: 700px;
+  }
+}
+
+@media (max-width: 520px){
+    .modal {
+    width: 95%;
   }
 }
 
