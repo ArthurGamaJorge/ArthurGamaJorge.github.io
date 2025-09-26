@@ -171,6 +171,61 @@ const skillsData = [
   { id: "git", name: "Git", category: "Outros", icon: "https://img.icons8.com/color/512/git.png", alt: "git-icon" }
 ];
 
+const researchData = [
+  {
+    id: "AlzCare-OBT",
+    title: "AlzCare — Bronze & terceiro lugar nacional no Desafio APP da OBT",
+    date: "2024",
+    image: "https://media.licdn.com/dms/image/v2/D4D22AQHpIL6Wfwv0wA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1722387310338?e=1761782400&v=beta&t=FHg60B_cKxlcOBW5AH5JkiPQPCVH1Enf-aHJ98_DbN4",
+    category: "Desafios de Tecnologia",
+    description: "A equipe olímpica que fui integrante, The Tech Titans (TTT) ganhou medalha de bronze na OBT, sendo convidada para a Semana da Escola Avançada de Tecnologia (EAT), onde ganhamos em terceiro lugar, em escala nacional, o 'Desafio App' com o projeto AlzCare, um aplicativo para suporte para cuidadores informais de idosos com Alzheimer.",
+  },
+  {
+    id: "Inova-Jovem",
+    title: "Representantes do Estado de São Paulo no Liga Jovem",
+    date: "2024",
+    image: "https://www.inova.unicamp.br/inovajovem/wp-content/uploads/2024/11/Participantes-Final-Inova-Jovem-Reproducao-Zoom-1-1024x478.png",
+    category: "Competições de Empreendedorismo",
+    description: "O projeto AlzCare venceu como melhor projeto do estado de São Paulo no Desafio Liga Jovem, além disso o projeto também foi finalista no Inova Jovem Unicamp.",
+  },
+    {
+    id: "Monitor-Voluntario",
+    title: "Monitor Voluntário",
+    date: "2025",
+    image: "https://media.licdn.com/dms/image/v2/D4D22AQFYdMRYo9r61Q/feedshare-shrink_1280/B4DZbLdFNCG8Ak-/0/1747170121564?e=1761782400&v=beta&t=7BkcpQgZo3m209QbiCk0-xhXSNzz61QAJMiRCXsGPVA",
+    category: "Voluntariado",
+    description: "Fui monitor no evento Elas-<TIC> e ExpoCotuca, programas de incentivo à participação feminina e de estudantes de escolas públicas na área de tecnologia",
+  },
+];
+
+  const medalsCard = {
+    id: "Medalhas",
+    title: "Multi Medalhista em Olimpíadas Científicas",
+    date: "2022-2025",
+    image: "https://elitecampinas.com.br/wp-content/uploads/2023/11/olimpiadas-site-elite-21.png",
+    category: "Conquistas",
+    description: "Durante meu percurso acadêmico, participei de diversas olimpíadas científicas, conquistando medalhas de Ouro, Prata e Bronze em áreas como Ciências, Matemática e Tecnologia. Essas experiências foram fundamentais para o fortalecimento de minha dedicação ao estudo.",
+    medals: {
+      Ouro: [
+        "Olímpiada Nacional de Ciências (ONC) - 2024",
+        "Competição USP de Conhecimentos e Oportunidades (CUCO) - 2024",
+        "Olímpiada Brasileira de Astronomia e Astronáutica (OBA) - 2022"
+      ],
+      Prata: [
+        "Olímpiada Nacional de Ciências (ONC) - 2023",
+        "Competição USP de Conhecimentos e Oportunidades (CUCO) - 2023",
+        "Olímpiada Brasileira de Astronomia e Astronáutica (OBA) - 2025",
+        "Canguru de Matemática - 2025"
+      ],
+      Bronze: [
+        "Olímpiada Brasileira de Tecnologia (OBT) - 2024",
+        "Canguru de Matemática - 2024",
+        "Olímpiada Brasileira de Astronomia e Astronáutica (OBA) - 2021"
+      ]
+    }
+  };
+
+
 function formatDate(raw) {
   if (!raw) return "";
   if (/^\d{2}\/\d{2}\/\d{4}$/.test(raw)) return raw;
@@ -280,5 +335,218 @@ function renderSkills(containerSelector, data) {
   });
 }
 
+(function () {
+  function createResearchCard(item) {
+    const article = document.createElement("article");
+    article.className = "research-card";
+    article.setAttribute("role", "listitem");
+    article.tabIndex = 0;
+    if (item.id) article.id = item.id;
+
+    const cover = document.createElement("div");
+    cover.className = "research-cover";
+    if (item.image) {
+      const img = document.createElement("img");
+      img.loading = "lazy";
+      img.decoding = "async";
+      img.src = item.image;
+      img.alt = item.title || "";
+      cover.appendChild(img);
+    }
+    article.appendChild(cover);
+
+    const body = document.createElement("div");
+    body.className = "research-body";
+
+    const cat = document.createElement("p");
+    cat.className = "research-category";
+    cat.textContent = item.category || "";
+    body.appendChild(cat);
+
+    const h = document.createElement(item.title && item.title.length ? "h3" : "h4");
+    h.className = "research-title";
+    h.textContent = item.title || "";
+    body.appendChild(h);
+
+    if (item.description) {
+      const desc = document.createElement("p");
+      desc.className = "research-description";
+      desc.textContent = item.description;
+      body.appendChild(desc);
+    }
+
+    const meta = document.createElement("div");
+    meta.className = "research-meta";
+    const dateSpan = document.createElement("span");
+    dateSpan.className = "research-period";
+    dateSpan.textContent = item.date || "";
+    meta.appendChild(dateSpan);
+    body.appendChild(meta);
+
+    article.appendChild(body);
+
+    if (item.medals && typeof item.medals === "object") {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "medal-btn";
+      btn.id = "openMedalsBtn";
+      btn.setAttribute("aria-haspopup", "dialog");
+      btn.setAttribute("aria-controls", "medalsModal");
+      btn.textContent = "Medalhas";
+      article.appendChild(btn);
+      btn.addEventListener("click", () => openModal(item.medals, btn));
+    }
+
+    return { article, coverImage: cover.querySelector("img") || null };
+  }
+
+  function renderResearchGrid(containerSelector, data) {
+    const container = typeof containerSelector === "string" ? document.querySelector(containerSelector) : containerSelector;
+    if (!container) return;
+    container.innerHTML = "";
+    const frag = document.createDocumentFragment();
+    const imgs = [];
+
+    const dataset = Array.isArray(data) ? data.slice() : [];
+    if (!dataset.some(d => d && d.id === "Medalhas")) dataset.push(medalsCard);
+
+    dataset.forEach(item => {
+      const { article, coverImage } = createResearchCard(item);
+      frag.appendChild(article);
+      if (coverImage) imgs.push(coverImage);
+    });
+
+    container.appendChild(frag);
+
+    let pending = imgs.length;
+    const finish = () => { if (window.sobreMimRecalculate) window.sobreMimRecalculate(); };
+    if (!pending) finish();
+    else {
+      imgs.forEach(i => {
+        if (i.complete) { pending--; if (!pending) finish(); }
+        else {
+          i.addEventListener("load", () => { pending--; if (!pending) finish(); }, { once: true });
+          i.addEventListener("error", () => { pending--; if (!pending) finish(); }, { once: true });
+        }
+      });
+    }
+  }
+
+  function ensureModal() {
+    if (document.getElementById("medalsModalOverlay")) return;
+    const overlay = document.createElement("div");
+    overlay.id = "medalsModalOverlay";
+    overlay.className = "medals-modal-overlay";
+    overlay.innerHTML = `
+      <div class="medals-modal" role="dialog" aria-modal="true" id="medalsModal" aria-labelledby="medalsTitle">
+        <header>
+          <div>
+            <h3 id="medalsTitle">Medalhas e Conquistas</h3>
+            <div class="medals-sub">Detalhamento das medalhas conquistadas</div>
+          </div>
+          <button class="medals-close" id="medalsCloseBtn" aria-label="Fechar">Fechar</button>
+        </header>
+        <br><br><br><br>
+        <div class="medals-body" id="medalsBody"></div>
+        <div class="medals-footer">
+          <button class="close-secondary" id="medalsCloseBtn2">Fechar</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
+    document.getElementById("medalsCloseBtn").addEventListener("click", closeModal);
+    document.getElementById("medalsCloseBtn2").addEventListener("click", closeModal);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && overlay.classList.contains("open")) closeModal(); });
+  }
+
+  let lastFocused = null;
+  let focusTrapHandler = null;
+
+  function trapFocus(modal) {
+    lastFocused = document.activeElement;
+    const focusable = modal.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])');
+    const nodes = Array.from(focusable);
+    if (!nodes.length) return;
+    const first = nodes[0];
+    const last = nodes[nodes.length - 1];
+    focusTrapHandler = function (e) {
+      if (e.key !== "Tab") return;
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
+    document.addEventListener("keydown", focusTrapHandler);
+  }
+
+  function releaseFocusTrap() {
+    if (focusTrapHandler) document.removeEventListener("keydown", focusTrapHandler);
+    focusTrapHandler = null;
+    if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
+    lastFocused = null;
+  }
+
+  function openModal(data, opener) {
+    ensureModal();
+    const overlay = document.getElementById("medalsModalOverlay");
+    const body = document.getElementById("medalsBody");
+    body.innerHTML = "";
+    const order = ["Ouro", "Prata", "Bronze"];
+    order.forEach(k => {
+      const col = document.createElement("div");
+      col.className = "medals-column";
+      const h4 = document.createElement("h4");
+      const chip = document.createElement("span");
+      chip.className = "medal-chip " + (k === "Ouro" ? "chip-gold" : k === "Prata" ? "chip-silver" : "chip-bronze");
+      chip.textContent = k.charAt(0);
+      h4.appendChild(chip);
+      const title = document.createElement("span");
+      title.textContent = " " + k;
+      h4.appendChild(title);
+      col.appendChild(h4);
+      const ul = document.createElement("ul");
+      const items = Array.isArray(data[k]) ? data[k] : [];
+      if (!items.length) {
+        const li = document.createElement("li");
+        li.textContent = "—";
+        ul.appendChild(li);
+      } else {
+        items.forEach(it => {
+          const li = document.createElement("li");
+          li.textContent = it;
+          ul.appendChild(li);
+        });
+      }
+      col.appendChild(ul);
+      body.appendChild(col);
+    });
+    overlay.classList.add("open");
+    overlay.style.display = "flex";
+    trapFocus(document.getElementById("medalsModal"));
+    const closeBtn = document.getElementById("medalsCloseBtn");
+    closeBtn.focus();
+    overlay.dataset.openerId = opener ? opener.id || "" : "";
+  }
+
+  function closeModal() {
+    const overlay = document.getElementById("medalsModalOverlay");
+    if (!overlay) return;
+    overlay.classList.remove("open");
+    overlay.style.display = "none";
+    releaseFocusTrap();
+    const openerId = overlay.dataset.openerId;
+    if (openerId) {
+      const btn = document.getElementById(openerId);
+      if (btn && typeof btn.focus === "function") btn.focus();
+    }
+    overlay.dataset.openerId = "";
+  }
+
+  window.renderResearchGrid = renderResearchGrid;
+})();
+
+renderResearchGrid("#researchGrid", researchData);
 renderPortfolio(".ContainerPortfolio", projectsData);
 renderSkills("#ContainerGeral", skillsData);

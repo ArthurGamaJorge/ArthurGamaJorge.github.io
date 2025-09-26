@@ -8,13 +8,11 @@ window.sr = ScrollReveal({
 sr.reveal("#Texto", { delay: 50, origin: "left" });
 if (window.matchMedia("(max-width: 730px)").matches) {
   sr.reveal("#imagemCorvo", { delay: 50, origin: "left" });
-} else{
+} else {
   sr.reveal("#imagemCorvo", { delay: 50, origin: "right" });
 }
 
-sr.reveal("#DivImagem", { delay: 50, origin: "right" });
-sr.reveal("#ContainerGeral", { delay: 50, origin: "left" });
 sr.reveal(".Container", { delay: 50, origin: "left" });
-sr.reveal(".linha-do-tempo", {delay: 50, origin: "left"});
-sr.reveal("#Botoes", { delay: 50, origin: "left" });
-sr.reveal(".ContainerPortifolio", { delay: 50, origin: "bottom" });
+sr.reveal(".Portfolio", { delay: 50, origin: "left" });
+sr.reveal(".Habilidades", { delay: 50, origin: "left" });
+sr.reveal(".sobre", { delay: 50, origin: "left" });

@@ -328,3 +328,165 @@ document.addEventListener("DOMContentLoaded", () => {
     if (src) projeto.style.backgroundImage = `url("${src}")`;
   });
 });
+
+// -------------------------------------------------
+// Sobre mim
+
+(function(){
+  const grid = document.getElementById('researchGrid');
+  const viewport = document.getElementById('cardsViewport');
+  const btn = document.getElementById('toggleMore');
+  const indicator = document.getElementById('moreIndicator');
+  const moreCountEl = document.getElementById('moreCount');
+
+  let isExpanded = false;
+  let visibleRows = 1;
+  let visibleHeight = 0;
+  let fullHeight = 0;
+  let cards = [];
+
+  function debounce(fn, wait = 100){
+    let t;
+    return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), wait); };
+  }
+
+  function getCols(){
+    const style = window.getComputedStyle(grid);
+    const tpl = style.gridTemplateColumns;
+    if (tpl && tpl !== 'none') return tpl.trim().split(/\s+/).length;
+    const c = grid.querySelector('.research-card');
+    if (!c) return 1;
+    const cardW = c.getBoundingClientRect().width || 300;
+    return Math.max(1, Math.floor(grid.clientWidth / cardW));
+  }
+
+  function recalcLayout() {
+    cards = Array.from(grid.querySelectorAll('.research-card'));
+    if (!cards.length) return;
+    cards.forEach(c => { c.style.display = 'flex'; c.classList.remove('card-hidden'); });
+    const cardRect = cards[0].getBoundingClientRect();
+    const rowGap = parseFloat(getComputedStyle(grid).rowGap) || 0;
+    const cardHeight = Math.round(cardRect.height);
+    const cols = getCols();
+    visibleRows = 1;
+    visibleHeight = (cardHeight * visibleRows) + (rowGap * (visibleRows - 1));
+    fullHeight = grid.scrollHeight;
+    if (isExpanded) {
+      animateHeightTo(fullHeight);
+      cards.forEach((c, i) => revealCard(c, i));
+    } else {
+      animateHeightTo(visibleHeight);
+      hideCardsBeyond(cols * visibleRows);
+    }
+    updateMoreCount(cols * visibleRows);
+  }
+
+  function hideCardsBeyond(limitIndex) {
+    cards.forEach((c, i) => {
+      if (i >= limitIndex) {
+        c.classList.add('card-hidden');
+        c.classList.remove('card-show');
+      } else {
+        c.classList.remove('card-hidden');
+        c.classList.add('card-show');
+        c.style.pointerEvents = '';
+      }
+    });
+  }
+
+  function revealCard(card, idx) {
+    card.classList.remove('card-hidden');
+    setTimeout(() => {
+      card.classList.add('card-show');
+    }, 80 + (idx * 50));
+  }
+
+  function updateMoreCount(visibleCount) {
+    const total = cards.length;
+    const remaining = Math.max(0, total - visibleCount);
+    if (remaining > 0 && !isExpanded) {
+      indicator.style.opacity = '1';
+      moreCountEl.textContent = `+${remaining}`;
+      btn.style.display = '';
+    } else {
+      indicator.style.opacity = '0';
+      moreCountEl.textContent = `+0`;
+      if (remaining === 0 && !isExpanded) btn.style.display = 'none';
+      else btn.style.display = '';
+    }
+  }
+
+  let heightAnimationRunning = false;
+  function animateHeightTo(target) {
+    if (!viewport) return;
+    const start = viewport.getBoundingClientRect().height;
+    const end = Math.ceil(target);
+    if (start === end) {
+      viewport.style.height = end + 'px';
+      return;
+    }
+    viewport.style.transition = 'height 420ms cubic-bezier(.2,.9,.2,1)';
+    viewport.style.height = start + 'px';
+    void viewport.offsetHeight;
+    viewport.style.height = end + 'px';
+    heightAnimationRunning = true;
+    const onEnd = () => {
+      viewport.style.transition = '';
+      viewport.style.height = end + 'px';
+      viewport.removeEventListener('transitionend', onEnd);
+      heightAnimationRunning = false;
+    };
+    viewport.addEventListener('transitionend', onEnd);
+  }
+
+  function toggleExpand() {
+    if (!cards.length) return;
+    if (!isExpanded) {
+      isExpanded = true;
+      btn.setAttribute('aria-expanded', 'true');
+      btn.textContent = 'Ver menos';
+      fullHeight = grid.scrollHeight;
+      animateHeightTo(fullHeight);
+      cards.forEach((c, i) => {
+        setTimeout(() => { revealCard(c, i); }, i * 40);
+      });
+      indicator.style.opacity = '0';
+    } else {
+      isExpanded = false;
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = 'Ver mais';
+      const cols = getCols();
+      const limit = cols * visibleRows;
+      cards.forEach((c, i) => {
+        if (i >= limit) {
+          setTimeout(() => {
+            c.classList.remove('card-show');
+            c.classList.add('card-hidden');
+          }, (i - limit) * 40);
+        }
+      });
+      setTimeout(() => {
+        animateHeightTo(visibleHeight);
+      }, 120);
+      updateMoreCount(limit);
+      setTimeout(() => { if (!isExpanded) indicator.style.opacity = '1'; }, 420);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      recalcLayout();
+    }, 120);
+  });
+
+  const imgs = grid.querySelectorAll('img');
+  imgs.forEach(img => {
+    if (!img.complete) {
+      img.addEventListener('load', debounce(recalcLayout, 80));
+    }
+  });
+
+  window.addEventListener('resize', debounce(recalcLayout, 140));
+  btn.addEventListener('click', toggleExpand);
+  window.sobreMimRecalculate = recalcLayout;
+})();
