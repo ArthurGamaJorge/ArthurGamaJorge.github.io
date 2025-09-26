@@ -43,8 +43,12 @@
   transition: background-color 0.3s ease;
 }
 
+#Previdengue::before{
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
 .Projeto:hover::before {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .Projeto:hover {
@@ -137,9 +141,14 @@
   display: block;
 }
 
-#CodeDrafts {
+.Projeto#CodeDrafts.Software {
+  background-image: url("../Images/Projetos/CodeDraftsJava.png");
+}
+
+.Projeto#CodeDrafts.Web {
   background-image: url("../Images/Projetos/CodeDraftsDark.png");
 }
+
 #Previdengue{
   background-image: url("../Images/Projetos/previdengue.png");
 }
@@ -349,4 +358,17 @@
   width: 100%;
   max-width: 300px;
   height: auto;
+}
+
+.Projeto.is-animating {
+  pointer-events: none;
+}
+
+.Projeto.is-animating:hover {
+  transform: none !important;
+}
+
+.Projeto.is-animating .info-bar {
+  transform: translateY(50%) !important;
+  opacity: 0 !important;
 }

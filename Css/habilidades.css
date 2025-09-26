@@ -12,10 +12,6 @@
   width: unset !important;
 }
 
-.Habilidades img {
-  width: calc(2.5vmax + 30px);
-}
-
 .Habilidades,
 .SobreMim,
 .Portfolio {
@@ -46,19 +42,12 @@
   width: calc(14vmax + 80px);
   height: calc(5vmax + 50px);
   background: linear-gradient(0.05turn, var(--brand), var(--darkBrand));
-  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
   transform: translateX(100vw);
   transition: transform 0.5s ease-in-out, opacity 0.5s ease, box-shadow 03s ease;
   display: none;
-}
-
-#ContainerGeral .Cartão:hover {
-  transform: scale(1.1) translateY(-10px);
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4); /* Sombra mais forte para dar profundidade */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, translateY 0.3s ease;
 }
 
 .VisivelEsquerda,
@@ -90,7 +79,7 @@
   color: white;
 }
 
-#habilidade {
+.habilidade {
   margin-left: 5px;
   width: calc(4vmax + 30px);
   margin-right: 2vmax;
@@ -104,4 +93,10 @@
   justify-content: center;
   margin: auto;
   gap: 30px;
+}
+
+#ContainerGeral .Cartão:not(.is-animating):not(.DesativarHover):hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
