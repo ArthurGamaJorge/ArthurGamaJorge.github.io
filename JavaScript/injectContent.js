@@ -444,7 +444,7 @@ function renderSkills(containerSelector, data) {
             <h3 id="medalsTitle">Medalhas e Conquistas</h3>
             <div class="medals-sub">Detalhamento das medalhas conquistadas</div>
           </div>
-          <button class="medals-close" id="medalsCloseBtn" aria-label="Fechar">Fechar</button>
+          <button class="medals-close" id="medalsCloseBtn" aria-label="Fechar">X</button>
         </header>
         <br><br><br><br>
         <div class="medals-body" id="medalsBody"></div>

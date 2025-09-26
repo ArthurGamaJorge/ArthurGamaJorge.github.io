@@ -56,20 +56,6 @@
   #DivImagem {
     display: none;
   }
-
-  .SobreMim {
-    padding: 10% 0% !important;
-  }
-  .SobremimContainer {
-    width: 100%;
-  }
-  .evento-conteudo svg {
-    padding: 0;
-  }
-  .linha-do-tempo {
-    gap: 100px;
-    max-width: 75%;
-  }
   #ContainerGeral {
     min-height: calc(15vmax + 210px);
   }
@@ -105,22 +91,9 @@
   #imagemCorvo {
     position: unset;
   }
-  .linha-do-tempo {
-    max-width: 100%;
-    padding: 0px;
-  }
-  .SobremimContainer {
-    padding: 0px;
-  }
-  .medalha-info {
-    left: 400%;
-  }
   .Central .paragrafo,
   .paragrafo h2 {
     text-align: center !important;
-  }
-  .SobreMim #Texto {
-    margin-bottom: 10%;
   }
   .Portfolio {
     padding: 4% 0;

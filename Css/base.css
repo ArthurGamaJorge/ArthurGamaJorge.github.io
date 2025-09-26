@@ -80,7 +80,7 @@ button {
 }
 
 a, .medalha, button, .ProjetoImg img, .Projeto, .close, .tabs button, #prevProject, #nextProject {
-    cursor: url("../Images/CursorPointer.png"), pointer;
+    cursor: url("../Images/CursorPointer.png"), pointer !important;
 }
 
 #Texto a img, #Texto2 a img{
@@ -118,7 +118,7 @@ a, .medalha, button, .ProjetoImg img, .Projeto, .close, .tabs button, #prevProje
     transform: translateX(7px);
 }
 
-.SobreMim, .Portfolio {
+.sobre, .Portfolio {
     background: rgb(255, 255, 255, 0.02);
 }
 
