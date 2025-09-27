@@ -18,7 +18,6 @@
   <meta name="description"
     content="Site pessoal de portfólio de programação full-stack de Arthur Gama Jorge. Confira quem eu sou, minhas habilidades, projetos prévios e formas de me contatar!">
 
-  <!-- FAVICON -->
   <link rel="shortcut icon" href="./Images/Icons/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="./Images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./Images/Icons/favicon-32x32.png">
@@ -42,41 +41,44 @@
     </div>
   </header>
 
-  <section class="Central">
-    <div id="imagemCorvo" class="glitch">
-      <div id="Corvo"></div>
-    </div>
-    <div id="Texto">
-      <div class="paragrafo">
-        <h2>Olá! Eu sou</h2>
-        <h1>Arthur Gama Jorge</h1>
-        <p id="EfeitoEscrevendo"></p>
-        <h3>Sou um desenvolvedor full-stack e técnico em informática pelo Cotuca apaixonado por tecnologia e aprendizado
-          contínuo, sempre explorando novos desafios para criar soluções inovadoras.</h3>
-        <div class="redes">
-          <a href="https://github.com/ArthurGamaJorge" target="_blank" rel="noreferrer noopener" class="glitch-icon"><i
-              class="bx bxl-github"> </i></a>
-          <a href="https://www.linkedin.com/in/arthurgamajorge/" target="_blank" rel="noreferrer noopener"
-            class="glitch-icon"><i class="bx bxl-linkedin-square"> </i></a>
-          <a href="https://discordapp.com/users/659238913227096085" target="_blank" rel="noreferrer noopener"
-            class="glitch-icon"><i class="bx bxl-discord-alt"> </i></a>
-          <a href="mailto: arthurgamajorgetec@gmail.com" target="_blank" rel="noreferrer noopener"
-            class="glitch-icon"><i class="bx bx-envelope" type="solid"></i></a>
-          <a href="https://leetcode.com/u/arthurgamajorge/" target="_blank" rel="noreferrer noopener"
-            class="glitch-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 16 16"
-              stroke="currentColor" stroke-width="1">
-              <path fill="currentColor"
-                d="M 10.447266 0.265625 A 0.50005 0.50005 0 0 0 10.103516 0.41796875 L 5.65625 4.8671875 L 3.0957031 7.4257812 A 0.50005 0.50005 0 0 0 2.9785156 7.6035156 C 1.769869 8.9739016 1.7865696 11.063913 3.0957031 12.373047 L 5.65625 14.933594 C 7.0176322 16.294976 9.242133 16.294976 10.603516 14.933594 L 12.853516 12.683594 A 0.50063809 0.50063809 0 1 0 12.144531 11.976562 L 9.8945312 14.226562 C 8.9159134 15.20518 7.3418991 15.20518 6.3632812 14.226562 L 3.8027344 11.666016 C 2.8241166 10.687398 2.8241166 9.1114303 3.8027344 8.1328125 L 6.3632812 5.5742188 C 7.3418991 4.5956009 8.9159135 4.5956009 9.8945312 5.5742188 L 12.144531 7.8242188 A 0.50063784 0.50063784 0 1 0 12.853516 7.1171875 L 10.603516 4.8671875 C 9.9106907 4.174363 8.9943718 3.8431189 8.0820312 3.8554688 L 10.8125 1.125 A 0.50005 0.50005 0 0 0 10.447266 0.265625 z M 7.328125 9.4003906 A 0.50005 0.50005 0 1 0 7.328125 10.400391 L 14.228516 10.400391 A 0.50005 0.50005 0 1 0 14.228516 9.4003906 L 7.328125 9.4003906 z">
-              </path>
-            </svg>
-          </a>
+<section class="Central">
+  <div id="imagemCorvo" class="glitch">
+    <div id="Corvo"></div>
+  </div>
+
+  <div id="Texto">
+    <div class="paragrafo">
+      <h2>Olá! Eu sou</h2>
+      <h1>Arthur Gama Jorge</h1>
+
+      <!-- Efeito de escrita -->
+      <p id="EfeitoEscrevendo" aria-live="polite"></p>
+
+      <h3>
+        Sou um desenvolvedor full-stack e técnico em informática pelo Cotuca,
+        apaixonado por tecnologia e aprendizado contínuo.
+      </h3>
+
+      <div class="itens">
+        <a href="./Images/Currículo.pdf"
+          download="Arthur-Gama-Jorge-CV.pdf"
+          class="btn-curriculo"
+          aria-label="Baixar currículo - Arthur Gama Jorge"
+          rel="noopener noreferrer">
+          <i class="bx bx-download" aria-hidden="true"></i>
+          Baixar currículo
+        </a>
+
+        <div class="redes" aria-hidden="false">
+          <a href="https://github.com/ArthurGamaJorge" target="_blank" rel="noreferrer noopener" class="glitch-icon" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/arthurgamajorge/" target="_blank" rel="noreferrer noopener" class="glitch-icon" aria-label="LinkedIn"><i class="bx bxl-linkedin-square"></i></a>
+          <a href="mailto:arthurgamajorgetec@gmail.com" class="glitch-icon" aria-label="Enviar email"><i class="bx bx-envelope"></i></a>
         </div>
       </div>
-      <br />
     </div>
+  </div>
+</section>
 
-  </section>
 
   <section id="SobreMim" class="sobre">
     <div id="Texto">
@@ -140,8 +142,7 @@
     <div id="projetoModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <!-- Abas (Tabs) agora estão acima da div.modal-body -->
-        <div class="tabs" id="tabs"></div> <!-- Novas abas -->
+        <div class="tabs" id="tabs"></div> 
         <div class="modal-body">
           <img id="modal-img" src="" alt="Imagem do Projeto" class="modal-img">
           <div class="modal-text">
@@ -149,7 +150,7 @@
             <p id="modal-description"></p>
             <span id="modal-date" class="modal-date"></span>
           </div>
-          <div class="tab-content" id="tab-content"></div> <!-- Conteúdo das abas -->
+          <div class="tab-content" id="tab-content"></div>
         </div>
         <div class="links">
           <a href="" target="_blank" rel="noreferrer noopener"> <img src="" /> Site </a>

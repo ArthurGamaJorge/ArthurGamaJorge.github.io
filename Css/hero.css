@@ -221,3 +221,120 @@ header {
     opacity: 0;
   }
 }
+
+.Central {
+  padding: 6vh 12%;
+  position: relative;
+}
+
+.paragrafo {
+  max-width: 700px;
+  z-index: 2;
+  display: inline-block;
+}
+
+.paragrafo h2 {
+  font-size: calc(1.6vmax + 8px);
+  color: var(--secondary);
+  margin-bottom: 6px;
+}
+
+.paragrafo h1 {
+  font-size: calc(3.2vmax + 8px);
+  white-space: nowrap;
+  margin-bottom: 8px;
+  color: var(--brand);
+}
+
+.paragrafo h3 {
+  font-size: calc(0.8vmax + 8px);
+  margin-top: 8px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+}
+
+/* Redes sociais */
+.redes {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Botão de currículo */
+.btn-curriculo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  margin-top: 14px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: calc(0.5vmax + 10px);
+  text-decoration: none;
+  border: 2px solid var(--secondary);
+  background: linear-gradient(90deg, rgba(0,255,81,0.08), rgba(1,117,32,0.06));
+  color: var(--brand);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, color 0.12s ease;
+  z-index: 3;
+}
+
+.btn-curriculo .bx { font-size: 1.1em; transform: translateY(1px); }
+
+.btn-curriculo:hover,
+.btn-curriculo:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.6);
+  color: white;
+  background: linear-gradient(90deg, var(--brand), var(--secondary));
+  outline: none;
+}
+
+.itens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 14px; 
+  flex-wrap: wrap; 
+  z-index: 3;
+}
+
+.redes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-curriculo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: calc(0.5vmax + 9px);
+  text-decoration: none;
+  border: 2px solid var(--secondary);
+  background: linear-gradient(90deg, rgba(0,255,81,0.08), rgba(1,117,32,0.06));
+  color: var(--brand);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  transition: transform .18s ease, box-shadow .18s ease, color .12s ease;
+}
+
+.btn-curriculo .bx {
+  font-size: 1.05em;
+  transform: translateY(1px);
+}
+
+.btn-curriculo:hover,
+.btn-curriculo:focus {
+  transform: translateY(-3px);
+  color: white;
+  background: linear-gradient(90deg, var(--brand), var(--secondary));
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  outline: none;
+}
+
