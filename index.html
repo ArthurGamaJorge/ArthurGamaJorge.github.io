@@ -25,7 +25,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./Images/Icons/favicon-16x16.png">
 </head>
 
-<body>
+<body onclick="window.dispatchEvent(new Event('resize'));">
   <script src="./JavaScript/avoidFlickering.js"></script>
   <header>
     <a href="#" class="Principal">Home</a>
@@ -101,7 +101,6 @@
     <div class="vermais-row" style="margin-top:18px;">
       <button id="toggleMore" class="ver-mais" aria-expanded="false" aria-controls="researchGrid">Ver mais</button>
     </div>
-  </div>
 </section>
 
   <section class="Habilidades" id="Habilidades">
@@ -134,8 +133,8 @@
     </div><br>
 
     <div id="modalFundo" class="modal-fundo">
-      <i class='bx bx-chevron-left' id="prevProject" class="arrow-left"></i>
-      <i class='bx bx-chevron-right' id="nextProject" class="arrow-right"></i>
+      <i class='bx bx-chevron-left arrow-left' id="prevProject"></i>
+      <i class='bx bx-chevron-right arrow-right' id="nextProject"></i>
     </div>
 
     <div id="projetoModal" class="modal">
@@ -178,6 +177,12 @@
   <script src="./JavaScript/layout.js"></script>
   <script src="./JavaScript/ui.js"></script>
   <script src="./JavaScript/scroll.js"></script>
-  </section>
-
+  <script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+    }, 300);
+  });
+</script>
+  </body>
 </html>

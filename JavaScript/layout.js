@@ -488,5 +488,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener('resize', debounce(recalcLayout, 140));
   btn.addEventListener('click', toggleExpand);
-  window.sobreMimRecalculate = recalcLayout;
 })();
+
